@@ -1,12 +1,11 @@
-import React from 'react';
-import './reset.scss';
+import { BrowserRouter } from "react-router-dom";
 
-function App() {
+import { Router } from "./router/Router";
+
+export default function App() {
   return (
-    <div className="App">
-      <h1>プレサイト</h1>
-    </div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
 }
-
-export default App;
