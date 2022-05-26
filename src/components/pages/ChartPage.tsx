@@ -7,6 +7,8 @@ import answers from "../../data/answer.json";
 import { useQuestion } from "../../hooks/useQuestion";
 import { useWindowDimensions } from "../../hooks/useWindowDimensions";
 
+import "../../styles/chart.scss";
+
 export const ChartPage = memo(() => {
 	// 画面の縦横を判定
 	const { width, height } = useWindowDimensions();
@@ -46,15 +48,17 @@ export const ChartPage = memo(() => {
 			{width > height ? (
 				isStart ? (
 					(questionId !== 100) ? (
-						<div>
-							<div>
-								<button onClick={onClickChangeYes}>はい</button>
-							</div>
-							<div>
-								<h2>{questionText}</h2>
-							</div>
-							<div>
-								<button onClick={onClickChangeNo} >いいえ</button>
+						<div className="chart-test-display">
+							<div className="chart-test-content-wrap">
+								<a className="chart-button-yes" onClick={onClickChangeYes}>
+									<p>はい</p>
+								</a>
+								<div className="chart-test-question">
+									<h2>{questionText}</h2>
+								</div>
+								<a className="chart-button-no" onClick={onClickChangeNo}>
+									<p>いいえ</p>
+								</a>
 							</div>
 						</div>
 					) : (
@@ -64,9 +68,12 @@ export const ChartPage = memo(() => {
 						</div>
 					)
 				) : (
-					<div>
-						スタート画面
-						<button onClick={onClickStart}>スタート</button>
+					<div className="chart-start-display">
+						<div className="chart-start-button-wrap">
+							<a className="chart-start-button" onClick={onClickStart}>
+								<p>START</p>
+							</a>
+						</div>
 					</div>
 				)
 			) : (
