@@ -1,7 +1,12 @@
-export const TopPage = () => {
+import { memo } from "react";
+
+import { TopVisual } from "../organisms/TopVisual";
+import "../../styles/top.scss";
+
+export const TopPage = memo(() => {
 	return (
 		<>
-			<h1>トップページ</h1>
+			<TopVisual />
 		</>
 	);
-}
+})

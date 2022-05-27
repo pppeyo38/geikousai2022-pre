@@ -13,6 +13,8 @@ export const Header = memo(() => {
 					</a>
 					<div className="Header-menu-icon">
 						<span></span>
+						<span></span>
+						<span></span>
 					</div>
 				</div>
 			</header>
