@@ -7,12 +7,14 @@ import { DepaPage } from "../components/pages/DepaPage";
 import { ChartPage } from "../components/pages/ChartPage";
 import { GamePage } from "../components/pages/GamePage";
 
+import { HeaderLayout } from "../components/templates/HeaderLayout";
+
 export const Router = memo(() => {
 	return (
 		<Routes>
 			<Route
 				path="/"
-				element={ <TopPage /> }
+				element={ <HeaderLayout><TopPage /></HeaderLayout> }
 			/>
 			<Route
 				path="/movie"
