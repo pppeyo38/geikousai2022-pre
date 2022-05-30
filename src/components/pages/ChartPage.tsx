@@ -1,4 +1,5 @@
-import { memo, useState } from "react";
+import { memo, useEffect, useState } from "react";
+import { Spinner, Center } from "@chakra-ui/react";
 
 // チャートページに出力する質問テキストと答えを読み込み
 import quetions from "../../data/question.json";
@@ -12,6 +13,7 @@ import "../../styles/chart.scss";
 export const ChartPage = memo(() => {
 	// 画面の縦横を判定
 	const { width, height } = useWindowDimensions();
+	const [ loading, setLoading ] = useState(true);
 	const [ isStart, setIsStart ] = useState(false);
 	const onClickStart = () => setIsStart(true);
 	const onClickReset = () => {
@@ -43,41 +45,60 @@ export const ChartPage = memo(() => {
 		});
 	}
 
+	// 2秒経ったらスピナーが消える
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
+	})
+
 	return (
 		<>
-			{width > height ? (
-				isStart ? (
-					(questionId !== 100) ? (
-						<div className="chart-test-display">
-							<div className="chart-test-content-wrap">
-								<a className="chart-button-yes" onClick={onClickChangeYes}>
-									<p>はい</p>
-								</a>
-								<div className="chart-test-question">
-									<h2>{questionText}</h2>
+			{loading ? (
+				<Center h="100vh">
+					<Spinner
+						thickness='5px'
+						speed='0.65s'
+						color="#DC4D40"
+						emptyColor="rgba(220, 77, 64, 0.4)"
+						size='xl'
+					/>
+				</Center>
+			) : (
+				width < height ? (
+					isStart ? (
+						(questionId !== 100) ? (
+							<div className="chart-test-display">
+								<div className="chart-test-content-wrap">
+									<a className="chart-button-yes" onClick={onClickChangeYes}>
+										<p>はい</p>
+									</a>
+									<div className="chart-test-question">
+										<h2>{questionText}</h2>
+									</div>
+									<a className="chart-button-no" onClick={onClickChangeNo}>
+										<p>いいえ</p>
+									</a>
 								</div>
-								<a className="chart-button-no" onClick={onClickChangeNo}>
-									<p>いいえ</p>
+							</div>
+						) : (
+							<div>
+								<p>あなたの結果は{answerText}です</p>
+								<button onClick={onClickReset}>はじめから</button>
+							</div>
+						)
+					) : (
+						<div className="chart-start-display">
+							<div className="chart-start-button-wrap">
+								<a className="chart-start-button" onClick={onClickStart}>
+									<p>START</p>
 								</a>
 							</div>
 						</div>
-					) : (
-						<div>
-							<p>あなたの結果は{answerText}です</p>
-							<button onClick={onClickReset}>はじめから</button>
-						</div>
 					)
 				) : (
-					<div className="chart-start-display">
-						<div className="chart-start-button-wrap">
-							<a className="chart-start-button" onClick={onClickStart}>
-								<p>START</p>
-							</a>
-						</div>
-					</div>
+					<p>画面を縦にしてね</p>
 				)
-			) : (
-				<p>横にしてね</p>
 			)}
 		</>
 	);
