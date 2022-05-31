@@ -1,5 +1,6 @@
 @import "./font";
 
+
 #root {
 	background-color: #0D2E4F;
 	overflow: clip;
@@ -7,38 +8,58 @@
 	height: 100vh;
 }
 
-.chart-start-display {
-	overflow: clip;
-	width: 100%;
-	height: 100%;
-	position: fixed;
+
+.chart-start-button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.chart-start-button {
-	display: block;
-	text-align: center;
-	width: 20vw;
-	height: 20vw;
+	width: 150px;
+	height: 150px;
 	font-family: vdl-gigajr;
 	font-size: 20px;
 	font-weight: 500;
 	color: #DC4D40;
-	background-color: rgba(220, 77, 64, 0.2);
 	border-radius: 50%;
 	border: solid 2px #DC4D40;
 	box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4) inset,
 							0px 0px 15px rgba(255, 0, 0, 0.4);
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 340px;
+		height: 340px;
+		background-image: url("../../public/images/chart/chartCycleGreen.svg");
+		background-repeat: no-repeat;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 280px;
+		height: 280px;
+		background-image: url("../../public/images/chart/chartCycleWhite.svg");
+		background-repeat: no-repeat;
+	}
 
 	& p {
 		display: inline-block;
 		margin: 0;
 		line-height: 20vw;
 		text-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4);
-		transform: skewX(-16deg);
+		transform: skewX(-10deg);
 	}
+}
+
+.chart-start-text {
+	margin-top: 186px;
+	color: #FFF;
+	-webkit-text-stroke: 1px #FFF;
+	text-stroke: 1px #FFF;
+	text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+	font-family: vdl-gigajr;
+	font-size: 24px;
+	transform: skewX(-10deg);
 }
 
 .chart-test-display {

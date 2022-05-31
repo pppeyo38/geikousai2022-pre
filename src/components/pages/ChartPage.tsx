@@ -1,5 +1,5 @@
 import { memo, useEffect, useState } from "react";
-import { Spinner, Center } from "@chakra-ui/react";
+import { Spinner, Center, Flex } from "@chakra-ui/react";
 
 // チャートページに出力する質問テキストと答えを読み込み
 import quetions from "../../data/question.json";
@@ -88,13 +88,18 @@ export const ChartPage = memo(() => {
 							</div>
 						)
 					) : (
-						<div className="chart-start-display">
-							<div className="chart-start-button-wrap">
-								<a className="chart-start-button" onClick={onClickStart}>
-									<p>START</p>
-								</a>
+						<Flex
+							justify="center"
+							align="center"
+							direction="column"
+							h="100vh"
+							onClick={onClickStart}
+						>
+							<div className="chart-start-button">
+								<p>CHART</p>
 							</div>
-						</div>
+							<h2 className="chart-start-text">TOUCH START</h2>
+						</Flex>
 					)
 				) : (
 					<p>画面を縦にしてね</p>
