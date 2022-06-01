@@ -42,14 +42,4 @@
 			<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_896_640" result="shape"/>
 		</filter>
 	</defs>
-
-	<animateTransform
-		xlinkHref="#cycle_white"
-		attributeName="transform"
-		type = "rotate"
-		from = "0 0 0"
-		to = "-360 0 0"
-		dur = "8s"
-		repeatCount = "indefinite"
-	/>
 </svg>

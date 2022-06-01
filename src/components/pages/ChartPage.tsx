@@ -68,19 +68,29 @@ export const ChartPage = memo(() => {
 				width < height ? (
 					isStart ? (
 						(questionId !== 100) ? (
-							<div className="chart-test-display">
-								<div className="chart-test-content-wrap">
-									<a className="chart-button-yes" onClick={onClickChangeYes}>
-										<p>はい</p>
-									</a>
+							<Flex
+								justify="center"
+								align="center"
+								direction="column"
+								h="100vh"
+								bgGradient='linear(to-b, #0D2E4F 0%, #0D2E4F 50%, #99C955 50%, #30895E 100%)'
+							>
+								<div className="question-wrap">
+									<div className="background"></div>
 									<div className="chart-test-question">
+										<span></span>
 										<h2>{questionText}</h2>
 									</div>
+								</div>
+								<div className="chart-test-buttons">
+									<a className="chart-button-yes" onClick={onClickChangeYes}>
+										<p>YES</p>
+									</a>
 									<a className="chart-button-no" onClick={onClickChangeNo}>
-										<p>いいえ</p>
+										<p>NO</p>
 									</a>
 								</div>
-							</div>
+							</Flex>
 						) : (
 							<div>
 								<p>あなたの結果は{answerText}です</p>
