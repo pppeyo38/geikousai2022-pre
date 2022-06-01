@@ -3,7 +3,7 @@ import { Spinner, Center, Flex } from "@chakra-ui/react";
 
 // チャートページに出力する質問テキストと答えを読み込み
 import quetions from "../../data/question.json";
-import answers from "../../data/answer.json";
+import answers from "../../data/chartAnswer.json";
 
 import { useQuestion } from "../../hooks/useQuestion";
 import { useWindowDimensions } from "../../hooks/useWindowDimensions";
@@ -31,6 +31,7 @@ export const ChartPage = memo(() => {
 
 	var questionText: string = "";
 	var answerText: string = "";
+	var answerImg: string = "";
 	if (questionId !== 100){
 		questionData.map(question => {
 			if (questionId === question.id){
@@ -41,6 +42,7 @@ export const ChartPage = memo(() => {
 		answerData.map(answer => {
 			if (answerId === answer.id){
 				answerText = answer.busyo;
+				answerImg = answer.image;
 			}
 		});
 	}
@@ -75,12 +77,9 @@ export const ChartPage = memo(() => {
 								h="100vh"
 								bgGradient='linear(to-b, #0D2E4F 0%, #0D2E4F 50%, #99C955 50%, #30895E 100%)'
 							>
-								<div className="question-wrap">
-									<div className="background"></div>
-									<div className="chart-test-question">
-										<span></span>
-										<h2>{questionText}</h2>
-									</div>
+								<div className="chart-test-question">
+									<span></span>
+									<h2>{questionText}</h2>
 								</div>
 								<div className="chart-test-buttons">
 									<a className="chart-button-yes" onClick={onClickChangeYes}>
@@ -92,10 +91,36 @@ export const ChartPage = memo(() => {
 								</div>
 							</Flex>
 						) : (
-							<div>
-								<p>あなたの結果は{answerText}です</p>
-								<button onClick={onClickReset}>はじめから</button>
-							</div>
+							// <div>
+							// 	<p>{answerText}</p>
+							// 	<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/departments/${answerImg}`} alt="チャート結果ロゴ画像"/>
+							// 	<button onClick={onClickReset}>はじめから</button>
+							// </div>
+							<Flex
+								justify="center"
+								align="center"
+								direction="column"
+								h="100vh"
+								bgGradient='linear(to-b, #0D2E4F 0%, #0D2E4F 50%, #99C955 50%, #30895E 100%)'
+							>
+								<div className="chart-test-answer-text">
+									<p>{answerText}</p>
+								</div>
+								<div className="chart-test-answer">
+									<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/departments/${answerImg}`} alt="チャート結果ロゴ画像"/>
+								</div>
+								<div className="chart-result-buttons">
+									<a className="chart-button-back" onClick={onClickReset}>
+										<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/back.svg`} alt="やり直しアイコン"/>
+									</a>
+									<a className="chart-button-twitter" onClick={onClickChangeNo}>
+										<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/twitter.svg`} alt="ツイッター画像"/>
+									</a>
+									<a className="chart-button-view" onClick={onClickChangeNo}>
+										<p>VIEW<br/>MORE</p>
+									</a>
+								</div>
+							</Flex>
 						)
 					) : (
 						<Flex
