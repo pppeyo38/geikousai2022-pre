@@ -55,9 +55,13 @@ export const ChartPage = memo(() => {
 	})
 
 	return (
-		<>
+		<Flex
+			w="100vw"
+			h="100vh"
+			bgColor="#0D2E4F"
+		>
 			{loading ? (
-				<Center h="100vh">
+				<Center h="100%" w="100%">
 					<Spinner
 						thickness='5px'
 						speed='0.65s'
@@ -74,7 +78,8 @@ export const ChartPage = memo(() => {
 								justify="center"
 								align="center"
 								direction="column"
-								h="100vh"
+								w="100%"
+								h="100%"
 								bgGradient='linear(to-b, #0D2E4F 0%, #0D2E4F 50%, #99C955 50%, #30895E 100%)'
 							>
 								<div className="chart-test-question">
@@ -95,7 +100,8 @@ export const ChartPage = memo(() => {
 								justify="center"
 								align="center"
 								direction="column"
-								h="100vh"
+								w="100%"
+								h="100%"
 								bgGradient='linear(to-b, #0D2E4F 0%, #0D2E4F 50%, #99C955 50%, #30895E 100%)'
 							>
 								<div className="chart-test-answer-text">
@@ -123,7 +129,8 @@ export const ChartPage = memo(() => {
 							justify="center"
 							align="center"
 							direction="column"
-							h="100vh"
+							w="100%"
+							h="100%"
 							onClick={onClickStart}
 						>
 							<div className="chart-start-button">
@@ -136,6 +143,6 @@ export const ChartPage = memo(() => {
 					<p>画面を縦にしてね</p>
 				)
 			)}
-		</>
+		</Flex>
 	);
 });
