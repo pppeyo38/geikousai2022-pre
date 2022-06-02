@@ -91,11 +91,6 @@ export const ChartPage = memo(() => {
 								</div>
 							</Flex>
 						) : (
-							// <div>
-							// 	<p>{answerText}</p>
-							// 	<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/departments/${answerImg}`} alt="チャート結果ロゴ画像"/>
-							// 	<button onClick={onClickReset}>はじめから</button>
-							// </div>
 							<Flex
 								justify="center"
 								align="center"
@@ -113,9 +108,10 @@ export const ChartPage = memo(() => {
 									<a className="chart-button-back" onClick={onClickReset}>
 										<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/back.svg`} alt="やり直しアイコン"/>
 									</a>
-									<a className="chart-button-twitter" onClick={onClickChangeNo}>
+									<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" className="twitter-share-button chart-button-twitter" data-show-count="false">
 										<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/twitter.svg`} alt="ツイッター画像"/>
 									</a>
+									<script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
 									<a className="chart-button-view" onClick={onClickChangeNo}>
 										<p>VIEW<br/>MORE</p>
 									</a>
