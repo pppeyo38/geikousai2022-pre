@@ -1,47 +1,69 @@
 @import "./font";
 
-body {
-	background-color: #0D2E4F;
-}
 
 #root {
+	background-color: #0D2E4F;
 	overflow: clip;
 	width: 100vw;
 	height: 100vh;
 }
 
-.chart-start-display {
-	overflow: clip;
-	width: 100%;
-	height: 100%;
-	position: fixed;
+
+.chart-start-button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.chart-start-button {
-	display: block;
-	text-align: center;
-	width: 20vw;
-	height: 20vw;
+	width: 180px;
+	height: 180px;
 	font-family: vdl-gigajr;
 	font-size: 20px;
 	font-weight: 500;
 	color: #DC4D40;
-	background-color: rgba(220, 77, 64, 0.2);
 	border-radius: 50%;
 	border: solid 2px #DC4D40;
 	box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4) inset,
 							0px 0px 15px rgba(255, 0, 0, 0.4);
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 340px;
+		height: 340px;
+		background-image: url("../../public/images/chart/chartCycleGreen.svg");
+		background-repeat: no-repeat;
+		transform-origin: center center;
+		animation:8s linear infinite rotation_green;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 280px;
+		height: 280px;
+		background-image: url("../../public/images/chart/chartCycleWhite.svg");
+		background-repeat: no-repeat;
+		transform-origin: center center;
+		animation:10s linear infinite rotation_white;
+	}
 
 	& p {
 		display: inline-block;
 		margin: 0;
 		line-height: 20vw;
 		text-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4);
-		transform: skewX(-16deg);
+		transform: skewX(-7deg);
 	}
+}
+
+.chart-start-text {
+	margin-top: 186px;
+	color: #FFF;
+	-webkit-text-stroke: 1px #FFF;
+	text-stroke: 1px #FFF;
+	text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+	font-family: vdl-gigajr;
+	font-size: 24px;
+	transform: skewX(-7deg);
 }
 
 .chart-test-display {
@@ -52,47 +74,144 @@ body {
 .chart-test-content-wrap {
 	width: 100%;
 	height: 100%;
-	position: fixed;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	column-gap: 13vw;
-}
-
-.chart-button-yes, .chart-button-no {
-	display: block;
-	text-align: center;
-	width: 10vw;
-	height: 10vw;
-	color: #EFEFEF;
-	border: solid 1px #EFEFEF;
-	border-radius: 50%;
-	background-color: rgba(239, 239, 239, 0.1);
-
-	& p {
-		display: inline-block;
-		margin: 0;
-		line-height: 10vw;
-		font-family: "ShinGo";
-		font-weight: 200;
-	}
 }
 
 .chart-test-question {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 39.8vw;
-	height: 39.8vw;
-	border-radius: 50%;
-	border: solid 3px #DC4D40;
-	box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4) inset,
-							0px 0px 15px rgba(255, 0, 0, 0.4);
+	position: relative;
+	width: 80vw;
+	height: 80vw;
+
+	& span {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		border-radius: 50%;
+		border: solid 2px #9FC771;
+		box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.4);
+		box-sizing: border-box;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 115vw;
+		height: 115vw;
+		border-radius: 50%;
+		background: #0D2E4F;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 64vw;
+		height: 64vw;
+		border-radius: 50%;
+		border: solid 3px #DC4D40;
+		box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4) inset,
+								0px 0px 15px rgba(255, 0, 0, 0.4);
+		box-sizing: border-box;
+	}
 
 	& h2 {
-		color: #EFEFEF;
+		color: #FFF;
 		font-family: "ShinGo";
 		font-weight: 200;
+		z-index: 100;
 	}
+}
+
+.chart-test-buttons {
+	display: flex;
+	flex-direction: row;
+	column-gap: 130px;
+	margin-top: 14vh;
+}
+
+.chart-button-yes, .chart-button-no {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90px;
+	height: 90px;
+	color: #EFEFEF;
+	border: solid 1px #FFF;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.1);
+
+	& p {
+		display: inline-block;
+		margin: 0;
+		line-height: 10vw;
+		font-family: vdl-gigajr;
+		font-weight: 200;
+		transform: skewX(-7deg);
+	}
+}
+
+.chart-test-answer-text {
+	position: absolute;
+	top: 92px;
+	font-family: vdl-gigajr;
+	font-size: 35px;
+	font-weight: 500;
+	-webkit-text-stroke: 1px #DC4D40;
+	text-stroke: 1px #DC4D40;
+	color: #DC4D40;
+	z-index: 100;
+
+	& p {
+		display: inline-block;
+		margin: 0;
+		line-height: 20vw;
+		transform: skewX(-7deg);
+	}
+}
+
+.chart-test-answer {
+	@extend .chart-test-question;
+
+	& img {
+		z-index: 100;
+		width: 80%;
+	}
+
+	&:after {
+		border: solid 2px #9FC771;
+		box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.4);
+	}
+}
+
+.chart-result-buttons {
+	@extend .chart-test-buttons;
+	column-gap: 20px;
+}
+
+.chart-button-back,
+.chart-button-twitter,
+.chart-button-view {
+	@extend .chart-button-yes;
+}
+
+.chart-button-twitter {
+	transform: translateY(30px);
+}
+
+.chart-button-view {
+	p {
+		line-height: 17px;
+	}
+}
+
+// 回転アニメーション
+@keyframes rotation_green {
+	0%{ transform:rotate(0);}
+	100%{ transform:rotate(360deg); }
+}
+@keyframes rotation_white {
+  0%{ transform:rotate(0);}
+  100%{ transform:rotate(-360deg); }
 }
