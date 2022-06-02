@@ -35,3 +35,63 @@
 	from    { transform: translate(0%); }
 	100%,to { transform: translate(-100%); }
 }
+
+
+// About部分
+.top-about {
+	padding: 60px 8% 81px;
+	text-align: center;
+	background-image: url("../../public/images/top/aboutBg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&__heading {
+		margin-bottom: 47px;
+	}
+
+	&__title {
+		font-family: "ShinGo";
+		font-weight: 800;
+		font-size: 38px;
+		color: #FFF;
+		text-shadow: 0px 4px 1px rgba(0, 0, 0, 0.1);
+	}
+
+	&__subtitle {
+		font-family: "ShinGo";
+		font-weight: 300;
+		font-size: 14px;
+		color: #39654C;
+	}
+
+	&__description-text {
+		white-space: nowrap;
+		font-family: "ShinGo";
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 2;
+		color: #FFF;
+	}
+
+	&__description-main {
+		position: relative;
+		width: fit-content;
+		margin: 40px auto 0;
+		font-family: "ShinGo";
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 2;
+		color: #FFF;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: calc(50% - 12px);
+			right: -24px;
+			width: 24px;
+			height: 24px;
+			background-image: url("../../public/icons/emojione_double-exclamation-mark.svg");
+			background-repeat: no-repeat;
+		}
+	}
+}
