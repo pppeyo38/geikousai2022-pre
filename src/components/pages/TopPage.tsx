@@ -2,6 +2,7 @@ import { memo } from "react";
 
 import { TopVisual } from "../organisms/TopPage/TopVisual";
 import { TopAbout } from "../organisms/TopPage/TopAbout";
+import { TopTheme } from "../organisms/TopPage/TopTheme";
 import "../../styles/top.scss";
 
 export const TopPage = memo(() => {
@@ -9,6 +10,7 @@ export const TopPage = memo(() => {
 		<>
 			<TopVisual />
 			<TopAbout />
+			<TopTheme />
 		</>
 	);
 })
