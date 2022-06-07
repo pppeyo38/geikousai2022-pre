@@ -98,7 +98,9 @@
 
 // Theme部分
 .top-theme {
-	margin: 60px 0;
+	position: relative;
+	min-height: 995px;
+	margin: 60px 0 0;
 
 	&__heading {
 		margin-bottom: 40px;
@@ -137,17 +139,34 @@
 	}
 
 	&__caption {
-		padding: 107px 20px 80px;
-		background-image: url("../../public/images/top/themeBg.jpg");
-		background-size: 100%;
-		background-repeat: no-repeat;
-		transform: translateY(-87px);
+		position: absolute;
+		width: 100%;
+		top: 235px;
+
+		&-inner {
+			position: relative;
+		}
+
+		&-bg {
+			width: 100%;
+			height: 766px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 
 		&-content-wrap {
-			padding: 40px 30px;
-			min-height: 573px;
-			background-image: url("../../public/images/top/themeBase.png");
-			background-size: 100%;
+			position: absolute;
+			top: 0;
+			margin: 27.5% 5% 20%;
+			padding: 10% 7.7%;
+			border-radius: 15px;
+			background-color: rgba(13, 46, 79, 0.4);
+			background-image:	radial-gradient(rgba(64, 95, 126, 0.3) 30%, transparent 30%);
+			background-size: 20px 15px;
 		}
 
 		&-title {
@@ -219,8 +238,13 @@
 	bottom: 0px;
 }
 #box01 .rect {
-	background: #FFF;
+	background: rgba(255, 255, 255, 0);
 }
 #box01 .top-theme__movie-box {
 	background:#5C5C5C;
+}
+
+// 部署紹介
+.top-DepaIntro {
+	margin: 60px 0;
 }
