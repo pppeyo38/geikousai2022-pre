@@ -328,3 +328,19 @@
 		}
 	}
 }
+
+.top-MiniGame {
+	@extend .top-DepaIntro;
+	margin-bottom: 80px;
+
+	&__thumbnail {
+		margin: 40px 0;
+		width: 100%;
+		height: 215px;
+		background-color: #c4c4c4;
+	}
+
+	&__introduction {
+		padding: 0px 30px 5px;
+	}
+}
