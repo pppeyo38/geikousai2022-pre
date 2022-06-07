@@ -165,8 +165,8 @@
 			padding: 10% 7.7%;
 			border-radius: 15px;
 			background-color: rgba(13, 46, 79, 0.4);
-			background-image:	radial-gradient(rgba(64, 95, 126, 0.3) 30%, transparent 30%);
-			background-size: 20px 15px;
+			background-image:	radial-gradient(rgba(64, 95, 126, 0.3) 22%, transparent 15%);
+			background-size: 12px 9px;
 		}
 
 		&-title {
@@ -247,4 +247,84 @@
 // 部署紹介
 .top-DepaIntro {
 	margin: 60px 0;
+
+	&__heading {
+		margin-bottom: 20px;
+	}
+
+	&__content {
+		width: 100%;
+		height: 807px;
+		background-color: rgba(217, 217, 217, 0.5);
+	}
+}
+
+.top-MovieIntro {
+	@extend .top-DepaIntro;
+
+	&__heading {
+		margin-bottom: 24px;
+	}
+
+	&__content {
+		margin: 0 auto;
+		position: relative;
+		width: 322px;
+		height: 208px;
+		background-color: #5C5C5C;
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: -4px;
+			top: 50%;
+			display: inline-block;
+			width: 5px;
+			height: 209px;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			background-color: #5C5C5C;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			right: -4px;
+			top: 50%;
+			display: inline-block;
+			width: 5px;
+			height: 209px;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			background-color: #5C5C5C;
+		}
+
+		&-inner {
+			position: relative;
+			width: 100%;
+			height: 100%;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0px;
+				top: -4px;
+				display: inline-block;
+				width: 322px;
+				height: 5px;
+				background-color: #5C5C5C;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0px;
+				bottom: -4px;
+				display: inline-block;
+				width: 322px;
+				height: 5px;
+				background-color: #5C5C5C;
+			}
+		}
+	}
 }

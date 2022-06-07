@@ -1,0 +1,22 @@
+.ViewMore {
+	display: flex;
+	justify-content: flex-end;
+	margin: 20px 17.5% 20px 0;
+	position: relative;
+	font-family: "ShinGo";
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1.7;
+
+	&:after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 50%;
+		right: -40px;
+		transform: translateY(-50%);
+		background-image: url("../../../public/icons/viewMore.svg");
+		background-repeat: no-repeat;
+	}
+}
