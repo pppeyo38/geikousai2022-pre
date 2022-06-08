@@ -10,8 +10,7 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	max-width: 360px;
-	margin: 0 auto;
+	margin: 0 15px;
 }
 
 .Header-logo-wrap {
@@ -55,4 +54,82 @@ header {
 
 .Menu-Drawer-wrap {
 	display: none;
+}
+
+.nav__overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	width: 100vw;
+	height: 100vh;
+	background-color: #0D2E4F;
+	color: #FFF;
+
+	&-close-icon {
+		margin: 20px 15px;
+
+		&-wrap {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-left: auto;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			border: solid 2px #FFF;
+
+			span, span:before {
+				position: absolute;
+				content: "";
+				display: block;
+				height: 2px;
+				width: 22px;
+				border-radius: 3px;
+				background-color: #FFF;
+			}
+
+			span {
+				transform: rotate(-45deg)
+			}
+
+			span:before {
+				transform: rotate(90deg)
+			}
+		}
+	}
+
+	&-menuList {
+		margin: 40px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		list-style: none;
+		font-family: "ShinGo";
+
+		* + * {
+			margin-top: 40px;
+		}
+
+		li {
+			text-align: center;
+		}
+
+		h3 {
+			font-weight: 600;
+			font-size: 25px;
+		}
+
+		p {
+			margin-top: 5px;
+			font-weight: 300;
+			font-size: 10px;
+			line-height: 1.5;
+		}
+	}
+
+	&-sns-wrap {
+		margin-top: 5px;
+	}
 }
