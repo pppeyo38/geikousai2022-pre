@@ -69,36 +69,18 @@ header {
 	color: #FFF;
 
 	&-close-icon {
-		margin: 20px 15px;
-
 		&-wrap {
-			position: relative;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-left: auto;
+			position: relative;
+			z-index: 500;
 			width: 50px;
 			height: 50px;
-			border-radius: 50%;
+			color: #FFF;
+			background-color: #0D2E4F;
 			border: solid 2px #FFF;
-
-			span, span:before {
-				position: absolute;
-				content: "";
-				display: block;
-				height: 2px;
-				width: 22px;
-				border-radius: 3px;
-				background-color: #FFF;
-			}
-
-			span {
-				transform: rotate(-45deg)
-			}
-
-			span:before {
-				transform: rotate(90deg)
-			}
+			border-radius: 50%;
 		}
 	}
 
@@ -134,5 +116,15 @@ header {
 
 	&-sns-wrap {
 		margin-top: 5px;
+	}
+}
+
+.hamburger-react {
+	div:nth-child(1) {
+		top: 18px;
+	}
+
+	div:nth-child(3) {
+		top: 28px;
 	}
 }

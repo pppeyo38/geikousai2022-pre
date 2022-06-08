@@ -1,9 +1,6 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import { Fade, useDisclosure } from "@chakra-ui/react";
-import { animated } from "react-spring";
-
-// import Burger from "@animated-burgers/burger-squeeze";
-// import '@animated-burgers/burger-squeeze/dist/styles.css';
+import Hamburger from 'hamburger-react';
 
 import { SnsIcons } from "../atoms/SnsIcons";
 
@@ -11,8 +8,7 @@ import "../../styles/base/header.scss";
 
 export const Header = memo(() => {
 	const { isOpen, onToggle } = useDisclosure();
-
-
+	const [ booOpen, setOpen ] = useState(false)
 
 	return (
 		<>
@@ -22,18 +18,14 @@ export const Header = memo(() => {
 						<img className="Header-logo" src={`${process.env.PUBLIC_URL}/icons/HeaderLogo.svg`} alt="芸工祭ロゴ画像"/>
 						<img className="Header-title" src={`${process.env.PUBLIC_URL}/icons/HeaderTitle.svg`} alt="芸工祭タイトル画像"/>
 					</a>
-					{/* <animated.div className="Header-menu-icon" onClick={onToggle} style={}>
-						<span></span>
-					</animated.div> */}
-					<div className="burger burger-squeeze">
-  					<div className="burger-lines"></div>
+					<div className="nav__overlay-close-icon-wrap" onClick={onToggle}>
+						<Hamburger
+							size={22}
+							toggled={booOpen}
+							toggle={setOpen}
+						/>
 					</div>
 					<Fade in={isOpen} className="nav__overlay">
-						{/* <div className="nav__overlay-close-icon">
-							<div className="nav__overlay-close-icon-wrap" onClick={onToggle}>
-								<span></span>
-							</div>
-						</div> */}
 						<ul className="nav__overlay-menuList">
 							<li>
 								<a href="/">
