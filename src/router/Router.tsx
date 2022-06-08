@@ -18,11 +18,11 @@ export const Router = memo(() => {
 			/>
 			<Route
 				path="/movie"
-				element={ <MoviePage /> }
+				element={ <Layout><MoviePage /></Layout> }
 			/>
 			<Route
 				path="/departments"
-				element={ <DepaPage /> }
+				element={ <Layout><DepaPage /></Layout> }
 			/>
 			<Route
 				path="/chart"
