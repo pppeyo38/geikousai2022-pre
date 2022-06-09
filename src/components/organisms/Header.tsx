@@ -25,7 +25,7 @@ export const Header = memo(() => {
 							toggle={setOpen}
 						/>
 					</div>
-					<Fade in={isOpen} className="nav__overlay">
+					<Fade in={isOpen} className="nav__overlay" style={{ pointerEvents: isOpen ? 'auto': 'none' }}>
 						<ul className="nav__overlay-menuList">
 							<li>
 								<a href="/">
