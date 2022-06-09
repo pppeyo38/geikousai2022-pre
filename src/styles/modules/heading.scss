@@ -90,3 +90,70 @@
 	bottom: -3px;
 	right: 0px;
 }
+
+//映画ページ用の
+.HeadingMovieText {
+	@extend .HeadingText;
+	padding: 9px 0;
+	font-size: 14px;
+
+	&:before {
+		@extend .HeadingText, :before;
+		left: -3px;
+		top: 50%;
+		width: 3px;
+		height: 38px;
+		box-shadow: 0 0;
+	}
+
+	&:after {
+		@extend .HeadingText, :after;
+		right: -3px;
+		top: 50%;
+		width: 3px;
+		height: 38px;
+	}
+}
+
+
+.HeadingMovie-wrap {
+	@extend .Heading-wrap;
+
+	&:before {
+		@extend .Heading-wrap, :before;
+		left: 0px;
+		top: -2.3px;
+		width: 200px;
+		height: 2.3px;
+	}
+
+	&:after {
+		@extend .Heading-wrap, :after;
+		left: 0px;
+		bottom: -2.3px;
+		width: 200px;
+		height: 2.3px;
+	}
+}
+
+.HeadingMovieBlackRect {
+	@extend .HeadingBlackRect;
+	height: 5.38px;
+}
+
+.mv__top-left {
+	top: -2.3px;
+	left: 0px;
+}
+.mv__top-rigt {
+	top: -2.3px;
+	right: 0px;
+}
+.mv__btm-left {
+	bottom: -2.3px;
+	left: 0px;
+}
+.mv__btm-rigt {
+	bottom: -2.3px;
+	right: 0px;
+}
