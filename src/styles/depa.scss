@@ -2,6 +2,10 @@
 	padding: 108px 0;
 	text-align: center;
 
+	&__panel-wrap {
+		display: flex;
+	}
+
 	&__heading {
 		margin-bottom: 20px;
 	}

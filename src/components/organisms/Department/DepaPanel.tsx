@@ -3,6 +3,7 @@ import { Tabs, TabPanel, TabPanels, TabList, Tab } from "@chakra-ui/react";
 
 export const DepaPanel = () => {
 	const [tabIndex, setTabIndex] = useState(0);
+	const [activeIndex, setActiveIndex] = useState(tabIndex);
 
 	// 矢印で戻るとき
 	const handleChangeBack = () => {
@@ -25,39 +26,57 @@ export const DepaPanel = () => {
 		setTabIndex(index);
 	}
 
+	// const handlePanelChange = (
+	// 	event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	// ): void => {
+	// 	setTabIndex(parseInt(event.target.value));
+	// };
+
 	return (
 		<>
-			<Tabs defaultIndex={tabIndex} index={tabIndex} onClick={handleChangeBack}>
-				<button className="p-depa__panel-arrow-back">
-					<img src="src={`${process.env.PUBLIC_URL}/icons/depa_back.svg`}" alt="戻る" />
-				</button>
+			<Tabs defaultIndex={tabIndex} index={tabIndex}>
+				<div className="p-depa__panel-wrap">
+					<button className="p-depa__panel-arrow-back"  onClick={handleChangeBack}>
+						<img src={`${process.env.PUBLIC_URL}/icons/depa_back.svg`} alt="戻る" />
+					</button>
+					<TabPanels>
+						<TabPanel>
+							芸工祭長の写真
+						</TabPanel>
+						<TabPanel>
+							副芸工祭長の写真
+						</TabPanel>
+					</TabPanels>
+					<button className="p-depa__panel-arrow-next" onClick={handleChangeNext}>
+						<img src={`${process.env.PUBLIC_URL}/icons/depa_next.svg`} alt="次へ" />
+					</button>
+				</div>
+
 				<TabPanels>
-					<TabPanel>
-						芸工祭長の写真
-					</TabPanel>
-					<TabPanel>
-						副芸工祭長の写真
-					</TabPanel>
+					<TabPanel>芸工祭長について〜〜〜</TabPanel>
+					<TabPanel>副芸工祭長について〜〜〜</TabPanel>
 				</TabPanels>
-				<button className="p-depa__panel-arrow-next" onClick={handleChangeNext}>
-					<img src="src={`${process.env.PUBLIC_URL}/icons/depa_next.svg`}" alt="次へ" />
-				</button>
 
 				{/* <TabList style={{ border: 'none' }}>
 					<Tab><img src={`${process.env.PUBLIC_URL}/images/department/saicho.svg`} /></Tab>
 					<Tab><img src={`${process.env.PUBLIC_URL}/images/department/saicho.svg`} /></Tab>
 				</TabList> */}
+
+				<ul>
+					<li
+						onClick={() => handlePanelChange(0)}
+						style={{ backgroundColor : tabIndex == 0 ? 'red': '' }}
+					>
+						<img src={`${process.env.PUBLIC_URL}/images/department/saicho.svg`} />
+					</li>
+					<li
+						onClick={() => handlePanelChange(1)}
+						style={{ backgroundColor : tabIndex == 1 ? 'red': '' }}
+					>
+						<img src={`${process.env.PUBLIC_URL}/images/department/saicho.svg`} />
+					</li>
+				</ul>
 			</Tabs>
-
-				{/* <ul>
-					<button onClick={handleChangeBack}>
-						<img src={`${process.env.PUBLIC_URL}/images/department/saicho.svg`} />
-						</button>
-					<li>
-						<img src={`${process.env.PUBLIC_URL}/images/department/saicho.svg`} />
-						</li>
-				</ul> */}
-
 		</>
 	);
 }
