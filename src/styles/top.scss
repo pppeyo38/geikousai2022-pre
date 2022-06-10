@@ -36,6 +36,11 @@
 	100%,to { transform: translate(-100%); }
 }
 
+.top__viewMore {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
 
 // About部分
 .top-about {

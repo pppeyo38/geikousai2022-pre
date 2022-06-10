@@ -12,7 +12,9 @@ export const TopMovie = () => {
 				<div className="MovieRect top-left"></div><div className="MovieRect top-rigt"></div><div className="MovieRect btm-left"></div><div className="MovieRect btm-rigt"></div>
 				<div className="top-MovieIntro__content-inner"></div>
 			 </div>
-			 <ViewMore link={`/movie`} />
+			 <div className="top__viewMore">
+				<ViewMore link={`/movie`}>ムービーページはこちら</ViewMore>
+			 </div>
 		 </div>
 		</>
 	);

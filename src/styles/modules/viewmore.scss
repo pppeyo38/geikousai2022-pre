@@ -1,22 +1,28 @@
 .ViewMore {
-	display: flex;
-	justify-content: flex-end;
-	margin: 20px 17.5% 20px 0;
+	display: inline-block;
 	position: relative;
+	width: 265px;
+	padding: 6px;
+	text-align: center;
+	line-height: 1.7;
 	font-family: "ShinGo";
 	font-weight: 600;
 	font-size: 14px;
-	line-height: 1.7;
+	color: #FFF;
+	background: -moz-linear-gradient(left, #99C955, #30895E);
+	background: -webkit-linear-gradient(left, #99C955, #30895E);
+	background: linear-gradient(to right, #99C955, #30895E);
 
 	&:after {
 		content: "";
+		position: absolute;
 		width: 20px;
 		height: 20px;
-		position: absolute;
 		top: 50%;
-		right: -40px;
+		right: 8px;
+		-webkit-transform: translateY(-50%);
 		transform: translateY(-50%);
-		background-image: url("../../../public/icons/viewMore.svg");
+		background-image: url("../../../public/icons/viewMore_white.svg");
 		background-repeat: no-repeat;
 	}
 }

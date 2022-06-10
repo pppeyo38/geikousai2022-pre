@@ -11,7 +11,9 @@ export const TopDepa = () => {
 			 <div className="top-DepaIntro__content">
 				 <p>紹介が入るよ</p>
 			 </div>
-			 <ViewMore link={`/departments`} />
+			 <div className="top__viewMore">
+				<ViewMore link={`/departments`}>部署紹介ページはこちら</ViewMore>
+			 </div>
 		 </div>
 		</>
 	);

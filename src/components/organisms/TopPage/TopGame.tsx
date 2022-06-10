@@ -14,7 +14,9 @@ export const TopGame = () => {
 					 どんなゲームか、くらいの軽い説明　てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと
 					</p>
 			 </div>
-			 <ViewMore link={`/game`} />
+			 <div className="top__viewMore">
+				<ViewMore link={`/game`}>ミニゲームをする</ViewMore>
+			 </div>
 		 </div>
 		</>
 	);
