@@ -65,15 +65,13 @@ export const DepaPanel = () => {
 				<ul>
 					<li
 						onClick={() => handlePanelChange(0)}
-						style={{ backgroundColor : tabIndex == 0 ? 'red': '' }}
 					>
-						<img src={`${process.env.PUBLIC_URL}/images/department/saicho.svg`} />
+						<img src={`${process.env.PUBLIC_URL}/images/department/20.png`} style={{ filter : tabIndex == 0 ? 'grayscale(0%)': 'grayscale(100%)', width : '61px', height : '109px' }}/>
 					</li>
 					<li
 						onClick={() => handlePanelChange(1)}
-						style={{ backgroundColor : tabIndex == 1 ? 'red': '' }}
 					>
-						<img src={`${process.env.PUBLIC_URL}/images/department/saicho.svg`} />
+						<img src={`${process.env.PUBLIC_URL}/images/department/20.png`} style={{ filter : tabIndex == 1 ? 'grayscale(0%)': 'grayscale(100%)', width : '61px', height : '109px' }}/>
 					</li>
 				</ul>
 			</Tabs>
