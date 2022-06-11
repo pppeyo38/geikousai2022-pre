@@ -3,6 +3,8 @@ import { DepaPanel } from "../organisms/Department/DepaPanel";
 import "../../styles/depa.scss";
 
 export const DepaPage = () => {
+	console.log("レンダリング");
+
 	return (
 		<>
 			<div className="p-depa">
