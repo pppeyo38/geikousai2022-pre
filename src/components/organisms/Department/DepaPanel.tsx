@@ -94,7 +94,7 @@ export const DepaPanel = memo(() => {
 							{kanbuImg.map((kanbu, index) => {
 								return (
 									<li onClick={() => handlePanelChange(kanbu.id)} key={index}>
-										<img src={`${process.env.PUBLIC_URL}/images/departments/${kanbu.image}`} style={{ filter : tabIndex == kanbu.id ? 'grayscale(0%)': 'grayscale(100%)', width : '61px', height : '109px' }}/>
+										<img src={`${process.env.PUBLIC_URL}/images/departments/${kanbu.image}`} style={{ filter : tabIndex == kanbu.id ? 'grayscale(0%)': 'grayscale(100%)', width : '59px', height : '115px', objectFit : 'cover' }}/>
 									</li>
 								);
 							})}
@@ -110,7 +110,7 @@ export const DepaPanel = memo(() => {
 							{busyochoImg.map((busyocho, index) => {
 								return (
 									<li onClick={() => handlePanelChange(busyocho.id)} key={index}>
-										<img src={`${process.env.PUBLIC_URL}/images/departments/${busyocho.image}`} style={{ filter : tabIndex == busyocho.id ? 'grayscale(0%)': 'grayscale(100%)', width : '61px', height : '109px' }}/>
+										<img src={`${process.env.PUBLIC_URL}/images/departments/${busyocho.image}`} style={{ filter : tabIndex == busyocho.id ? 'grayscale(0%)': 'grayscale(100%)', width : '59px', height : '115px', objectFit : 'cover' }}/>
 									</li>
 								);
 							})}
