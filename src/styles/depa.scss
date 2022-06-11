@@ -1,15 +1,35 @@
 .p-depa {
-	padding: 108px 0;
+	padding: 108px 0 0;
 	text-align: center;
 
+	&__display {
+		margin-top: 30px;
+		padding-top: 37px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			right: 29px;
+			width: 173px;
+			height: 685px;
+			background-image: url("../../public/images/top/Bg-dot.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position-x: 85%;
+		}
+	}
+
 	&__panel {
-		margin: 30px 0;
 
 		&-wrap {
+			position: relative;
+			z-index: 100;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-top: 37px;
 		}
 
 		&-arrow-back {
@@ -64,6 +84,47 @@
 				background-repeat: no-repeat;
 				background-size: contain;
 				filter: drop-shadow(0px 0px 15px rgba(159, 199, 113, 0.4));
+			}
+		}
+
+		&-chartLink {
+			position: absolute;
+			z-index: 200;
+			bottom: 35px;
+			left: 50%;
+			width: 330px;
+			height: 36px;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+			display: inline-block;
+			color: #DC4D40;
+			font-family: "Pixel";
+			font-size: 14px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				z-index: -10;
+				width: 330px;
+				height: 36px;
+				top: -8px;
+				left: 0;
+				background: #FFF;
+				border: solid 1px #DC4D40;
+				transform:skew(-15deg, 0);
+				box-shadow: 0px 4px 15px rgba(220, 77, 64, 0.4);
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: 200;
+				top: 0px;
+				right: 20px;
+				width: 20px;
+				height: 20px;
+				background-image: url("../../public/icons/viewMore.svg");
+				background-repeat: no-repeat;
 			}
 		}
 	}
@@ -126,6 +187,8 @@
 	}
 
 	&__content {
+		position: relative;
+		z-index: 100;
 		padding: 25px 20px 35px 23px;
 		background-color: rgba(255, 255, 255, 0.7);
 		border-radius: 15px;
@@ -197,7 +260,7 @@
 			background-color: rgba(255 ,255, 255, 0.1);
 		}
 
-		&-kanbu {
+		&-kanbu, &-busyocho {
 			position: relative;
 			z-index: 30;
 			padding-top: 30px;
@@ -224,9 +287,17 @@
 
 		&-wrap {
 			margin: 0 auto;
-			width: fit-content;
+			width: 332px;
 			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 			list-style: none;
+
+			&:after {
+				content: '';
+				display: block;
+				width: 61px;
+			}
 		}
 	}
 }
