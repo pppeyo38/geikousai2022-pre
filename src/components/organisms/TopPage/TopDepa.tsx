@@ -10,7 +10,7 @@ export const TopDepa = () => {
 			 </div>
 			 <div className="top-DepaIntro__content">
 				<div className="top-DepaIntro__content-saicho">
-					<img src={`${process.env.PUBLIC_URL}/images/top/saicho.png`} alt="" />
+					<img src={`${process.env.PUBLIC_URL}/images/busyotyo_full/saicho.png`} alt="" />
 					<div className="top-DepaIntro__content-saicho-about">
 						<div className="top-DepaIntro__content-saicho-logo-wrap">
 							<img src={`${process.env.PUBLIC_URL}/icons/departments/01chief.png`} alt="芸工祭長ロゴ" width='66px' height='66px' />
@@ -33,7 +33,7 @@ export const TopDepa = () => {
 				</div>
 
 				<div className="top-DepaIntro__content-saicho">
-					<img src={`${process.env.PUBLIC_URL}/images/top/fuku-saicho.png`} alt="" />
+					<img src={`${process.env.PUBLIC_URL}/images/busyotyo_full/fuku-saicho.png`} alt="" />
 					<div className="top-DepaIntro__content-saicho-about">
 						<div className="top-DepaIntro__content-saicho-logo-wrap">
 							<img src={`${process.env.PUBLIC_URL}/icons/departments/02chief_sub.png`} alt="芸工祭長ロゴ" width='66px' height='66px' />
