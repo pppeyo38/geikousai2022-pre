@@ -26,16 +26,17 @@ export const DepaPanel = memo(() => {
 
 	return (
 		<>
-			<Tabs defaultIndex={tabIndex} index={tabIndex}>
+			<Tabs defaultIndex={tabIndex} index={tabIndex} className="p-depa__panel">
 				<div className="p-depa__panel-wrap">
 					<button className="p-depa__panel-arrow-back"  onClick={handleChangeBack}>
 						<img src={`${process.env.PUBLIC_URL}/icons/depa_back.svg`} alt="戻る" />
 					</button>
-					<TabPanels>
+					<TabPanels className="p-depa__panel-image-wrap" style={{ width: '310px' }}>
 						{content.map((department, index) => {
 							return (
-								<TabPanel tabIndex={index} key={index}>
-									<img src={`${process.env.PUBLIC_URL}/images/busyotyo_full/${department.image}`} alt=""/>
+								<TabPanel tabIndex={index} key={index} style={{ padding: '0', display: 'flex', justifyContent: 'center' }}>
+									<img className="p-depa__panel-image" src={`${process.env.PUBLIC_URL}/images/busyotyo_full/${department.image}`} alt="" style={{ maxWidth: '115%' }} />
+									<span className="p-depa__panel-image-drop"></span>
 								</TabPanel>
 							);
 						})}
@@ -49,18 +50,18 @@ export const DepaPanel = memo(() => {
 					{content.map((department, index) => {
         		return (
 							<TabPanel tabIndex={index} key={index}>
-								<div className="top-DepaIntro__content-saicho-about">
-									<div className="top-DepaIntro__content-saicho-logo-wrap">
-										<img src={`${process.env.PUBLIC_URL}/icons/departments/${department.icon}`} alt="芸工祭長ロゴ" width='66px' height='66px' />
-									</div>
-									<div className="top-DepaIntro__content-saicho-text">
-										<div className="top-DepaIntro__content-saicho-name">
+								<div className="p-depa__content">
+									<div className="p-depa__content-intro">
+										<div className="p-depa__content-intro-logo">
+											<img src={`${process.env.PUBLIC_URL}/icons/departments/${department.icon}`} alt="芸工祭長ロゴ" width='66px' height='66px' />
+										</div>
+										<div className="p-depa__content-intro-name">
 											<h3>{department.job}</h3>
 											<p>{department.name}</p>
 										</div>
-										<div className="top-DepaIntro__content-saicho-greeting">
-											<p>{department.greet}</p>
-										</div>
+									</div>
+									<div className="p-depa__content-greet">
+										<p>{department.greet}</p>
 									</div>
 								</div>
 							</TabPanel>

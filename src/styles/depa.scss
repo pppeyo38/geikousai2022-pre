@@ -2,8 +2,70 @@
 	padding: 108px 0;
 	text-align: center;
 
-	&__panel-wrap {
-		display: flex;
+	&__panel {
+		margin: 30px 0;
+
+		&-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 37px;
+		}
+
+		&-arrow-back {
+			width: 32px;
+			height: 32px;
+			position: relative;
+			z-index: 50;
+			transform: translateX(15px);
+		}
+
+		&-arrow-next {
+			width: 32px;
+			height: 32px;
+			position: relative;
+			z-index: 50;
+			transform: translateX(-15px);
+		}
+
+		&-image {
+			filter: drop-shadow(8px 0px 0px #519E5C);
+		}
+
+		&-image-wrap {
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				z-index: -100;
+				width: 250px;
+				height: 250px;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				transform: translateX(-50%) translateY(-50%);
+				background-image: url("../../public/images/departments/circle-navy.svg");
+				background-repeat: no-repeat;
+				filter: drop-shadow(0px 0px 15px rgba(13, 46, 79, 0.4));
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: -100;
+				width: 310px;
+				height: 310px;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				transform: translateX(-50%) translateY(-50%);
+				background-image: url("../../public/images/departments/circle-green.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+				filter: drop-shadow(0px 0px 15px rgba(159, 199, 113, 0.4));
+			}
+		}
 	}
 
 	&__heading {
@@ -60,6 +122,49 @@
 			transform: translateY(-50%);
 			background-image: url("../../public/icons/viewMore_white.svg");
 			background-repeat: no-repeat;
+		}
+	}
+
+	&__content {
+		padding: 25px 20px 35px 23px;
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 15px;
+
+		&-intro {
+			display: flex;
+
+			&-logo {
+				width: fit-content;
+			}
+
+			&-name {
+				margin-left: 15px;
+				text-align: left;
+				font-family: "ShinGo";
+				color: #0D2E4F;
+
+				h3 {
+					line-height: 1.7;
+					font-size: 32px;
+					font-weight: 400;
+				}
+
+				p {
+					line-height: 0.3;
+					font-size: 14px;
+					font-weight: 300;
+				}
+			}
+		}
+
+		&-greet {
+			margin: 7px 0 0 7px;
+			text-align: left;
+			line-height: 1.7;
+			font-family: "ShinGo";
+			font-size: 14px;
+			font-weight: 300;
+			color: #0D2E4F;
 		}
 	}
 }
