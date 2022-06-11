@@ -2,10 +2,12 @@ import { memo, useState } from "react";
 import { Tabs, TabPanel, TabPanels } from "@chakra-ui/react";
 
 import contents from "../../../data/departments.json";
+import kanbu from "../../../data/depaImages/kanbu.json";
 
 export const DepaPanel = memo(() => {
 	const [tabIndex, setTabIndex] = useState(0);
 	const content: {job: string, name: string, greet: string, image: string, icon: string}[] = contents.departments;
+	const kanbuImg: {id: number, image: string}[] = kanbu.kanbu;
 
 	// 矢印で戻るとき
 	const handleChangeBack = () => {
@@ -23,6 +25,10 @@ export const DepaPanel = memo(() => {
 			setTabIndex(tabIndex + 1);
 		}
   };
+
+	const handlePanelChange = (index: number) => {
+		setTabIndex(index);
+	}
 
 	return (
 		<>
@@ -69,18 +75,24 @@ export const DepaPanel = memo(() => {
 					})}
 				</TabPanels>
 
-				{/* <ul>
-					<li
-						onClick={() => handlePanelChange(0)}
-					>
-						<img src={`${process.env.PUBLIC_URL}/images/department/20.png`} style={{ filter : tabIndex == 0 ? 'grayscale(0%)': 'grayscale(100%)', width : '61px', height : '109px' }}/>
-					</li>
-					<li
-						onClick={() => handlePanelChange(1)}
-					>
-						<img src={`${process.env.PUBLIC_URL}/images/department/20.png`} style={{ filter : tabIndex == 1 ? 'grayscale(0%)': 'grayscale(100%)', width : '61px', height : '109px' }}/>
-					</li>
-				</ul> */}
+				<div className="p-depa__handleImg">
+					<div className="p-depa__handleImg-kanbu">
+						<div className="p-depa__handleImg-kanbu-heading">
+							<h3>KANBU</h3>
+							<p>幹部</p>
+						</div>
+						<ul className="p-depa__handleImg-wrap">
+							{kanbuImg.map((kanbu, index) => {
+								return (
+									<li onClick={() => handlePanelChange(kanbu.id)} key={index}>
+										<img src={`${process.env.PUBLIC_URL}/images/departments/${kanbu.image}`} style={{ filter : tabIndex == kanbu.id ? 'grayscale(0%)': 'grayscale(100%)', width : '61px', height : '109px' }}/>
+									</li>
+								);
+							})}
+						</ul>
+					</div>
+				</div>
+
 			</Tabs>
 		</>
 	);
