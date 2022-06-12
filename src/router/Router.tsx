@@ -13,23 +13,23 @@ export const Router = memo(() => {
 	return (
 		<Routes>
 			<Route
-				path="/"
+				path={`${process.env.REACT_APP_PUBLIC_URL}/`}
 				element={ <Layout><TopPage /></Layout> }
 			/>
 			<Route
-				path="/movie"
+				path={`${process.env.REACT_APP_PUBLIC_URL}/movie`}
 				element={ <Layout><MoviePage /></Layout> }
 			/>
 			<Route
-				path="/departments"
+				path={`${process.env.REACT_APP_PUBLIC_URL}/departments`}
 				element={ <Layout><DepaPage /></Layout> }
 			/>
 			<Route
-				path="/chart"
+				path={`${process.env.REACT_APP_PUBLIC_URL}/chart`}
 				element={ <ChartPage /> }
 			/>
 			<Route
-				path="/game"
+				path={`${process.env.REACT_APP_PUBLIC_URL}/game`}
 				element={ <GamePage /> }
 			/>
 		</Routes>
