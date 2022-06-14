@@ -2,7 +2,7 @@
   "name": "geikousai2022-pre",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "./",
   "dependencies": {
     "@chakra-ui/react": "^2.1.2",
     "@emotion/react": "^11.9.0",
@@ -14,7 +14,6 @@
     "@types/node": "^16.11.36",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
-    "env-cmd": "^10.1.0",
     "framer-motion": "^6.3.4",
     "gh-pages": "^4.0.0",
     "hamburger-react": "^2.5.0",
