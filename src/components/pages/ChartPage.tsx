@@ -115,7 +115,7 @@ export const ChartPage = memo(() => {
 										<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/back.svg`} alt="やり直しアイコン"/>
 									</a>
 									<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" className="twitter-share-button chart-button-twitter" data-show-count="false">
-										<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/twitter.svg`} alt="ツイッター画像"/>
+										<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/twitter.png`} alt="ツイッター画像" style={{ width: '35px', height: '35px' }} />
 									</a>
 									<script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
 									<a className="chart-button-view" onClick={onClickChangeNo}>
