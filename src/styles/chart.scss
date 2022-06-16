@@ -70,13 +70,13 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	width: 80vw;
-	height: 80vw;
+	width: 237px;
+	height: 237px;
 
 	& span {
 		content: "";
-		width: 100%;
-		height: 100%;
+		width: 310px;
+		height: 310px;
 		position: absolute;
 		border-radius: 50%;
 		border: solid 2px #9FC771;
@@ -87,8 +87,8 @@
 	&:before {
 		content: "";
 		position: absolute;
-		width: 115vw;
-		height: 115vw;
+		width: 200%;
+		height: 200%;
 		border-radius: 50%;
 		background: #0D2E4F;
 	}
@@ -96,8 +96,8 @@
 	&:after {
 		content: "";
 		position: absolute;
-		width: 64vw;
-		height: 64vw;
+		width: 250px;
+		height: 250px;
 		border-radius: 50%;
 		border: solid 3px #DC4D40;
 		box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4) inset,
@@ -109,6 +109,7 @@
 		color: #FFF;
 		font-family: "ShinGo";
 		font-weight: 200;
+		font-size: 18px;
 		z-index: 100;
 	}
 }
@@ -118,6 +119,7 @@
 	flex-direction: row;
 	column-gap: 130px;
 	margin-top: 14vh;
+	transform: translateY(20px);
 }
 
 .chart-button-yes, .chart-button-no {
@@ -143,7 +145,7 @@
 
 .chart-test-answer-text {
 	position: absolute;
-	top: 92px;
+	top: 90px;
 	font-family: vdl-gigajr;
 	font-size: 35px;
 	font-weight: 500;
@@ -155,7 +157,6 @@
 	& p {
 		display: inline-block;
 		margin: 0;
-		line-height: 20vw;
 		transform: skewX(-7deg);
 	}
 }
@@ -165,7 +166,8 @@
 
 	& img {
 		z-index: 100;
-		width: 80%;
+		width: 237px;
+		height: 237px;
 	}
 
 	&:after {
