@@ -204,8 +204,10 @@
 				height: 43px;
 				top: -20px;
 				left: 0;
-				background-image: url("../../public/images/top/GOOOON.svg");
+				background-image: url("../../public/images/top/GOOOON.png");
 				background-repeat: no-repeat;
+				background-size: cover;
+				transform: translateY(3px);
 			}
 		}
 
