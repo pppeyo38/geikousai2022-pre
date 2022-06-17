@@ -15,8 +15,8 @@ export const Header = memo(() => {
 			<header>
 				<div className="Header-wrap">
 					<a className="Header-logo-wrap" href="/">
-						<img className="Header-logo" src={`${process.env.PUBLIC_URL}/icons/logo_stroke.svg`} alt="芸工祭ロゴ画像" width="55px" height="50px" />
-						<img className="Header-title" src={`${process.env.PUBLIC_URL}/icons/HeaderTitle.svg`} alt="芸工祭タイトル画像"/>
+						<img className="Header-logo" src={`${process.env.PUBLIC_URL}/icons/geikosai-logo.svg`} alt="芸工祭ロゴ画像" width="60px" height="60px" />
+						<img className="Header-title" src={`${process.env.PUBLIC_URL}/icons/HeaderTitle.svg`} alt="芸工祭"/>
 					</a>
 					<div className="nav__overlay-close-icon-wrap" onClick={onToggle}>
 						<Hamburger
