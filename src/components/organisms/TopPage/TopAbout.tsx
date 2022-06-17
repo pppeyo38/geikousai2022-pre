@@ -17,7 +17,7 @@ export const TopAbout = () => {
 							<br/>
 							とにかく見どころ満載で<br/>
 							妥協のないこの学祭は<br/>
-							<span>芸工生全員</span>で作る一つの作品です！
+							<span>芸工生全員で作る</span>一つの作品です！
 						</p>
 						<h2 className="top-about__description-main">
 							みんなで盛り上げよう
