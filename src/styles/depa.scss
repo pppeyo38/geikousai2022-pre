@@ -25,8 +25,6 @@
 	&__panel {
 
 		&-wrap {
-			position: relative;
-			z-index: 100;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -54,6 +52,7 @@
 
 		&-image-wrap {
 			position: relative;
+			z-index: 30;
 
 			&:before {
 				content: '';
@@ -88,15 +87,14 @@
 		}
 
 		&-chartLink {
-			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
 			z-index: 200;
-			bottom: 35px;
-			left: 50%;
+			bottom: 1.3rem;
 			width: 330px;
 			height: 36px;
-			-webkit-transform: translateX(-50%);
-			transform: translateX(-50%);
-			display: inline-block;
 			color: #DC4D40;
 			font-family: "Pixel";
 			font-size: 14px;
@@ -106,7 +104,7 @@
 				position: absolute;
 				z-index: -10;
 				width: 330px;
-				height: 36px;
+				height: 50px;
 				top: -8px;
 				left: 0;
 				background: #FFF;
@@ -119,8 +117,9 @@
 				content: '';
 				position: absolute;
 				z-index: 200;
-				top: 0px;
+				top: 50%;
 				right: 20px;
+				transform: translateY(-50%);
 				width: 20px;
 				height: 20px;
 				background-image: url("../../public/icons/viewMore.svg");
@@ -190,6 +189,7 @@
 		position: relative;
 		z-index: 100;
 		padding: 25px 20px 35px 23px;
+		margin: 1rem;
 		background-color: rgba(255, 255, 255, 0.7);
 		border-radius: 15px;
 
@@ -221,7 +221,7 @@
 		}
 
 		&-greet {
-			margin: 7px 0 0 7px;
+			margin: 17px 0 0 3px;
 			text-align: left;
 			line-height: 1.7;
 			font-family: "ShinGo";

@@ -4,10 +4,20 @@
 }
 
 .MainVisual-img {
+	position: relative;
 	height: 94vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.MainVisual-count {
+	position: absolute;
+	bottom: 0;
+	left: 30px;
+	margin-bottom: 15px;
+	font-family: "ShinGo";
+	font-weight: 300;
 }
 
 .MainVisual-info {
