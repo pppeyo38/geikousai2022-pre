@@ -136,7 +136,9 @@ export const ChartPage = memo(() => {
 							<div className="chart-start-button">
 								<p>CHART</p>
 							</div>
-							<h2 className="chart-start-text">TOUCH START</h2>
+							<h2 className="chart-start-text">
+								TOUCH START
+							</h2>
 						</Flex>
 					)
 				) : (

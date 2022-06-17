@@ -100,9 +100,8 @@
 		height: 250px;
 		border-radius: 50%;
 		border: solid 3px #DC4D40;
-		box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4) inset,
-								0px 0px 15px rgba(255, 0, 0, 0.4);
 		box-sizing: border-box;
+		animation: neonRedCycle 1.5s infinite alternate;
 	}
 
 	& h2 {
@@ -112,6 +111,32 @@
 		font-weight: 200;
 		font-size: 18px;
 		z-index: 100;
+	}
+}
+
+// ネオン風アニメーション
+@keyframes neonRedCycle {
+  100% {
+    box-shadow:
+			0 0 4px rgba(255, 0, 0, 0.1),
+			0 0 11px rgba(255, 0, 0, 0.1),
+			0 0 40px rgba(255, 0, 0, 0.2),
+			0 0 60px rgba(255, 0, 0, 0.4),
+			0 0 4px rgba(255, 0, 0, 0.1) inset,
+			0 0 11px rgba(255, 0, 0, 0.1) inset,
+			0 0 40px rgba(255, 0, 0, 0.2) inset,
+			0 0 60px rgba(255, 0, 0, 0.4) inset;
+  }
+  0% {
+    box-shadow:
+			0 0 2px rgba(255, 0, 0, 0.1),
+			0 0 4px rgba(255, 0, 0, 0.1),
+			0 0 10px rgba(255, 0, 0, 0.2),
+			0 0 35px rgba(255, 0, 0, 0.4),
+			0 0 2px rgba(255, 0, 0, 0.1) inset,
+			0 0 4px rgba(255, 0, 0, 0.1) inset,
+			0 0 10px rgba(255, 0, 0, 0.2) inset,
+			0 0 35px rgba(255, 0, 0, 0.4) inset;
 	}
 }
 
