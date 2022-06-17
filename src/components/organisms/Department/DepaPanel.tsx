@@ -1,6 +1,7 @@
 import { memo, useState } from "react";
 import { Tabs, TabPanel, TabPanels } from "@chakra-ui/react";
 
+import { DepaTabPanels } from "../../molecules/DepaTabPanels";
 import contents from "../../../data/departments.json";
 import kanbu from "../../../data/depaImages/kanbu.json";
 import busyocho from "../../../data/depaImages/busyocho.json";
@@ -53,31 +54,21 @@ export const DepaPanel = memo(() => {
 						<button className="p-depa__panel-arrow-next" onClick={handleChangeNext}>
 							<img src={`${process.env.PUBLIC_URL}/icons/depa_next.svg`} alt="次へ" />
 						</button>
-						{/* <div className="p-depa__panel-chartLink"> */}
-							<a href="/chart" className="p-depa__panel-chartLink">
-								悩んでいるキミに適部署チャート！
-							</a>
-						{/* </div> */}
+						<a href="/chart" className="p-depa__panel-chartLink">
+							悩んでいるキミに適部署チャート！
+						</a>
 					</div>
 
 					<TabPanels>
 						{content.map((department, index) => {
 							return (
-								<TabPanel tabIndex={index} key={index}>
-									<div className="p-depa__content">
-										<div className="p-depa__content-intro">
-											<div className="p-depa__content-intro-logo">
-												<img src={`${process.env.PUBLIC_URL}/icons/departments/${department.icon}`} alt="芸工祭長ロゴ" width='66px' height='66px' />
-											</div>
-											<div className="p-depa__content-intro-name">
-												<h3>{department.job}</h3>
-												<p>{department.name}</p>
-											</div>
-										</div>
-										<div className="p-depa__content-greet">
-											<p>{department.greet}</p>
-										</div>
-									</div>
+								<TabPanel tabIndex={index} key={index} style={{ padding: '0px' }}>
+									<DepaTabPanels
+										Icon={department.icon}
+										Job={department.job}
+										GeikoName={department.name}
+										Greet={department.greet}
+									/>
 								</TabPanel>
 							);
 						})}
