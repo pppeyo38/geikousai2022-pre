@@ -12,7 +12,7 @@ export const Footer = () => {
 				</div>
 				<div className="footer__copyright">
 					<div className="footer__copyright-logo">
-						<img src={`${process.env.PUBLIC_URL}/icons/logo_stroke.svg`} alt="Instagramアイコン" />
+						<img src={`${process.env.PUBLIC_URL}/icons/geikosai-logo.png`} alt="芸工祭アイコン" style={{ width: '109px', height: '98px' }} />
 					</div>
 					<p>@2022 GEIKO SAI</p>
 				</div>
