@@ -8,10 +8,10 @@ export const GamePage = memo(() => {
 	}, []);
 
 	const { unityProvider } = useUnityContext({
-		loaderUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai620.loader.js`,
-		dataUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai620.data`,
-		frameworkUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai620.framework.js`,
-		codeUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai620.wasm`,
+		loaderUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai_kan.loader.js`,
+		dataUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai_kan.data`,
+		frameworkUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai_kan.framework.js`,
+		codeUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai_kan.wasm`,
 	});
 
 	return (

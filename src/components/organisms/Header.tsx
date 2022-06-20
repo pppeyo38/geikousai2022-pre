@@ -58,10 +58,10 @@ export const Header = memo(() => {
 								</Link>
 							</li>
 							<li>
-								<Link to={"/game"}>
+								<a href="/game" target="_blank" rel="noopener noreferrer">
 									<h3>GAME</h3>
 									<p>ゲーム</p>
-								</Link>
+								</a>
 							</li>
 						</ul>
 						<div className="nav__overlay-sns-wrap">

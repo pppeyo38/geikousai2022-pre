@@ -28,10 +28,10 @@ export const Router = memo(() => {
 				path={"/chart"}
 				element={ <ChartPage /> }
 			/>
-			<Route
+			{/* <Route
 				path={"/game"}
 				element={ <GamePage /> }
-			/>
+			/> */}
 		</Routes>
 	);
 })

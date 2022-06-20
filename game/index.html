@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GEIKOSAI | GAME</title>
+  </head>
+  <body>
+    <!-- h/w = 656/369(1.777) -->
+    <iframe
+      frameborder="0"
+      id="webgl-frame"
+      scrolling="auto"
+      src="https://object-storage.tyo1.conoha.io/v1/nc_df3bdbc45bc04950b558834f5728517a/unityroom_production/game/29844/webgl/play.html"
+    ></iframe>
+  </body>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+    }
+    body {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #4f4947;
+    }
+  </style>
+
+  <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", (event) => {
+      function onResize() {
+        const iframeRatio = 1.77777;
+        const windowRatio = window.innerHeight / window.innerWidth;
+
+        const bodyRef = document.body;
+        const containerRef = document.getElementById("webgl-frame");
+
+        bodyRef.style.width = window.innerWidth;
+        bodyRef.style.height = window.innerHeight;
+
+        if (iframeRatio < windowRatio) {
+          const width = window.innerWidth;
+          containerRef.style.width = `${width}px`;
+          containerRef.style.height = `${width * iframeRatio}px`;
+        } else {
+          const height = window.innerHeight;
+          containerRef.style.width = `${height / iframeRatio}px`;
+          containerRef.style.height = `${height}px`;
+        }
+      }
+
+      onResize();
+      window.addEventListener("resize", onResize);
+    });
+  </script>
+</html>

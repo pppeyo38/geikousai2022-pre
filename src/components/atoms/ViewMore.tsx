@@ -13,9 +13,15 @@ export const ViewMore: FC<Props> = memo((props) => {
 
 	return (
 		<>
+		{link === 'game' ? (
+			<a href="/game" target="_blank" rel="noopener noreferrer" className="ViewMore">
+				{children}
+			</a>
+		) : (
 			<Link to={link} className="ViewMore">
-				 {children}
+				{children}
 			</Link>
+		)}
 		</>
 	);
 })
