@@ -35,6 +35,11 @@ export const DepaPanel = memo(() => {
 	// 下の写真クリックしたときにフォーカス人物を変える
 	const handlePanelChange = (index: number) => {
 		setTabIndex(index);
+		setWhichSlide('next');
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
 	}
 
 	return (
