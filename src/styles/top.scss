@@ -12,9 +12,16 @@
 }
 
 .MainVisual-img-wrap {
+	width: fit-content;
 	// animation: slideIn 3s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
 	opacity: 0;
 	animation: 3s fuwafuwa infinite, fadein 2s ease forwards;
+
+	img {
+		width: fit-content;
+		height: 588px;
+		object-fit: contain;
+	}
 }
 
 // @keyframes slideIn {
