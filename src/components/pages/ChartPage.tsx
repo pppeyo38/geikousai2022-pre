@@ -9,6 +9,7 @@ import { useQuestion } from "../../hooks/useQuestion";
 import { useWindowDimensions } from "../../hooks/useWindowDimensions";
 
 import "../../styles/chart.scss";
+import { Link } from "react-router-dom";
 
 export const ChartPage = memo(() => {
 	// 画面の縦横を判定
@@ -118,9 +119,9 @@ export const ChartPage = memo(() => {
 										<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/twitter.png`} alt="ツイッター画像" style={{ width: '35px', height: '35px' }} />
 									</a>
 									<script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
-									<a className="chart-button-view" onClick={onClickChangeNo}>
+									<Link className="chart-button-view" to="/departments">
 										<p>VIEW<br/>MORE</p>
-									</a>
+									</Link>
 								</div>
 							</Flex>
 						)

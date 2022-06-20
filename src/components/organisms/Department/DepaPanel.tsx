@@ -5,6 +5,7 @@ import { DepaTabPanels } from "../../molecules/DepaTabPanels";
 import contents from "../../../data/departments.json";
 import kanbu from "../../../data/depaImages/kanbu.json";
 import busyocho from "../../../data/depaImages/busyocho.json";
+import { Link } from "react-router-dom";
 
 export const DepaPanel = memo(() => {
 	const [tabIndex, setTabIndex] = useState(0);
@@ -54,9 +55,9 @@ export const DepaPanel = memo(() => {
 						<button className="p-depa__panel-arrow-next" onClick={handleChangeNext}>
 							<img src={`${process.env.PUBLIC_URL}/icons/depa_next.svg`} alt="次へ" />
 						</button>
-						<a href="/chart" className="p-depa__panel-chartLink">
+						<Link to="/chart" className="p-depa__panel-chartLink">
 							悩んでいるキミに適部署チャート！
-						</a>
+						</Link>
 					</div>
 
 					<TabPanels>
