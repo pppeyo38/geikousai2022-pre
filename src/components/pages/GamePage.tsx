@@ -16,7 +16,9 @@ export const GamePage = memo(() => {
 
 	return (
 		<>
-			<Unity unityProvider={unityProvider} style={{ width: '390px', height: '844px' }}  />
+			<div className="game-display__wrap">
+				<Unity unityProvider={unityProvider} style={{ width: '390px', height: '844px' }}  />
+			</div>
 		</>
 	);
 })

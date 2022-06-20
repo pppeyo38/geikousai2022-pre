@@ -11,6 +11,38 @@
 	align-items: center;
 }
 
+.MainVisual-img-wrap {
+	// animation: slideIn 3s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+	opacity: 0;
+	animation: 3s fuwafuwa infinite, fadein 2s ease forwards;
+}
+
+// @keyframes slideIn {
+//   0% {
+//     transform: translateY(-180px);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
+//   40%,100% {
+//     opacity: 1;
+//   }
+// }
+
+@keyframes fadein {
+	100% {  opacity: 1;}
+}
+
+@keyframes fuwafuwa {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .MainVisual-count {
 	position: absolute;
 	bottom: 0;

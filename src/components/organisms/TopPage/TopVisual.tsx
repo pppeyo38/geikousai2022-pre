@@ -4,7 +4,9 @@ export const TopVisual = () => {
 	return (
 		<section className="MainVisual">
 			<div className="MainVisual-img">
-				<h4>メインビジュアルが入るよ</h4>
+				<div className="MainVisual-img-wrap">
+					<img src={`${process.env.PUBLIC_URL}/images/top/topVisual.png`} alt="" />
+				</div>
 				<div className="MainVisual-count">
 					<CountDown />
 				</div>
