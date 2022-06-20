@@ -12,11 +12,20 @@ import "../../styles/chart.scss";
 import { Link } from "react-router-dom";
 
 export const ChartPage = memo(() => {
+	console.log('レンダリング')
+
 	// 画面の縦横を判定
 	const { width, height } = useWindowDimensions();
 	const [ loading, setLoading ] = useState(true);
 	const [ isStart, setIsStart ] = useState(false);
-	const onClickStart = () => setIsStart(true);
+	const [ textFade, setTextFade ] = useState('FadeIn');
+	const onClickStart = () => {
+		setTextFade('FadeOut');
+		setTimeout(() => {
+			setIsStart(true);
+			setTextFade('FadeIn');
+		}, 500);
+	};
 	const onClickReset = () => {
 		setIsStart(false);
 		setQuestionId(1);
@@ -24,8 +33,20 @@ export const ChartPage = memo(() => {
 	}
 
 	const { change, questionId, setQuestionId, answerId, setAnswerId } = useQuestion();
-	const onClickChangeYes = () => change(true);
-	const onClickChangeNo = () => change(false);
+	const onClickChangeYes = () => {
+		setTextFade('FadeOut');
+		setTimeout(() => {
+			change(true);
+			setTextFade('FadeIn');
+		}, 500);
+	};
+	const onClickChangeNo = () => {
+		setTextFade('FadeOut');
+		setTimeout(() => {
+			change(false);
+			setTextFade('FadeIn');
+		}, 500);
+	};
 
 	const questionData = quetions.question;
 	const answerData = answers.answer;
@@ -33,19 +54,20 @@ export const ChartPage = memo(() => {
 	var questionText: string = "";
 	var answerText: string = "";
 	var answerImg: string = "";
+
 	if (questionId !== 100){
-		questionData.map(question => {
-			if (questionId === question.id){
-				questionText = question.text;
+		for (let i = 0; i < questionData.length; i++){
+			if (questionId === questionData[i].id){
+				questionText = questionData[i].text;
 			}
-		});
+		}
 	} else {
-		answerData.map(answer => {
-			if (answerId === answer.id){
-				answerText = answer.busyo;
-				answerImg = answer.image;
+		for (let i = 0; i < answerData.length; i++){
+			if (answerId === answerData[i].id){
+				answerText = answerData[i].busyo;
+				answerImg = answerData[i].image;
 			}
-		});
+		}
 	}
 
 	// 2秒経ったらスピナーが消える
@@ -82,10 +104,11 @@ export const ChartPage = memo(() => {
 								w="100%"
 								h="100%"
 								bgGradient='linear(to-b, #0D2E4F 0%, #0D2E4F 50%, #99C955 50%, #30895E 100%)'
+								className="questionFadeIn"
 							>
 								<div className="chart-test-question">
 									<span></span>
-									<h2>{questionText}</h2>
+									<h2 className={`chart-test-question__${textFade}`}>{questionText}</h2>
 								</div>
 								<div className="chart-test-buttons">
 									<a className="chart-button-yes" onClick={onClickChangeYes}>
@@ -133,6 +156,7 @@ export const ChartPage = memo(() => {
 							w="100%"
 							h="100%"
 							onClick={onClickStart}
+							className={`start${textFade}`}
 						>
 							<div className="chart-start-button">
 								<p>CHART</p>
