@@ -1,4 +1,5 @@
 import { FC, memo, ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 import "../../styles/modules/viewmore.scss";
 
@@ -12,9 +13,9 @@ export const ViewMore: FC<Props> = memo((props) => {
 
 	return (
 		<>
-			<a href={link} className="ViewMore">
+			<Link to={link} className="ViewMore">
 				 {children}
-			</a>
+			</Link>
 		</>
 	);
 })

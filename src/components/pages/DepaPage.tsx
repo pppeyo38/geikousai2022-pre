@@ -1,9 +1,13 @@
 import { DepaPanel } from "../organisms/Department/DepaPanel";
 
+import { useEffect, memo } from "react";
 import "../../styles/depa.scss";
 
-export const DepaPage = () => {
+export const DepaPage = memo(() => {
 	console.log("レンダリング");
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, []);
 
 	return (
 		<>
@@ -24,4 +28,4 @@ export const DepaPage = () => {
 			</div>
 		</>
 	);
-}
+})

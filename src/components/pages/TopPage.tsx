@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
 import { TopVisual } from "../organisms/TopPage/TopVisual";
 import { TopAbout } from "../organisms/TopPage/TopAbout";
@@ -9,6 +9,11 @@ import { TopGame } from "../organisms/TopPage/TopGame";
 import "../../styles/top.scss";
 
 export const TopPage = memo(() => {
+
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, []);
+
 	return (
 		<>
 			<TopVisual />

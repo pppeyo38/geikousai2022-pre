@@ -1,8 +1,14 @@
+import { memo, useEffect } from "react";
 import { HeadingMovie } from "../atoms/HeadingMovie";
 
 import "../../styles/movie.scss";
 
-export const MoviePage = () => {
+export const MoviePage = memo(() => {
+
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, []);
+
 	return (
 		<>
 			<div className="p-movie">
@@ -26,4 +32,4 @@ export const MoviePage = () => {
 			</div>
 		</>
 	);
-}
+})
