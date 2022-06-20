@@ -76,16 +76,6 @@
 	}
 }
 
-.questionFadeIn {
-	opacity: 0;
-	animation: 1s textFadeIn forwards;
-}
-
-@keyframes textFadeIn {
-	100% {
-		opacity: 1;
-	}
-}
 
 .chart-test-display {
 	width: 100%;
@@ -241,14 +231,23 @@
 	-webkit-text-stroke: 1px #DC4D40;
 	text-stroke: 1px #DC4D40;
 	color: #DC4D40;
-	z-index: 100;
-	opacity: 0;
-	animation: 1s questionTextSlideIn both;;
+	z-index: 500;
+	animation: 1s answerFadeIn both;
 
 	& p {
 		display: inline-block;
 		margin: 0;
 		transform: skewX(-7deg);
+	}
+}
+
+@keyframes answerFadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -259,9 +258,11 @@
 		z-index: 100;
 		width: 237px;
 		height: 237px;
+		animation: 1s answerFadeIn both;
 	}
 
 	&:after {
+		animation: none;
 		border: solid 2px #9FC771;
 		box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.4);
 	}

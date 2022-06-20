@@ -104,7 +104,6 @@ export const ChartPage = memo(() => {
 								w="100%"
 								h="100%"
 								bgGradient='linear(to-b, #0D2E4F 0%, #0D2E4F 50%, #99C955 50%, #30895E 100%)'
-								className="questionFadeIn"
 							>
 								<div className="chart-test-question">
 									<span></span>
