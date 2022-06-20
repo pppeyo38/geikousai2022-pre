@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 export const DepaPanel = memo(() => {
 	const [tabIndex, setTabIndex] = useState(0);
+	const [whichSlide, setWhichSlide] = useState('next'); // true: Next false: back
 	const content: {job: string, name: string, greet: string, image: string, icon: string}[] = contents.departments;
 	const kanbuImg: {id: number, image: string}[] = kanbu.kanbu;
 	const busyochoImg: {id: number, image: string}[] = busyocho.busyocho;
@@ -20,6 +21,7 @@ export const DepaPanel = memo(() => {
 		} else {
 			setTabIndex(tabIndex - 1);
 		}
+		setWhichSlide('back');
   };
 	// 矢印で進むとき
 	const handleChangeNext = () => {
@@ -28,6 +30,7 @@ export const DepaPanel = memo(() => {
 		} else {
 			setTabIndex(tabIndex + 1);
 		}
+		setWhichSlide('next');
   };
 	// 下の写真クリックしたときにフォーカス人物を変える
 	const handlePanelChange = (index: number) => {
@@ -46,8 +49,7 @@ export const DepaPanel = memo(() => {
 							{content.map((department, index) => {
 								return (
 									<TabPanel tabIndex={index} key={index} style={{ padding: '0', display: 'flex', justifyContent: 'center' }}>
-										<img className="p-depa__panel-image" src={`${process.env.PUBLIC_URL}/images/busyotyo_full/${department.image}`} alt="" style={{ maxWidth: '115%' }} />
-										<span className="p-depa__panel-image-drop"></span>
+										<img className={`p-depa__panel-image-${whichSlide}`} src={`${process.env.PUBLIC_URL}/images/busyotyo_full/${department.image}`} alt="" style={{ maxWidth: '115%' }} />
 									</TabPanel>
 								);
 							})}

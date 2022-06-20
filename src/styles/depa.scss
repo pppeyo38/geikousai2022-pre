@@ -48,6 +48,14 @@
 
 		&-image {
 			filter: drop-shadow(8px 0px 0px #519E5C);
+
+			&-next {
+				animation: slideNext 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+			}
+
+			&-back {
+				animation: slideBack 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+			}
 		}
 
 		&-image-wrap {
@@ -304,4 +312,31 @@
 			}
 		}
 	}
+}
+
+// スライドインアニメーション
+@keyframes slideNext {
+  0% {
+    transform: translateX(180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+  40%,100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideBack {
+  0% {
+    transform: translateX(-180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+  40%,100% {
+    opacity: 1;
+  }
 }
