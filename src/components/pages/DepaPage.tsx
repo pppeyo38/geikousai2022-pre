@@ -20,7 +20,7 @@ export const DepaPage = memo(() => {
 					芸工祭には19の幹部と部署長がいます。<br/>
 					部署に所属して一緒に芸工祭を盛り上げよう。
 				</h3>
-				<a href="/" className="p-depa__toForm">
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSctcuZao8qtZg1j_Tw5VOHbLlpMo49iuyX9ci0PkHZQkBNhuw/viewform" className="p-depa__toForm">
 					部署配属希望フォームはこちら　
 				</a>
 

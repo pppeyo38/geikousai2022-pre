@@ -10,7 +10,7 @@ export const TopVisual = () => {
 				</div>
 			</div>
 			<div className="MainVisual-info">
-				<p className="flow-text">部署登録は○月○日まで！！！！</p>
+				<p className="flow-text">部署登録は6月29日(水)まで！！！！</p>
 			</div>
 		</section>
 	);
