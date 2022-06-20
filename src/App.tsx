@@ -6,7 +6,7 @@ import { Router } from "./router/Router";
 export default function App() {
   return (
     <ChakraProvider>
-      <BrowserRouter basename="/test2022/">
+      <BrowserRouter basename="/">
         <Router />
       </BrowserRouter>
     </ChakraProvider>

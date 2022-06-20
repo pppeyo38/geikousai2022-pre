@@ -34,31 +34,31 @@ export const Header = memo(() => {
 					<Fade in={isOpen} className="nav__overlay" style={{ pointerEvents: isOpen ? 'auto': 'none' }}>
 						<ul className="nav__overlay-menuList" onClick={hiddenNav}>
 							<li>
-								<Link to={`${process.env.PUBLIC_URL}/`}>
+								<Link to={"/"}>
 									<h3>TOP</h3>
 									<p>トップ</p>
 								</Link>
 							</li>
 							<li>
-								<Link to={`${process.env.PUBLIC_URL}/departments`}>
+								<Link to={"/departments"}>
 									<h3>DEPARTMENTS</h3>
 									<p>部署紹介</p>
 								</Link>
 							</li>
 							<li>
-								<Link to={`${process.env.PUBLIC_URL}/chart`}>
+								<Link to={"/chart"}>
 									<h3>CHART</h3>
 									<p>チャート</p>
 								</Link>
 							</li>
 							<li>
-								<Link to={`${process.env.PUBLIC_URL}/movie`}>
+								<Link to={"/movie"}>
 									<h3>MOVIE</h3>
 									<p>ムービー</p>
 								</Link>
 							</li>
 							<li>
-								<Link to={`${process.env.PUBLIC_URL}/game`}>
+								<Link to={"/game"}>
 									<h3>GAME</h3>
 									<p>ゲーム</p>
 								</Link>
