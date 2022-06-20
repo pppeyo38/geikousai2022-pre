@@ -32,6 +32,7 @@ export const TopDepa = () => {
 			</div>
 			 <div className="top__viewMore">
 				<ViewMore link={`/departments`}>部署紹介ページはこちら</ViewMore>
+				<ViewMore link={`/chart`}>適部署診断をする</ViewMore>
 			 </div>
 		 </div>
 		</>
