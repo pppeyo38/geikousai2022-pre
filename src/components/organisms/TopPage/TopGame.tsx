@@ -8,10 +8,12 @@ export const TopGame = () => {
 			 	<div className="top-MiniGame__heading">
 					<Heading>ミニゲーム</Heading>
 			 	</div>
-				<div className="top-MiniGame__thumbnail"></div>
+				<div className="top-MiniGame__thumbnail">
+					<img src={`${process.env.PUBLIC_URL}/images/top/game_thumbnail.jpg`} alt="" />
+				</div>
 			 	<div className="top-MiniGame__introduction">
 					<p>
-					 どんなゲームか、くらいの軽い説明　てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと
+						スライムを引っ張って遠くまで飛ばそう！たくさん飛ばして目指せランカー！
 					</p>
 			 </div>
 			 <div className="top__viewMore">

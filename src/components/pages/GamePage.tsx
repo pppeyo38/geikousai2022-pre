@@ -8,19 +8,15 @@ export const GamePage = memo(() => {
 	}, []);
 
 	const { unityProvider } = useUnityContext({
-		loaderUrl: `${process.env.PUBLIC_URL}/Build/geikosai616.loader.js`,
-		dataUrl: `${process.env.PUBLIC_URL}/Build/geikosai616.data`,
-		frameworkUrl: `${process.env.PUBLIC_URL}/Build/geikosai616.framework.js`,
-		codeUrl: `${process.env.PUBLIC_URL}/Build/geikosai616.wasm`,
-		// webglContextAttributes: {
-    //   preserveDrawingBuffer: true,
-    // },
+		loaderUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai620.loader.js`,
+		dataUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai620.data`,
+		frameworkUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai620.framework.js`,
+		codeUrl: `${process.env.PUBLIC_URL}/GameBuild/Build/geikosai620.wasm`,
 	});
 
 	return (
 		<>
-			<Unity unityProvider={unityProvider} />
-			<p>ミニゲーム</p>
+			<Unity unityProvider={unityProvider} style={{ width: '390px', height: '844px' }}  />
 		</>
 	);
 })
