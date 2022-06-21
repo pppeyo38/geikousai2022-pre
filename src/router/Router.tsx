@@ -5,7 +5,6 @@ import { TopPage } from "../components/pages/TopPage";
 import { MoviePage } from "../components/pages/MoviePage";
 import { DepaPage } from "../components/pages/DepaPage";
 import { ChartPage } from "../components/pages/ChartPage";
-import { GamePage } from "../components/pages/GamePage";
 
 import { Layout } from "../components/templates/Layout";
 
@@ -28,10 +27,6 @@ export const Router = memo(() => {
 				path={"/chart"}
 				element={ <ChartPage /> }
 			/>
-			{/* <Route
-				path={"/game"}
-				element={ <GamePage /> }
-			/> */}
 		</Routes>
 	);
 })
