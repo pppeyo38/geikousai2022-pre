@@ -21,7 +21,7 @@
 		background-image: url("../../public/images/chart/chartCycleGreen.svg");
 		background-repeat: no-repeat;
 		transform-origin: center center;
-		animation:8s linear infinite rotation_green;
+		animation: 10s linear infinite rotation_green;
 	}
 
 	&:after {
@@ -32,7 +32,7 @@
 		background-image: url("../../public/images/chart/chartCycleWhite.svg");
 		background-repeat: no-repeat;
 		transform-origin: center center;
-		animation:10s linear infinite rotation_white;
+		animation: 12s linear infinite rotation_white;
 	}
 
 	& p {
