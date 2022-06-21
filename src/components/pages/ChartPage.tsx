@@ -12,8 +12,6 @@ import "../../styles/chart.scss";
 import { Link } from "react-router-dom";
 
 export const ChartPage = memo(() => {
-	console.log('レンダリング')
-
 	// 画面の縦横を判定
 	const { width, height } = useWindowDimensions();
 	const [ loading, setLoading ] = useState(true);

@@ -7,7 +7,7 @@
 		},
 		{
 			"id": 102,
-			"busyo": "EIZO",
+			"busyo": "MOVIE",
 			"image": "04eizo.png"
 		},
 		{
@@ -54,6 +54,16 @@
 			"id": 111,
 			"busyo": "BOOTH",
 			"image": "12booth.png"
+		},
+		{
+			"id": 112,
+			"busyo": "SPORTS",
+			"image": "09undokai.png"
+		},
+		{
+			"id": 113,
+			"busyo": "BAR",
+			"image": "13bar.png"
 		}
 	]
 }

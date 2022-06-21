@@ -15,7 +15,8 @@ export const useQuestion = () => {
 					setAnswerId(109);
 					break;
 				case 3:
-					setQuestionId(4);
+					setQuestionId(100);
+					setAnswerId(113);
 					break;
 				case 4:
 					setQuestionId(100);
@@ -62,6 +63,10 @@ export const useQuestion = () => {
 					setQuestionId(100);
 					setAnswerId(111);
 					break;
+				case 16:
+					setQuestionId(100);
+					setAnswerId(112);
+					break;
 			}
 		} else {
 			switch(questionId){
@@ -99,7 +104,7 @@ export const useQuestion = () => {
 					setQuestionId(10);
 					break;
 				case 12:
-					setQuestionId(14);
+					setQuestionId(16);
 					break;
 				case 13:
 					setQuestionId(15);
@@ -110,6 +115,9 @@ export const useQuestion = () => {
 				case 15:
 					setQuestionId(100);
 					setAnswerId(103);
+					break;
+				case 16:
+					setQuestionId(14);
 					break;
 			}
 		}
