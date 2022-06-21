@@ -135,7 +135,6 @@ export const ChartPage = memo(() => {
 									<a className="chart-button-back" onClick={onClickReset}>
 										<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/back.svg`} alt="やり直しアイコン"/>
 									</a>
-									{/* <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" className="twitter-share-button chart-button-twitter" data-show-count="false"> */}
 									<a href={`http://twitter.com/share?url=https://geikousai-ncu.com&text=私の適部署は…%0a%0a${answerText}！！！%0a%23芸工祭2022%20%23GOOOON`} target="_blank" className="twitter-share-button chart-button-twitter">
 										<img className="AnswerLogo" src={`${process.env.PUBLIC_URL}/icons/twitter.png`} alt="ツイッター画像" style={{ width: '35px', height: '35px' }} />
 									</a>
