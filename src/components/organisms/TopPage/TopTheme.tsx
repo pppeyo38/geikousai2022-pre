@@ -1,3 +1,5 @@
+import { MovieFrame } from "../../atoms/MovieFrame";
+
 export const TopTheme = () => {
 	return (
 		<>
@@ -7,10 +9,11 @@ export const TopTheme = () => {
 					<p className="top-theme__subtitle">今年のテーマ</p>
 				</div>
 				<div className="top-theme__movie" id="box01">
-						<div className="rect top-left"></div><div className="rect top-rigt"></div><div className="rect btm-left"></div><div className="rect btm-rigt"></div>
-						<div className="top-theme__movie-box">
-							動画が入るよ
+					<MovieFrame>
+						<div className="comingSoon" style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+							<p style={{ color: 'white', fontFamily: 'ShinGo' }}>Coming Soon...</p>
 						</div>
+					</MovieFrame>
 				</div>
 				<div className="top-theme__caption">
 					<div className="top-theme__caption-inner">

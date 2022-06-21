@@ -1,5 +1,6 @@
 import { memo, useEffect } from "react";
 import { HeadingMovie } from "../atoms/HeadingMovie";
+import { MovieFrame } from "../atoms/MovieFrame";
 
 import "../../styles/movie.scss";
 
@@ -22,12 +23,18 @@ export const MoviePage = memo(() => {
 
 				<div className="p-movie__concept">
 					<HeadingMovie>コンセプトムービー</HeadingMovie>
-					<div className="p-movie__concept-inner"></div>
+					<MovieFrame>
+						<div className="comingSoon" style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+							<p style={{ color: 'white', fontFamily: 'ShinGo' }}>Coming Soon...</p>
+						</div>
+					</MovieFrame>
 				</div>
 
 				<div className="p-movie__busyocho">
 					<HeadingMovie>部署長紹介</HeadingMovie>
-					<div className="p-movie__busyocho-inner"></div>
+					<MovieFrame>
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/e56HFTK1KS8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+					</MovieFrame>
 				</div>
 			</div>
 		</>
