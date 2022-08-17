@@ -9,24 +9,33 @@ import { ChartPage } from "../components/pages/ChartPage";
 import { Layout } from "../components/templates/Layout";
 
 export const Router = memo(() => {
-	return (
-		<Routes>
-			<Route
-				path={"/"}
-				element={ <Layout><TopPage /></Layout> }
-			/>
-			<Route
-				path={"/movie"}
-				element={ <Layout><MoviePage /></Layout> }
-			/>
-			<Route
-				path={"/departments"}
-				element={ <Layout><DepaPage /></Layout> }
-			/>
-			<Route
-				path={"/chart"}
-				element={ <ChartPage /> }
-			/>
-		</Routes>
-	);
-})
+  return (
+    <Routes>
+      <Route
+        path={"/"}
+        element={
+          <Layout>
+            <TopPage />
+          </Layout>
+        }
+      />
+      <Route
+        path={"/movie"}
+        element={
+          <Layout>
+            <MoviePage />
+          </Layout>
+        }
+      />
+      <Route
+        path={"/departments"}
+        element={
+          <Layout>
+            <DepaPage />
+          </Layout>
+        }
+      />
+      <Route path={"/chart"} element={<ChartPage />} />
+    </Routes>
+  );
+});

@@ -9,19 +9,18 @@ import { TopGame } from "../organisms/TopPage/TopGame";
 import "../../styles/top.scss";
 
 export const TopPage = memo(() => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-	useEffect(() => {
-		window.scrollTo(0, 0)
-	}, []);
-
-	return (
-		<>
-			<TopVisual />
-			<TopAbout />
-			<TopTheme />
-			<TopDepa />
-			<TopMovie />
-			<TopGame />
-		</>
-	);
-})
+  return (
+    <>
+      <TopVisual />
+      <TopAbout />
+      <TopTheme />
+      <TopDepa />
+      <TopMovie />
+      <TopGame />
+    </>
+  );
+});

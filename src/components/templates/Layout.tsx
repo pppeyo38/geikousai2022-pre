@@ -1,5 +1,4 @@
 import { memo, ReactNode, FC } from "react";
-
 import { Header } from "../organisms/Header";
 import { Footer } from "../organisms/Footer";
 

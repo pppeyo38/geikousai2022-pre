@@ -24,9 +24,7 @@ export const MoviePage = memo(() => {
 				<div className="p-movie__concept">
 					<HeadingMovie>コンセプトムービー</HeadingMovie>
 					<MovieFrame>
-						<div className="comingSoon" style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-							<p style={{ color: 'white', fontFamily: 'ShinGo' }}>Coming Soon...</p>
-						</div>
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Md_DxUNp4sM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 					</MovieFrame>
 				</div>
 

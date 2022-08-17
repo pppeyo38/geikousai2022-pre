@@ -13,7 +13,7 @@ export const ViewMore: FC<Props> = memo((props) => {
 
 	return (
 		<>
-		{link === 'game' ? (
+		{link === '/game' ? (
 			<a href="/game" target="_blank" rel="noopener noreferrer" className="ViewMore">
 				{children}
 			</a>

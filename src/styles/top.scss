@@ -283,10 +283,6 @@
 	height: 3px;
 	position: absolute;
 	z-index: 2;
-
-	#box01 {
-		background: #FFF;
-	}
 }
 
 .top-left {
@@ -304,12 +300,6 @@
 .btm-rigt {
 	right: 0px;
 	bottom: 0px;
-}
-#box01 .rect {
-	background: rgba(255, 255, 255, 0);
-}
-#box01 .top-theme__movie-box {
-	background:#5C5C5C;
 }
 
 // 部署紹介
