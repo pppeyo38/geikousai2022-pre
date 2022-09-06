@@ -12,13 +12,13 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
 
-      - name: Use Node.js 14
-        uses: actions/setup-node@v2-beta
-        with:
-          node-version: "14"
+      # - name: Use Node.js 14
+      #   uses: actions/setup-node@v2-beta
+      #   with:
+      #     node-version: "14"
 
-      - name: 🔨 Build Project
-        run: yarn install --frozen-lockfile && yarn build
+      # - name: 🔨 Build Project
+      #   run: yarn install --frozen-lockfile && yarn build
 
       - name: 📂 Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
