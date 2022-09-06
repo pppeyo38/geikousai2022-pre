@@ -27,4 +27,4 @@ jobs:
           username: ${{ secrets.FTP_ACCOUNT }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: build/
-          server-dir: public_html/geikousai/2022/pre/
+          git-ftp-args: --remote-root ${{ secrets.FTP_REMOTE_ROOT }}
