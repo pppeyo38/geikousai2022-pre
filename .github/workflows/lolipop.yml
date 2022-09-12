@@ -20,4 +20,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./test/
-          server-dir: /geikousai/2022/pre
+          server-dir: /geikousai/2022/pre/
