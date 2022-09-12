@@ -13,11 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Deploy files
+      - name: 📂 Deploy files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./test/
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          server-dir: /geikousai/2022/pre
