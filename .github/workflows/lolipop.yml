@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - master
+
 name: 🚀 Deploy to lolipop on push
 
 jobs:
@@ -10,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # - name: Use Node.js 14
       #   uses: actions/setup-node@v2-beta
@@ -21,11 +22,10 @@ jobs:
       #   run: yarn install --frozen-lockfile && yarn build
 
       - name: 📂 Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_ACCOUNT }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          git-ftp-args: --remote-root ${{ secrets.FTP_REMOTE_ROOT }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./test/
-          server-dir: /public_html/geikousai/2022/pre/
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
