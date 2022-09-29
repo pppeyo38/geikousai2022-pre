@@ -24,7 +24,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: 🛠 Build
-        run: npm ci && npm run build
+        run: yarn install --frozen-lockfile && yarn build
 
       - name: 🎉 Deploy to server
         uses: appleboy/scp-action@master

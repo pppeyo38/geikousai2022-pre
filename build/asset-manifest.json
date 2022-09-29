@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.039096fc.css",
-    "main.js": "./static/js/main.9db93fdb.js",
+    "main.js": "./static/js/main.d00fcfae.js",
     "static/media/A-OTF-ShinGoPr6N-Ultra.otf": "./static/media/A-OTF-ShinGoPr6N-Ultra.50351f441eaba5549a77.otf",
     "static/media/A-OTF-ShinGoPr6N-Heavy.otf": "./static/media/A-OTF-ShinGoPr6N-Heavy.5a66c6a1ff1c8ea5a152.otf",
     "static/media/A-OTF-ShinGoPr6N-Bold.otf": "./static/media/A-OTF-ShinGoPr6N-Bold.891d4369cf5564559bd0.otf",
@@ -25,10 +25,10 @@
     "static/media/viewMore_white.svg": "./static/media/viewMore_white.3241b0f4eb19a4d0c69a.svg",
     "static/media/emojione_double-exclamation-mark.svg": "./static/media/emojione_double-exclamation-mark.6d8ed444287d4741096f.svg",
     "main.039096fc.css.map": "./static/css/main.039096fc.css.map",
-    "main.9db93fdb.js.map": "./static/js/main.9db93fdb.js.map"
+    "main.d00fcfae.js.map": "./static/js/main.d00fcfae.js.map"
   },
   "entrypoints": [
     "static/css/main.039096fc.css",
-    "static/js/main.9db93fdb.js"
+    "static/js/main.d00fcfae.js"
   ]
 }
