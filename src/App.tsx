@@ -7,7 +7,7 @@ import { Router } from "./router/Router";
 export default function App() {
   return (
     <ChakraProvider>
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="/2022/pre/">
         {isMobile ? (
           <Router />
         ) : (
