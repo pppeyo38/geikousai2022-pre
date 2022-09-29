@@ -25,6 +25,8 @@ jobs:
 
       - name: 🛠 Build
         run: yarn install --frozen-lockfile && yarn build
+        env:
+          CI: false
 
       - name: 🎉 Deploy to server
         uses: appleboy/scp-action@master
