@@ -1,11 +1,11 @@
 import { memo, useState } from "react";
 import { Tabs, TabPanel, TabPanels } from "@chakra-ui/react";
+import Link from "next/link";
 
 import { DepaTabPanels } from "../../molecules/DepaTabPanels";
 import contents from "../../../data/departments.json";
 import kanbu from "../../../data/depaImages/kanbu.json";
 import busyocho from "../../../data/depaImages/busyocho.json";
-import { Link } from "react-router-dom";
 
 export const DepaPanel = memo(() => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -96,7 +96,7 @@ export const DepaPanel = memo(() => {
                 alt="次へ"
               />
             </button>
-            <Link to="/chart" className="p-depa__panel-chartLink">
+            <Link href="/chart" className="p-depa__panel-chartLink">
               悩んでいるキミに適部署チャート！
             </Link>
           </div>

@@ -1,5 +1,6 @@
 import { memo, useEffect, useState } from "react";
 import { Spinner, Center, Flex } from "@chakra-ui/react";
+import Link from "next/link";
 
 // チャートページに出力する質問テキストと答えを読み込み
 import quetions from "../../data/question.json";
@@ -9,7 +10,6 @@ import { useQuestion } from "../../hooks/useQuestion";
 import { useWindowDimensions } from "../../hooks/useWindowDimensions";
 
 import "../../styles/chart.scss";
-import { Link } from "react-router-dom";
 
 export const ChartPage = memo(() => {
   // 画面の縦横を判定
@@ -158,7 +158,7 @@ export const ChartPage = memo(() => {
                   src="https://platform.twitter.com/widgets.js"
                   charSet="utf-8"
                 ></script>
-                <Link className="chart-button-view" to="/departments">
+                <Link className="chart-button-view" href="/departments">
                   <p>
                     VIEW
                     <br />

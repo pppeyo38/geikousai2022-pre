@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import { TopLayout } from "@/components/templates/TopLayout";
+
 const Home: NextPage = () => {
   return (
     <>
@@ -8,7 +10,7 @@ const Home: NextPage = () => {
         <title>芸工祭2022</title>
       </Head>
 
-      <p>テストテストテスト</p>
+      <TopLayout />
     </>
   );
 };
