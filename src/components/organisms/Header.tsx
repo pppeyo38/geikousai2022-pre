@@ -8,10 +8,6 @@ import { HeaderTitle } from "@/components/atoms/icons/HeaderTitle";
 import { HamburgerBtn } from "@/components/atoms/HamburgerBtn";
 import { NavFade } from "@/components/organisms/NavFade";
 
-import { SnsIcons } from "../atoms/SnsIcons";
-
-// import "../../styles/base/header.scss";
-
 export const Header = memo(() => {
   const { isOpen, onToggle } = useDisclosure();
 

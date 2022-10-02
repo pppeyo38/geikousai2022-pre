@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { use100vh } from "react-div-100vh";
 
 import { NavTitle } from "@/components/molecules/NavTitle";
+import { SnsIcons } from "@/components/molecules/SnsIcons";
 
 type Props = {
   isOpen: boolean;
@@ -43,9 +44,7 @@ export const NavFade = ({ isOpen }: Props) => {
           <NavTitle subTitle="ゲーム">GAME</NavTitle>
         </_NavListItem>
       </_NavList>
-      {/* <div className="nav__overlay-sns-wrap">
       <SnsIcons />
-    </div> */}
     </_Fade>
   );
 };
