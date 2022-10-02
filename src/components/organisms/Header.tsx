@@ -1,15 +1,14 @@
-import { memo } from "react";
-import Link from "next/link";
-import styled from "@emotion/styled";
-import { useDisclosure } from "@chakra-ui/react";
+import Link from 'next/link'
+import styled from '@emotion/styled'
+import { useDisclosure } from '@chakra-ui/react'
 
-import { Logo } from "@/components/atoms/icons/Logo";
-import { HeaderTitle } from "@/components/atoms/icons/HeaderTitle";
-import { HamburgerBtn } from "@/components/atoms/HamburgerBtn";
-import { NavFade } from "@/components/organisms/NavFade";
+import { Logo } from '@/components/atoms/icons/Logo'
+import { HeaderTitle } from '@/components/atoms/icons/HeaderTitle'
+import { HamburgerBtn } from '@/components/atoms/HamburgerBtn'
+import { NavFade } from '@/components/organisms/NavFade'
 
-export const Header = memo(() => {
-  const { isOpen, onToggle } = useDisclosure();
+export const Header = () => {
+  const { isOpen, onToggle } = useDisclosure()
 
   return (
     <_Header>
@@ -24,8 +23,8 @@ export const Header = memo(() => {
       </_HeaderInner>
       <NavFade isOpen={isOpen} />
     </_Header>
-  );
-});
+  )
+}
 
 const _Header = styled.header`
   position: fixed;
@@ -33,16 +32,16 @@ const _Header = styled.header`
   width: 100vw;
   padding: 10px 15px;
   background-color: ${({ theme }) => theme.colors.white};
-`;
+`
 
 const _HeaderInner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
+`
 
 const _LogoWrap = styled.a`
   display: flex;
   align-items: center;
   gap: 10px;
-`;
+`

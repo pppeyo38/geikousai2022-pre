@@ -1,13 +1,19 @@
-import { Twitter } from "@/components/atoms/icons/Twitter";
-import { Instagram } from "@/components/atoms/icons/Instagram";
-import { Line } from "@/components/atoms/icons/LINE";
+import styled from '@emotion/styled'
+
+import { Twitter } from '@/components/atoms/icons/Twitter'
+import { Instagram } from '@/components/atoms/icons/Instagram'
+import { Line } from '@/components/atoms/icons/Line'
 
 export const SnsIcons = () => {
   return (
-    <div className="footer__sns-wrap">
+    <_IconWrap>
       <Twitter />
       <Instagram />
       <Line />
-    </div>
-  );
-};
+    </_IconWrap>
+  )
+}
+
+const _IconWrap = styled.div`
+  display: flex;
+`

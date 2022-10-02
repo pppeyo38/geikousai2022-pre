@@ -42,7 +42,7 @@ const fuwafuwa = keyframes`
 
 const textSlide = keyframes`
 	from {
-    transform: translate(0%);
+    transform: translate(100%);
   }
 	100%,to {
     transform: translate(-100%);
@@ -81,12 +81,15 @@ const _MainVisualCount = styled.div`
 const _MainVisualInfo = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
   height: 6%;
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.red};
+  overflow-x: hidden;
 `
 
 const _FlowText = styled.p`
+  width: 100%;
   font-family: ${({ theme }) => theme.fonts.pixel};
   white-space: nowrap;
   animation: 7s ${textSlide} linear infinite;

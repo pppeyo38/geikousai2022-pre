@@ -1,13 +1,21 @@
-import TwitterIcon from "public/icons/sns/Twitter.svg";
+import styled from '@emotion/styled'
+import TwitterIcon from 'public/icons/sns/Twitter.svg'
 
 export const Twitter = () => {
   return (
-    <a
+    <_A
       href="https://twitter.com/geik0"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <TwitterIcon width={80} height={80} />
-    </a>
-  );
-};
+      <TwitterIcon />
+    </_A>
+  )
+}
+
+const _A = styled.a`
+  display: grid;
+  place-content: center;
+  width: 80px;
+  height: 80px;
+`
