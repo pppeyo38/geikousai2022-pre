@@ -1,11 +1,11 @@
-import type { DocumentContext, DocumentInitialProps } from "next/document";
-import Document, { Head, Html, Main, NextScript } from "next/document";
+import type { DocumentContext, DocumentInitialProps } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 export default class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
   }
 
   render() {
@@ -13,8 +13,7 @@ export default class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#000000" />
+          <link rel="icon" href="/favicon.ico" />
           <meta property="og:title" content="芸工祭2022 告知サイト" />
           <meta property="og:url" content="https://geikousai-ncu.com" />
           <meta property="og:type" content="website" />
@@ -27,7 +26,6 @@ export default class MyDocument extends Document {
             property="og:image"
             content="https://geikousai-ncu.com/images/geikousai-thumbnail.png"
           />
-          <title>芸工祭2022 告知サイト</title>
           <meta
             name="keywords"
             content="芸工祭,芸工祭2022,名古屋市,芸術工学,名古屋市立大学,GOOOON,ぐーん,グーン,ゴーオン"
@@ -54,6 +52,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }

@@ -1,5 +1,12 @@
 {
+  "prettier.semi": false,
+  "prettier.singleAttributePerLine": false,
+  "prettier.singleQuote": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
   "yaml.schemas": {
-    "https://json.schemastore.org/github-workflow.json": "file:///Users/isonotamaki/Desktop/geikousai2022-pre/.github/workflows/deploy.yml"
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/isonotamaki/Desktop/web/portfolio/.github/workflows/deploy.yml"
   }
 }

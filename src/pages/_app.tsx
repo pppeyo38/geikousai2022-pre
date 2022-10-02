@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           `}
         />
         <main>
-          <Header />
+          {/* <Header /> */}
           <Component {...pageProps} />
         </main>
       </ThemeProvider>
