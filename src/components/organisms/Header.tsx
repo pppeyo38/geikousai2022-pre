@@ -36,7 +36,7 @@ const _Header = styled.header`
   z-index: 1000;
   width: 100vw;
   padding: 10px 15px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.white};
 `;
 
 const _HeaderInner = styled.div`

@@ -57,19 +57,20 @@ const _Fade = styled(Fade)<{ height: string }>`
   left: 0;
   width: 100vw;
   height: ${(props) => props.height};
-  background-color: #0d2e4f;
+  background-color: ${({ theme }) => theme.colors.navy};
 `;
 
 const _NavList = styled.ul`
-  margin: 40px 0;
+  margin: 130px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style: none;
-  font-family: "ShinGo";
+
+  * + * {
+    margin-top: 40px;
+  }
 `;
 
 const _NavListItem = styled.li`
-  color: #fff;
   text-align: center;
 `;

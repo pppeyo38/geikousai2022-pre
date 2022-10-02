@@ -22,8 +22,8 @@ const _HamburgerIcon = styled.div`
   align-items: center;
   width: 50px;
   height: 50px;
-  color: #fff;
-  background-color: #0d2e4f;
-  border: solid 2px #fff;
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.navy};
+  border: solid 2px ${({ theme }) => theme.colors.white};
   border-radius: 50%;
 `;
