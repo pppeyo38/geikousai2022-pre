@@ -1,9 +1,14 @@
+import { Tabs } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
+import { usePanelSlide } from '@/hooks/usePanelSlide'
 import { Text } from '@/components/atoms/text/Text'
 import { PageTitle } from '@/components/molecules/PageTitle'
+import { TabSlide } from '@/components/organisms/Department/TabSlide'
 
 export const DepartmentLayout = () => {
+  const { tabIndex, onClickPrev, onClickNext } = usePanelSlide()
+
   return (
     <_Section>
       <PageTitle subTitle="部署紹介">DEPARTMENTS</PageTitle>
@@ -16,6 +21,9 @@ export const DepartmentLayout = () => {
           兼部署についてはインスタをチェック！
         </Text>
       </_TextWrap>
+      <Tabs defaultIndex={tabIndex} index={tabIndex}>
+        <TabSlide onClickPrev={onClickPrev} onClickNext={onClickNext} />
+      </Tabs>
     </_Section>
   )
 }
