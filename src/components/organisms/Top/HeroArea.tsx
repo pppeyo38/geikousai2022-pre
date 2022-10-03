@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { keyframes } from '@emotion/react'
 import { use100vh } from 'react-div-100vh'
 
-import { CountDown } from '@/components/molecules/CountDown'
+import { CountDown } from '@/components/molecules/Top/CountDown'
 import topVisual from 'public/images/top/topVisual.png'
 
 export const HeroArea = () => {

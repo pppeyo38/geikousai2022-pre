@@ -1,19 +1,37 @@
+import styled from '@emotion/styled'
+
 import { MovieFrame } from '@/components/molecules/MovieFrame'
 import { PageTitle } from '@/components/molecules/PageTitle'
-import styled from '@emotion/styled'
+import { Caption } from '@/components/molecules/Top/Caption'
 
 export const Theme = () => {
   return (
     <_Section>
       <PageTitle subTitle="今年のテーマ">THEME</PageTitle>
-      <MovieFrame url="https://www.youtube.com/embed/e56HFTK1KS8" />
+      <_MovieThumWrap>
+        <MovieFrame url="https://www.youtube.com/embed/e56HFTK1KS8" />
+      </_MovieThumWrap>
+      <_CaptionWrap>
+        <Caption />
+      </_CaptionWrap>
     </_Section>
   )
 }
 
 const _Section = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 60px 20px 80px;
+`
+
+const _MovieThumWrap = styled.div`
+  margin-top: 40px;
+  z-index: 100;
+`
+
+const _CaptionWrap = styled.div`
+  position: absolute;
+  top: 295px;
 `
