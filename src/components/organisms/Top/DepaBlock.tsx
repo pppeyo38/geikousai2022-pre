@@ -58,6 +58,7 @@ const _Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 84px;
   padding: 60px 20px 0;
 `
 
