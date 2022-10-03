@@ -1,14 +1,14 @@
 import styled from '@emotion/styled'
 
-import { Twitter } from '@/components/atoms/icons/Twitter'
 import { Instagram } from '@/components/atoms/icons/Instagram'
+import { Twitter } from '@/components/atoms/icons/Twitter'
 import { Line } from '@/components/atoms/icons/Line'
 
 export const SnsIcons = () => {
   return (
     <_IconWrap>
-      <Twitter />
       <Instagram />
+      <Twitter />
       <Line />
     </_IconWrap>
   )

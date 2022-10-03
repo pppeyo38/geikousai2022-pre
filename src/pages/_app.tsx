@@ -5,6 +5,7 @@ import emotionReset from 'emotion-reset'
 
 import { theme } from '@/themes/theme'
 import { Header } from '@/components/organisms/Header'
+import { Footer } from '@/components/organisms/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -40,6 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <main>
           <Header />
           <Component {...pageProps} />
+          <Footer />
         </main>
       </ThemeProvider>
     </ChakraProvider>
