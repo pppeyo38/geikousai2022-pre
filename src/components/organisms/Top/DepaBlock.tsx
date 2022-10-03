@@ -1,8 +1,10 @@
-import { Heading } from '@/components/atoms/icons/Heading'
-import { DepaCard } from '@/components/molecules/Department/DepaCrad'
-import styled from '@emotion/styled'
 import Image from 'next/image'
+import styled from '@emotion/styled'
 import { Grid } from '@chakra-ui/react'
+
+import { Heading } from '@/components/atoms/icons/Heading'
+import { ViewMore } from '@/components/atoms/buttons/ViewMore'
+import { DepaCard } from '@/components/molecules/Department/DepaCrad'
 
 export const DepaBlock = () => {
   return (
@@ -44,11 +46,18 @@ export const DepaBlock = () => {
           </DepaCard>
         </_ContentWrap>
       </Grid>
+      <Grid gap="15px" mt="40px">
+        <ViewMore route="/departments">部署紹介ページはこちら</ViewMore>
+        <ViewMore route="/chart">適部署診断をする</ViewMore>
+      </Grid>
     </_Section>
   )
 }
 
 const _Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 60px 20px 0;
 `
 
