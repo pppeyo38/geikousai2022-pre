@@ -1,11 +1,11 @@
 export const theme = {
   colors: {
-    green: "#4E8465",
-    lightGreen: "#9FC771",
-    red: "#DC4D40",
-    navy: "#0D2E4F",
-    white: "#FFF",
-    black: "#333333",
+    green: '#4E8465',
+    lightGreen: '#9FC771',
+    red: '#DC4D40',
+    navy: '#0D2E4F',
+    white: '#FFF',
+    black: '#333333',
   },
   fonts: {
     txtBasic: `'txt-basic', 'sans-serif'`,
@@ -13,6 +13,7 @@ export const theme = {
   },
   fontWt: {
     Regular: 400,
+    Medium: 500,
     Bold: 700,
   },
-};
+}

@@ -21,6 +21,12 @@ function MyApp({ Component, pageProps }: AppProps) {
             }
             @font-face {
               font-family: 'txt-basic';
+              src: url('fonts/A-OTF-ShinGoPr6N-Medium.otf') format('opentype');
+              font-style: normal;
+              font-weight: 500;
+            }
+            @font-face {
+              font-family: 'txt-basic';
               src: url('fonts/A-OTF-ShinGoPr6N-Bold.otf') format('opentype');
               font-style: normal;
               font-weight: 700;

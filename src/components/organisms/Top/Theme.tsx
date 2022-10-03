@@ -23,6 +23,7 @@ const _Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 1055px;
   padding: 60px 20px 80px;
 `
 
