@@ -1,10 +1,10 @@
+import styled from '@emotion/styled'
 import { AboutTxt } from '@/components/atoms/text/AboutTxt'
 import { PageTitle } from '@/components/molecules/PageTitle'
-import styled from '@emotion/styled'
 
 export const About = () => {
   return (
-    <_Page>
+    <_Section>
       <PageTitle subTitle="芸工祭とは" isShadow>
         ABOUT
       </PageTitle>
@@ -31,11 +31,11 @@ export const About = () => {
       <AboutTxt fontSize={20}>
         <_doubleExclamation>みんなで盛り上げよう</_doubleExclamation>
       </AboutTxt>
-    </_Page>
+    </_Section>
   )
 }
 
-const _Page = styled.section`
+const _Section = styled.section`
   padding: 60px 30px;
   background-image: url('/images/top/aboutBg.jpg');
 

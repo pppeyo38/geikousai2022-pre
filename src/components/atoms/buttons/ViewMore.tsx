@@ -1,19 +1,19 @@
-import { FC, memo, ReactNode } from "react";
-import Link from "next/link";
+import { FC, memo, ReactNode } from 'react'
+import Link from 'next/link'
 
-import "../../styles/modules/viewmore.scss";
+import '../../styles/modules/viewmore.scss'
 
 type Props = {
-  children: ReactNode;
-  link: string;
-};
+  children: ReactNode
+  link: string
+}
 
 export const ViewMore: FC<Props> = memo((props) => {
-  const { children, link } = props;
+  const { children, link } = props
 
   return (
     <>
-      {link === "/game" ? (
+      {link === '/game' ? (
         <a
           href="/game"
           target="_blank"
@@ -28,5 +28,5 @@ export const ViewMore: FC<Props> = memo((props) => {
         </Link>
       )}
     </>
-  );
-});
+  )
+})

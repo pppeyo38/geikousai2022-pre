@@ -1,18 +1,18 @@
-import styled from "@emotion/styled";
-import Hamburger from "hamburger-react";
+import styled from '@emotion/styled'
+import Hamburger from 'hamburger-react'
 
 type Props = {
-  onToggle: () => void;
-  isOpen: boolean;
-};
+  onToggle: () => void
+  isOpen: boolean
+}
 
 export const HamburgerBtn = ({ onToggle, isOpen }: Props) => {
   return (
     <_HamburgerIcon onClick={onToggle}>
       <Hamburger size={22} toggled={isOpen} />
     </_HamburgerIcon>
-  );
-};
+  )
+}
 
 const _HamburgerIcon = styled.div`
   position: relative;
@@ -26,4 +26,4 @@ const _HamburgerIcon = styled.div`
   background-color: ${({ theme }) => theme.colors.navy};
   border: solid 2px ${({ theme }) => theme.colors.white};
   border-radius: 50%;
-`;
+`
