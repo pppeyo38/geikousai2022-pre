@@ -38,6 +38,7 @@ export const About = () => {
 const _Section = styled.section`
   padding: 60px 30px;
   background-image: url('/images/top/aboutBg.jpg');
+  background-size: cover;
 
   * + * {
     margin-top: 40px;

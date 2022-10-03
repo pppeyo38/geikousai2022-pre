@@ -3,9 +3,7 @@ import { About } from '@/components/organisms/Top/About'
 import { Theme } from '@/components/organisms/Top/Theme'
 import { DepaBlock } from '@/components/organisms/Top/DepaBlock'
 import { MovieBlock } from '@/components/organisms/Top/MovieBlock'
-// import { TopDepa } from "@/components/organisms/TopPage/TopDepa";
-// import { TopMovie } from "@/components/organisms/TopPage/TopMovie";
-// import { TopGame } from "@/components/organisms/TopPage/TopGame";
+import { GameBlock } from '../organisms/Top/GameBlock'
 
 export const TopLayout = () => {
   return (
@@ -15,9 +13,7 @@ export const TopLayout = () => {
       <Theme />
       <DepaBlock />
       <MovieBlock />
-      {/* <TopDepa />
-      <TopMovie />
-      <TopGame />  */}
+      <GameBlock />
     </>
   )
 }

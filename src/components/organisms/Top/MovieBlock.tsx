@@ -19,5 +19,5 @@ const _Section = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 80px;
 `

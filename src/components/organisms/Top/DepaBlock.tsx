@@ -58,7 +58,7 @@ const _Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 84px;
+  margin-bottom: 80px;
   padding: 60px 20px 0;
 `
 
@@ -69,6 +69,9 @@ const _HeadingWrap = styled.div`
 `
 
 const _ContentWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 37px 0 30px;
   background-image: url('/images/top/Bg-dot.png');
   background-repeat: no-repeat;
