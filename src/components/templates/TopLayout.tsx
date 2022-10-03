@@ -1,5 +1,5 @@
-import { TopVisual } from '@/components/organisms/TopPage/TopVisual'
-// import { TopAbout } from "@/components/organisms/TopPage/TopAbout";
+import { HeroArea } from '@/components/organisms/Top/HeroArea'
+import { About } from '@/components/organisms/Top/About'
 // import { TopTheme } from "@/components/organisms/TopPage/TopTheme";
 // import { TopDepa } from "@/components/organisms/TopPage/TopDepa";
 // import { TopMovie } from "@/components/organisms/TopPage/TopMovie";
@@ -8,9 +8,9 @@ import { TopVisual } from '@/components/organisms/TopPage/TopVisual'
 export const TopLayout = () => {
   return (
     <>
-      <TopVisual />
-      {/* <TopAbout />
-      <TopTheme />
+      <HeroArea />
+      <About />
+      {/* <TopTheme />
       <TopDepa />
       <TopMovie />
       <TopGame /> */}

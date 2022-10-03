@@ -6,7 +6,7 @@ import { use100vh } from 'react-div-100vh'
 import { CountDown } from '@/components/molecules/CountDown'
 import topVisual from 'public/images/top/topVisual.png'
 
-export const TopVisual = () => {
+export const HeroArea = () => {
   const height = use100vh()
 
   return (

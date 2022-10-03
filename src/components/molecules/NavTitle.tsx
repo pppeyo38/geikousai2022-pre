@@ -1,10 +1,10 @@
-import styled from "@emotion/styled";
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
+import styled from '@emotion/styled'
 
 type Props = {
-  children: ReactNode;
-  subTitle: string;
-};
+  children: ReactNode
+  subTitle: string
+}
 
 export const NavTitle = ({ children, subTitle }: Props) => {
   return (
@@ -12,12 +12,12 @@ export const NavTitle = ({ children, subTitle }: Props) => {
       <_Title>{children}</_Title>
       <_SubTitle>{subTitle}</_SubTitle>
     </_TitleWrap>
-  );
-};
+  )
+}
 
 const _TitleWrap = styled.a`
   color: ${({ theme }) => theme.colors.white};
-`;
+`
 
 const _Title = styled.h3`
   margin-bottom: 5px;
@@ -26,7 +26,7 @@ const _Title = styled.h3`
   font-size: 25px;
   line-height: 100%;
   letter-spacing: 0.1rem;
-`;
+`
 
 const _SubTitle = styled.span`
   font-family: ${({ theme }) => theme.fonts.txtBasic};
@@ -34,4 +34,4 @@ const _SubTitle = styled.span`
   font-size: 10px;
   line-height: 150%;
   letter-spacing: 0.1rem;
-`;
+`
