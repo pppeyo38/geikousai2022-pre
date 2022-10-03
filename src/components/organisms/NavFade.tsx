@@ -8,9 +8,10 @@ import { SnsIcons } from '@/components/molecules/SnsIcons'
 
 type Props = {
   isOpen: boolean
+  onToggle: () => void
 }
 
-export const NavFade = ({ isOpen }: Props) => {
+export const NavFade = ({ isOpen, onToggle }: Props) => {
   const height = use100vh()
 
   return (
@@ -20,27 +21,35 @@ export const NavFade = ({ isOpen }: Props) => {
       style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
     >
       <_NavList>
-        <_NavListItem>
+        <_NavListItem onClick={onToggle}>
           <Link href={'/'}>
-            <NavTitle subTitle="トップ">TOP</NavTitle>
+            <a>
+              <NavTitle subTitle="トップ">TOP</NavTitle>
+            </a>
           </Link>
         </_NavListItem>
-        <_NavListItem>
+        <_NavListItem onClick={onToggle}>
           <Link href={'/departments'}>
-            <NavTitle subTitle="部署紹介">DEPARTMENTS</NavTitle>
+            <a>
+              <NavTitle subTitle="部署紹介">DEPARTMENTS</NavTitle>
+            </a>
           </Link>
         </_NavListItem>
-        <_NavListItem>
+        <_NavListItem onClick={onToggle}>
           <Link href={'/chart'}>
-            <NavTitle subTitle="チャート">CHART</NavTitle>
+            <a>
+              <NavTitle subTitle="チャート">CHART</NavTitle>
+            </a>
           </Link>
         </_NavListItem>
-        <_NavListItem>
+        <_NavListItem onClick={onToggle}>
           <Link href={'/movie'}>
-            <NavTitle subTitle="ムービー">MOVIE</NavTitle>
+            <a>
+              <NavTitle subTitle="ムービー">MOVIE</NavTitle>
+            </a>
           </Link>
         </_NavListItem>
-        <_NavListItem>
+        <_NavListItem onClick={onToggle}>
           <NavTitle subTitle="ゲーム">GAME</NavTitle>
         </_NavListItem>
       </_NavList>

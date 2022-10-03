@@ -1,5 +1,7 @@
-import type { NextPage } from "next";
-import Head from "next/head";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+
+import { MovieLayout } from '@/components/templates/MovieLayout'
 
 const MoviePage: NextPage = () => {
   return (
@@ -8,9 +10,9 @@ const MoviePage: NextPage = () => {
         <title>ムービー | 芸工祭2022</title>
       </Head>
 
-      <p>テストテストテスト</p>
+      <MovieLayout />
     </>
-  );
-};
+  )
+}
 
-export default MoviePage;
+export default MoviePage

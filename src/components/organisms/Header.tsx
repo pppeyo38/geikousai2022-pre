@@ -21,7 +21,7 @@ export const Header = () => {
         </Link>
         <HamburgerBtn onToggle={onToggle} isOpen={isOpen} />
       </_HeaderInner>
-      <NavFade isOpen={isOpen} />
+      <NavFade isOpen={isOpen} onToggle={onToggle} />
     </_Header>
   )
 }
