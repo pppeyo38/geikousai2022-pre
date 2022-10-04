@@ -3,8 +3,8 @@ import { Grid } from '@chakra-ui/react'
 
 import { Text } from '@/components/atoms/text/Text'
 import { Heading } from '@/components/atoms/icons/Heading'
-import { PageTitle } from '@/components/molecules/PageTitle'
-import { MovieFrame } from '../molecules/MovieFrame'
+import { PageTitle } from '@/components/molecules/Shared/PageTitle'
+import { MovieFrame } from '../molecules/Shared/MovieFrame'
 
 export const MovieLayout = () => {
   return (

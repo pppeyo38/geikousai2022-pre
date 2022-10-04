@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styled from '@emotion/styled'
 
 import { Text } from '@/components/atoms/text/Text'
-import { SnsIcons } from '@/components/molecules/SnsIcons'
+import { SnsIcons } from '@/components/molecules/Shared/SnsIcons'
 
 import GOOOONLogo from 'public/icons/header/geikosai-logo.png'
 

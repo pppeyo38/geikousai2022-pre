@@ -4,8 +4,8 @@ import { ThemeProvider, Global, css } from '@emotion/react'
 import emotionReset from 'emotion-reset'
 
 import { theme } from '@/themes/theme'
-import { Header } from '@/components/organisms/Header'
-import { Footer } from '@/components/organisms/Footer'
+import { Header } from '@/components/organisms/Shared/Header'
+import { Footer } from '@/components/organisms/Shared/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

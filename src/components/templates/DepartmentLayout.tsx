@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 import { usePanelSlide } from '@/hooks/usePanelSlide'
 import { Text } from '@/components/atoms/text/Text'
-import { PageTitle } from '@/components/molecules/PageTitle'
+import { PageTitle } from '@/components/molecules/Shared/PageTitle'
 import { TabSlide } from '@/components/organisms/Department/TabSlide'
 import { TabImageList } from '@/components/organisms/Department/TabImageList'
 
@@ -37,7 +37,6 @@ const _Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 180px;
   padding-top: 88px;
 `
 

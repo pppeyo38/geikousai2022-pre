@@ -5,7 +5,7 @@ import { useDisclosure } from '@chakra-ui/react'
 import { Logo } from '@/components/atoms/icons/Logo'
 import { HeaderTitle } from '@/components/atoms/icons/HeaderTitle'
 import { HamburgerBtn } from '@/components/atoms/buttons/HamburgerBtn'
-import { NavFade } from '@/components/organisms/NavFade'
+import { NavFade } from '@/components/organisms/Shared/NavFade'
 
 export const Header = () => {
   const { isOpen, onToggle } = useDisclosure()

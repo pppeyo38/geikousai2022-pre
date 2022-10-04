@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 import { Heading } from '@/components/atoms/icons/Heading'
-import { MovieFrame } from '@/components/molecules/MovieFrame'
+import { MovieFrame } from '@/components/molecules/Shared/MovieFrame'
 import { ViewMore } from '@/components/atoms/buttons/ViewMore'
 
 export const MovieBlock = () => {

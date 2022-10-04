@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
-import { MovieFrame } from '@/components/molecules/MovieFrame'
-import { PageTitle } from '@/components/molecules/PageTitle'
+import { MovieFrame } from '@/components/molecules/Shared/MovieFrame'
+import { PageTitle } from '@/components/molecules/Shared/PageTitle'
 import { Caption } from '@/components/molecules/Top/Caption'
 
 export const Theme = () => {

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { TabList } from '@chakra-ui/react'
 
-import { PageTitle } from '@/components/molecules/PageTitle'
+import { PageTitle } from '@/components/molecules/Shared/PageTitle'
 import departmentTab from '@/data/department/departmentTab.json'
 import Image from 'next/image'
 

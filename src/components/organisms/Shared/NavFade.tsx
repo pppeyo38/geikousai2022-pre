@@ -3,8 +3,8 @@ import { Center, Fade } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import { use100vh } from 'react-div-100vh'
 
-import { NavTitle } from '@/components/molecules/NavTitle'
-import { SnsIcons } from '@/components/molecules/SnsIcons'
+import { NavTitle } from '@/components/molecules/Shared/NavTitle'
+import { SnsIcons } from '@/components/molecules/Shared/SnsIcons'
 
 type Props = {
   isOpen: boolean

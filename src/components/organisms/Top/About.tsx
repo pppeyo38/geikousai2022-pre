@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { AboutTxt } from '@/components/atoms/text/AboutTxt'
-import { PageTitle } from '@/components/molecules/PageTitle'
+import { PageTitle } from '@/components/molecules/Shared/PageTitle'
 
 export const About = () => {
   return (
