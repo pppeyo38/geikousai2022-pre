@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
 import { ChakraProvider } from '@chakra-ui/react'
 import { ThemeProvider, Global, css } from '@emotion/react'
 import emotionReset from 'emotion-reset'
@@ -8,6 +9,8 @@ import { Header } from '@/components/organisms/Shared/Header'
 import { Footer } from '@/components/organisms/Shared/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const route = useRouter()
+
   return (
     <ChakraProvider>
       <ThemeProvider theme={theme}>
@@ -39,9 +42,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           `}
         />
         <main>
-          <Header />
+          {route.pathname !== '/chart' && <Header />}
           <Component {...pageProps} />
-          <Footer />
+          {route.pathname !== '/chart' && <Footer />}
         </main>
       </ThemeProvider>
     </ChakraProvider>

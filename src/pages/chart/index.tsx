@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
+import { ChartLayout } from '@/components/templates/ChartLayout'
+
 const ChartPage: NextPage = () => {
   return (
     <>
@@ -8,7 +10,7 @@ const ChartPage: NextPage = () => {
         <title>適部署チャート｜芸工祭2022</title>
       </Head>
 
-      <p>テストテストテスト</p>
+      <ChartLayout />
     </>
   )
 }
