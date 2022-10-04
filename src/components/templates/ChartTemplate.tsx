@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode
 }
 
-export const ChartLayout = ({ children }: Props) => {
+export const ChartTemplate = ({ children }: Props) => {
   const height = use100vh()
 
   return <_Page height={height ? `${height}px` : '100vh'}>{children}</_Page>

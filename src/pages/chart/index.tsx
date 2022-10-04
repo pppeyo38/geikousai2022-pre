@@ -2,8 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 
-import { ChartLayout } from '@/components/templates/ChartLayout'
+import { ChartTemplate } from '@/components/templates/ChartTemplate'
 import { Loading } from '@/components/organisms/Chart/Loading'
+import { ChartTestLayout } from '@/components/templates/ChartTestLayout'
 
 const ChartPage: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -20,7 +21,9 @@ const ChartPage: NextPage = () => {
         <title>適部署チャート｜芸工祭2022</title>
       </Head>
 
-      <ChartLayout>{isLoading ? <Loading /> : <p>チャート</p>}</ChartLayout>
+      <ChartTemplate>
+        {isLoading ? <Loading /> : <ChartTestLayout />}
+      </ChartTemplate>
     </>
   )
 }

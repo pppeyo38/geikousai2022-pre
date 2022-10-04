@@ -3,12 +3,20 @@ import { css } from '@emotion/react'
 import { use100vh } from 'react-div-100vh'
 
 import { _DoubleCircle } from '@/styles/CircleStyle'
+import { Dispatch, SetStateAction } from 'react'
 
-export const StartDisplay = () => {
+type Props = {
+  setIsStart: Dispatch<SetStateAction<boolean>>
+}
+
+export const StartDisplay = ({ setIsStart }: Props) => {
   const height = use100vh()
 
   return (
-    <_ContentWrap height={height ? `${height}px` : '100vh'}>
+    <_ContentWrap
+      onClick={() => setIsStart(true)}
+      height={height ? `${height}px` : '100vh'}
+    >
       <_ChartStart>
         <_RedCircle>
           <_H1>CHART</_H1>
