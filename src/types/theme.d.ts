@@ -20,6 +20,7 @@ interface Colors {
 interface Fonts {
   txtBasic: string
   pixel: string
+  VDL: string
 }
 
 interface FontWt {

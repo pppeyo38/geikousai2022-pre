@@ -6,6 +6,7 @@ import { css } from '@emotion/react'
 import { DepaCard } from '@/components/molecules/Department/DepaCrad'
 import { department } from '@/types/department'
 import content from '@/data/department/departmentHeads.json'
+import { _DoubleCircle } from '@/styles/CircleStyle'
 
 type Props = {
   onClickPrev: () => void
@@ -61,6 +62,7 @@ const _TabWrap = styled.div`
 `
 
 const _TabPanels = styled(TabPanels)`
+  ${_DoubleCircle}
   position: relative;
   display: flex;
   align-items: center;
@@ -70,25 +72,7 @@ const _TabPanels = styled(TabPanels)`
   z-index: 30;
 
   &:before {
-    content: '';
-    position: absolute;
-    z-index: -100;
-    width: 250px;
-    height: 250px;
     background-image: url('/images/department/circleNavy.svg');
-    background-repeat: no-repeat;
-    filter: drop-shadow(0 0 15px rgba(13, 46, 79, 0.4));
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: -100;
-    width: 310px;
-    height: 310px;
-    background-image: url('/images/department/circleGreen.svg');
-    background-repeat: no-repeat;
-    filter: drop-shadow(0 0 15px rgba(159, 199, 113, 0.4));
   }
 `
 

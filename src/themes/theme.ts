@@ -10,6 +10,7 @@ export const theme = {
   fonts: {
     txtBasic: `'txt-basic', 'sans-serif'`,
     pixel: `'pixel', 'sans-serif'`,
+    VDL: 'vdl-gigajr',
   },
   fontWt: {
     Regular: 400,

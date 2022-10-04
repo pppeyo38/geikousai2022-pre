@@ -1,24 +1,15 @@
-import { useState, useEffect } from 'react'
+import { ReactNode } from 'react'
 import { use100vh } from 'react-div-100vh'
 import styled from '@emotion/styled'
 
-import { Loading } from '@/components/organisms/Chart/Loading'
+type Props = {
+  children: ReactNode
+}
 
-export const ChartLayout = () => {
+export const ChartLayout = ({ children }: Props) => {
   const height = use100vh()
-  const [isLoading, setIsLoading] = useState(true)
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 3000)
-  }, [])
-
-  return (
-    <_Page height={height ? `${height}px` : '100vh'}>
-      {isLoading && <Loading />}
-    </_Page>
-  )
+  return <_Page height={height ? `${height}px` : '100vh'}>{children}</_Page>
 }
 
 const _Page = styled.section<{ height: string }>`
