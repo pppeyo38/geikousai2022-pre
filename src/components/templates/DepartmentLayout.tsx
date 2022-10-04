@@ -21,9 +21,9 @@ export const DepartmentLayout = () => {
           兼部署についてはインスタをチェック！
         </Text>
       </_TextWrap>
-      <Tabs defaultIndex={tabIndex} index={tabIndex}>
+      <_ImageTabs defaultIndex={tabIndex} index={tabIndex}>
         <TabSlide onClickPrev={onClickPrev} onClickNext={onClickNext} />
-      </Tabs>
+      </_ImageTabs>
     </_Section>
   )
 }
@@ -39,4 +39,11 @@ const _Section = styled.section`
 const _TextWrap = styled.div`
   margin: 22px 0;
   text-align: center;
+`
+
+const _ImageTabs = styled(Tabs)`
+  padding: 38px 0 30px;
+  background-image: url('/images/top/Bg-dot.png');
+  background-repeat: repeat-y;
+  background-position-x: 10px;
 `

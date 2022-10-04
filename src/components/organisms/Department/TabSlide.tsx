@@ -3,6 +3,7 @@ import { TabPanels, TabPanel } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
+import { DepaCard } from '@/components/molecules/Department/DepaCrad'
 import { department } from '@/types/department'
 import content from '@/data/departmentHeads.json'
 
@@ -15,17 +16,32 @@ export const TabSlide = ({ onClickPrev, onClickNext }: Props) => {
   const data: department[] = content.departmentHeads
 
   return (
-    <_TabWrap>
-      <_PrevBtn onClick={onClickPrev} />
-      <_TabPanels>
+    <>
+      <_TabWrap>
+        <_PrevBtn onClick={onClickPrev} />
+        <_TabPanels>
+          {data.map((item, index) => (
+            <TabPanel key={index}>
+              <_Image src={item.image} layout="fill" alt="" />
+            </TabPanel>
+          ))}
+        </_TabPanels>
+        <_NextBtn onClick={onClickNext} />
+      </_TabWrap>
+      <_CardPanels>
         {data.map((item, index) => (
-          <TabPanel key={index}>
-            <_Image src={item.image} layout="fill" alt="" />
-          </TabPanel>
+          <_CardPanel key={index}>
+            <DepaCard
+              icon={item.icon}
+              roll={item.roll}
+              geikoName={item.geikoName}
+            >
+              {item.greet}
+            </DepaCard>
+          </_CardPanel>
         ))}
-      </_TabPanels>
-      <_NextBtn onClick={onClickNext} />
-    </_TabWrap>
+      </_CardPanels>
+    </>
   )
 }
 
@@ -87,12 +103,16 @@ const _NextBtn = styled.button`
   transform: rotate(180deg);
 `
 
-const _TabPanel = styled(TabPanel)`
-  position: relative;
-`
-
 const _Image = styled(Image)`
   width: 310px;
   height: 310px;
   filter: drop-shadow(8px 0px 0px #549f5b);
+`
+
+const _CardPanels = styled(TabPanels)`
+  margin-top: 38px;
+`
+
+const _CardPanel = styled(TabPanel)`
+  padding: 0;
 `

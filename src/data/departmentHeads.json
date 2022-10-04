@@ -5,133 +5,133 @@
       "geikoName": "3N 花天狂骨",
       "greet": "芸工祭全体の統括をしてるよ！今年の芸工祭は例年に比べて自分の案が通りやすいかも...？！学年とか気にせずドシドシ意見出してみんなで盛り上げてこう💪いろんな部署にいるから会いにきてね❤️❤️❤️",
       "image": "/images/departmentHead/saicho.png",
-      "icon": "01chief.png"
+      "icon": "/icons/department/01chief.png"
     },
     {
       "roll": "副芸工祭長",
       "geikoName": "3O オクタン",
       "greet": "主に祭長のサポートや芸工祭が円滑に行えるように活動しています！部署はインテリアとディレクションに入っているので是非一緒に楽しく活動しましょう！みんなで最高の芸工祭をつくりあげれるようにがんばりましょう！👊💪",
       "image": "/images/departmentHead/fuku-saicho.png",
-      "icon": "02chief_sub.png"
+      "icon": "/icons/department/02chief_sub.png"
     },
     {
       "roll": "会計",
       "geikoName": "3O ちりぬん",
       "greet": "会計は芸工祭のお金の管理をしています！💴エクステリアに入っているので、みんなも入って一緒に活動しませんか！！楽しい芸工祭にしましょう〜〜💖",
       "image": "/images/departmentHead/tirinun.png",
-      "icon": "18kaikei.png"
+      "icon": "/icons/department/18kaikei.png"
     },
     {
       "roll": "書記",
       "geikoName": "3N ルーベン",
       "greet": "書記では主に芸工祭会議での議事録をとってまとめたり、運営のサポートをしています！☺️部署はブース、ディレクション、運動会にも入っているのでみんなも是非入ってね！一緒に芸工祭を盛り上げていきましょう〜！！",
       "image": "/images/departmentHead/ruuben.png",
-      "icon": "19syoki.png"
+      "icon": "/icons/department/19syoki.png"
     },
     {
       "roll": "総務",
       "geikoName": "3M ノボル",
       "greet": "総務では協賛の管理をしたり、ゲストとの連絡をとったりしています！！☆部署はグラフィックとディレクションに入ってるからみんなも是非入ってね！( ◠‿◠ )学部学科問いません〜！みんなで助け合いながら、ハッピイな芸工祭にしましょう！！",
       "image": "/images/departmentHead/noboru.png",
-      "icon": "03soumu.png"
+      "icon": "/icons/department/03soumu.png"
     },
     {
       "roll": "Web",
       "geikoName": "3M ぺよ",
       "greet": "Webサイトのデザイン🎨・コーディング💻、ゲーム制作🎮を行う部署です！みんなでスキルを得ながら、芸工祭を全力で楽しもう〜！",
       "image": "/images/departmentHead/peyo.png",
-      "icon": "10web.png"
+      "icon": "/icons/department/10web.png"
     },
     {
       "roll": "映像",
       "geikoName": "3M にっしー",
       "greet": "芸工祭を盛り上げるための映像制作を行います！OP、ED、CM、企画物など様々なことをする予定です！制作、撮影からCG、音楽までなんでもできる！映像好きならみんなおいでませ🎥活動頻度はグループに分かれてそれぞれで行います！そう！やる気次第！パワー！",
       "image": "/images/departmentHead/nishi.png",
-      "icon": "04eizo.png"
+      "icon": "/icons/department/04eizo.png"
     },
     {
       "roll": "グラフィック",
       "geikoName": "3N 一斗缶",
       "greet": "グッズ、パンフ、ポスター、サインのデザイン作成をします！イラレなどのスキルをあげたい人、自分のデザインをモノとして残したい人大歓迎◎みんなの都合を見つつ考えていきます！卓終わりから週1くらいを目処に活動します！やりがいはあります！丁寧に教えるので沢山入ってね！！！",
       "image": "/images/departmentHead/kann.png",
-      "icon": "14graphic.png"
+      "icon": "/icons/department/14graphic.png"
     },
     {
       "roll": "PA",
       "geikoName": "3M タリー",
       "greet": "ステージ音響機材の設営・運営をします！芸工祭以外のイベントでも音響のお仕事をするよ🫶🏻メインの活動は芸工祭前日と当日で活動頻度は少なめです🪗音楽好きな方、機材触りたい方、忙しくて他の部署に入るのは不安な方など誰でもどうぞ〜！",
       "image": "/images/departmentHead/tarry.png",
-      "icon": "08PA.png"
+      "icon": "/icons/department/08PA.png"
     },
     {
       "roll": "昼ステージ",
       "geikoName": "3N ジョナゴールド",
       "greet": "昼ステージの設置、運営をやります！みんなで企画から考えるので絶対友達できます！芸工祭の華は絶対昼ステージ！！入らなきゃ損！みんなはいろう！！！",
       "image": "/images/departmentHead/jona.png",
-      "icon": "15stage_hiru.png"
+      "icon": "/icons/department/15stage_hiru.png"
     },
     {
       "roll": "夜ステージ",
       "geikoName": "3N 桃白白",
       "greet": "夜ステージの設置、運営をやります！兼部署ができるので、是非とも入って欲しいです！主に活動するのは芸工祭前々日くらいだと思うので、もうほんとに入り得です。入らなきゃ損してます。",
       "image": "/images/departmentHead/paipai.png",
-      "icon": "17stage_yoru.png"
+      "icon": "/icons/department/17stage_yoru.png"
     },
     {
       "roll": "ワークショップ",
       "geikoName": "3O パイオニア師匠",
       "greet": "'22のWSでは、GOOOONのコンセプトにちなんだワークショップを3種類行うための準備・当日の運営をします💖学科を超えた交流が盛んな部署なので、是非今年はココWSでniceなfriendsをつくろ ~🎶(当日はstaffとして活動します🎶)ほんとうに誰でも大歓迎🔥😸活動頻度は月2〜3回ほどを予定しています🫶🏻たくさんの入部署お待ちしております🌞",
       "image": "/images/departmentHead/shisyo.png",
-      "icon": "16workshop.png"
+      "icon": "/icons/department/16workshop.png"
     },
     {
       "roll": "ディレクション",
       "geikoName": "3N そば",
       "greet": "この部署ではみんなが出してくれる作品を素敵に飾ります！活動は少なめなので少しでも芸工祭に関わりたい人はみんな来てね！おしゃべりしながらワイワイ作業しよう🥳お友達誘ってきてくださーい！",
       "image": "/images/departmentHead/soba.png",
-      "icon": "05direction.png"
+      "icon": "/icons/department/05direction.png"
     },
     {
       "roll": "インテリア",
       "geikoName": "3O キャベツン",
       "greet": "インテリア部署は芸工棟内部の装飾を担当します！！みんなで楽しく制作するので学年問わず仲良くしたい人はぜひ入ってください🥰活動は9月頃から週1くらいで集まって、本番2週間前から本格的に制作を始めます！この部署に入ってくれて仲良くできるのを待ってます！！！",
       "image": "/images/departmentHead/tsun.png",
-      "icon": "06interior.png"
+      "icon": "/icons/department/06interior.png"
     },
     {
       "roll": "エクステリア",
       "geikoName": "3O イエメン",
       "greet": "北千種キャンパスの正門や食堂前の広場などのキャンパスの外を装飾していきます！活動は9月中旬ごろスタートと考えているので、夏休み遊びまくりたい人大歓迎！！！毎年多くの人に入ってもらってるので、多くの人と関わりができる部署です！難しい作業一切なくたくさん喋って少し手を動かすをモットーに活動していきましょう！！",
       "image": "/images/departmentHead/iemen.png",
-      "icon": "07exterior.png"
+      "icon": "/icons/department/07exterior.png"
     },
     {
       "roll": "ブース",
       "geikoName": "3N よだれだこ",
       "greet": "ワークショップのテントのデザイン・制作を行います⛺️みんなでひとつのものを作る、The学園祭な部署です！活動するのは卓が終わった後の9月くらいからだから、卓で忙しい人も問題ナシです🤟みんなで作業したい人とか、何したらいいか分かんない人とかは友達引連れてぜひ来てね〜🙌",
       "image": "/images/departmentHead/tako.png",
-      "icon": "12booth.png"
+      "icon": "/icons/department/12booth.png"
     },
     {
       "roll": "カフェ",
       "geikoName": "3O コルコ",
       "greet": "当日にカフェをオープンする部署だよ🍩今年はオリジナルのゲームの企画もやるよ☺️🌟色んなお仕事があるから性別・料理等の経験は一切問いません☺️活動は９月からの予定💭他学科・他学年と仲良くなりたい！みんなで大きな何かを成し遂げたい！って子にはもってこい🙌一緒に新しいわくわくするカフェを作ろう❣️待ってます🎶",
       "image": "/images/departmentHead/koruko.png",
-      "icon": "11cafe.png"
+      "icon": "/icons/department/11cafe.png"
     },
     {
       "roll": "バー",
       "geikoName": "3O ミョスロス",
       "greet": "バー部署は当日芸工祭に来てくれた学生にドリンクを提供します！ドリンクを提供する中で、沢山の芸工生と出会えて交流を深められるよ！だから、いろんな人ともっと仲良くなりたい！って人はバー部署に入って芸工祭をみんなで盛り上げて行こう〜！",
       "image": "/images/departmentHead/myosu.png",
-      "icon": "13bar.png"
+      "icon": "/icons/department/13bar.png"
     },
     {
       "roll": "運動会",
       "geikoName": "3M トラペジウム",
       "greet": "球技大会・運動会の準備と当日運営をします！学部学年関係なくみんなでワイワイ盛り上がりたい人大歓迎‼️交友関係が広がるかも⁉️主な仕事は会直前の準備と当日参加することだけ🔥ほとんどの人が兼部してます！みんなでサイコーな思い出作りしませんか❕",
       "image": "/images/departmentHead/torape.png",
-      "icon": "09undokai.png"
+      "icon": "/icons/department/09undokai.png"
     }
   ]
 }

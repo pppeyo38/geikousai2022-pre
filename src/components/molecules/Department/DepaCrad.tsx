@@ -32,7 +32,9 @@ export const DepaCard = ({ icon, roll, geikoName, children }: CardProps) => {
 }
 
 const _Card = styled.div`
+  width: 350px;
   padding: 25px;
+  border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.7);
 `
 
