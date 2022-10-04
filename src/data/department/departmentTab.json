@@ -1,0 +1,82 @@
+{
+  "kanbu": [
+    {
+      "id": 0,
+      "image": "/images/departmentTab/saicho.png"
+    },
+    {
+      "id": 1,
+      "image": "/images/departmentTab/fuku-saicho.png"
+    },
+    {
+      "id": 2,
+      "image": "/images/departmentTab/kaikei.png"
+    },
+    {
+      "id": 3,
+      "image": "/images/departmentTab/syoki.png"
+    },
+    {
+      "id": 4,
+      "image": "/images/departmentTab/soumu.png"
+    }
+  ],
+  "busyocho": [
+    {
+      "id": 5,
+      "image": "/images/departmentTab/web.png"
+    },
+    {
+      "id": 6,
+      "image": "/images/departmentTab/movie.png"
+    },
+    {
+      "id": 7,
+      "image": "/images/departmentTab/graphic.png"
+    },
+    {
+      "id": 8,
+      "image": "/images/departmentTab/pa.png"
+    },
+    {
+      "id": 9,
+      "image": "/images/departmentTab/stage-hiru.png"
+    },
+    {
+      "id": 10,
+      "image": "/images/departmentTab/stage-yoru.png"
+    },
+    {
+      "id": 11,
+      "image": "/images/departmentTab/ws.png"
+    },
+    {
+      "id": 12,
+      "image": "/images/departmentTab/direction.png"
+    },
+    {
+      "id": 13,
+      "image": "/images/departmentTab/interior.png"
+    },
+    {
+      "id": 14,
+      "image": "/images/departmentTab/exterior.png"
+    },
+    {
+      "id": 15,
+      "image": "/images/departmentTab/booth.png"
+    },
+    {
+      "id": 16,
+      "image": "/images/departmentTab/cafe.png"
+    },
+    {
+      "id": 17,
+      "image": "/images/departmentTab/bar.png"
+    },
+    {
+      "id": 18,
+      "image": "/images/departmentTab/sports.png"
+    }
+  ]
+}

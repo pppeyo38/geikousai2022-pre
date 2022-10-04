@@ -59,7 +59,7 @@ const _DepaDetail = styled.div`
 const _Roll = styled.h3`
   font-family: ${({ theme }) => theme.fonts.txtBasic};
   font-weight: ${({ theme }) => theme.fontWt.Medium};
-  font-size: 32px;
+  font-size: 28px;
   color: ${({ theme }) => theme.colors.navy};
   line-height: 170%;
 `

@@ -5,9 +5,11 @@ import { usePanelSlide } from '@/hooks/usePanelSlide'
 import { Text } from '@/components/atoms/text/Text'
 import { PageTitle } from '@/components/molecules/PageTitle'
 import { TabSlide } from '@/components/organisms/Department/TabSlide'
+import { TabImageList } from '@/components/organisms/Department/TabImageList'
 
 export const DepartmentLayout = () => {
-  const { tabIndex, onClickPrev, onClickNext } = usePanelSlide()
+  const { tabIndex, onClickPrev, onClickNext, onClickSetPanel } =
+    usePanelSlide()
 
   return (
     <_Section>
@@ -21,9 +23,12 @@ export const DepartmentLayout = () => {
           兼部署についてはインスタをチェック！
         </Text>
       </_TextWrap>
-      <_ImageTabs defaultIndex={tabIndex} index={tabIndex}>
-        <TabSlide onClickPrev={onClickPrev} onClickNext={onClickNext} />
-      </_ImageTabs>
+      <_Tabs defaultIndex={tabIndex} index={tabIndex}>
+        <_ImageTabs>
+          <TabSlide onClickPrev={onClickPrev} onClickNext={onClickNext} />
+        </_ImageTabs>
+        <TabImageList tabIndex={tabIndex} onClickSetPanel={onClickSetPanel} />
+      </_Tabs>
     </_Section>
   )
 }
@@ -41,7 +46,15 @@ const _TextWrap = styled.div`
   text-align: center;
 `
 
-const _ImageTabs = styled(Tabs)`
+const _Tabs = styled(Tabs)`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const _ImageTabs = styled.div`
+  width: 350px;
   padding: 38px 0 30px;
   background-image: url('/images/top/Bg-dot.png');
   background-repeat: repeat-y;

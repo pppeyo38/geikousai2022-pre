@@ -5,7 +5,7 @@ import { css } from '@emotion/react'
 
 import { DepaCard } from '@/components/molecules/Department/DepaCrad'
 import { department } from '@/types/department'
-import content from '@/data/departmentHeads.json'
+import content from '@/data/department/departmentHeads.json'
 
 type Props = {
   onClickPrev: () => void

@@ -19,5 +19,13 @@ export const usePanelSlide = () => {
     }
   }
 
-  return { tabIndex, onClickPrev, onClickNext }
+  const onClickSetPanel = (index: number) => {
+    setTabIndex(index)
+    window.scrollTo({
+      top: 160,
+      behavior: 'smooth',
+    })
+  }
+
+  return { tabIndex, onClickPrev, onClickNext, onClickSetPanel }
 }
