@@ -2,21 +2,21 @@ import styled from '@emotion/styled'
 
 import { CircleSkeltonBtn } from '@/components/atoms/buttons/CircleSkeltonBtn'
 import { QuestionCircle } from '@/components/molecules/Chart/QuestionCircle'
-import { Dispatch, SetStateAction } from 'react'
 
 type Props = {
-  setIsCompleted: Dispatch<SetStateAction<boolean>>
+  questionText: string
+  onClickAnswer: (isAnswer: boolean) => void
 }
 
-export const QuestionDisplay = ({ setIsCompleted }: Props) => {
+export const QuestionDisplay = ({ questionText, onClickAnswer }: Props) => {
   return (
     <_ContentWrap>
-      <QuestionCircle question="質問が入ります" />
+      <QuestionCircle question={questionText} />
       <_LowerBtnArea>
-        <CircleSkeltonBtn onClick={() => setIsCompleted(true)}>
+        <CircleSkeltonBtn onClick={() => onClickAnswer(true)}>
           <_Span>YES</_Span>
         </CircleSkeltonBtn>
-        <CircleSkeltonBtn onClick={() => setIsCompleted(false)}>
+        <CircleSkeltonBtn onClick={() => onClickAnswer(false)}>
           <_Span>NO</_Span>
         </CircleSkeltonBtn>
       </_LowerBtnArea>

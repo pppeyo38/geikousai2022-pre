@@ -6,16 +6,23 @@ import { CircleSkeltonBtn } from '@/components/atoms/buttons/CircleSkeltonBtn'
 import BackIcon from 'public/icons/chart/back.svg'
 import TwitterIcon from 'public/icons/chart/twitter.svg'
 
-type Props = {
-  resultReset: () => void
+type resultType = {
+  id: number
+  department: string
+  image: string
 }
 
-export const AnswerDisplay = ({ resultReset }: Props) => {
+type Props = {
+  result: resultType
+  chartReset: () => void
+}
+
+export const AnswerDisplay = ({ result, chartReset }: Props) => {
   return (
     <_ContentWrap>
-      <AnswerCircle iconPath="" />
+      <AnswerCircle iconPath={result.image} />
       <_LowerBtnArea>
-        <CircleSkeltonBtn onClick={resultReset}>
+        <CircleSkeltonBtn onClick={chartReset}>
           <BackIcon />
         </CircleSkeltonBtn>
         <_TwitterShare>

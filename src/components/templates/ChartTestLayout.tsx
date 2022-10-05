@@ -1,17 +1,18 @@
-import { useState } from 'react'
-
+import { useChartFlow } from '@/hooks/useChartFlow'
 import { StartDisplay } from '@/components/organisms/Chart/StartDisplay'
 import { QuestionDisplay } from '@/components/organisms/Chart/QuestionDisplay'
 import { AnswerDisplay } from '@/components/organisms/Chart/AnswerDisplay'
 
 export const ChartTestLayout = () => {
-  const [isStart, setIsStart] = useState(false)
-  const [isCompleted, setIsCompleted] = useState(false)
-
-  const resultReset = () => {
-    setIsStart(false)
-    setIsCompleted(false)
-  }
+  const {
+    isStart,
+    setIsStart,
+    question,
+    result,
+    isCompleted,
+    chartReset,
+    onClickAnswer,
+  } = useChartFlow()
 
   return (
     <>
@@ -20,9 +21,12 @@ export const ChartTestLayout = () => {
       ) : (
         <>
           {!isCompleted ? (
-            <QuestionDisplay setIsCompleted={setIsCompleted} />
+            <QuestionDisplay
+              questionText={question.text}
+              onClickAnswer={onClickAnswer}
+            />
           ) : (
-            <AnswerDisplay resultReset={resultReset} />
+            <AnswerDisplay result={result} chartReset={chartReset} />
           )}
         </>
       )}

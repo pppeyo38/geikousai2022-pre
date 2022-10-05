@@ -5,7 +5,7 @@ import { css } from '@emotion/react'
 
 import { DepaCard } from '@/components/molecules/Department/DepaCrad'
 import { department } from '@/types/department'
-import content from '@/data/department/departmentHeads.json'
+import { departmentHeads } from '@/data/department/departmentHeads.json'
 import { _DoubleCircle } from '@/styles/CircleStyle'
 
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
 }
 
 export const TabSlide = ({ onClickPrev, onClickNext }: Props) => {
-  const data: department[] = content.departmentHeads
+  const data: department[] = departmentHeads
 
   return (
     <>

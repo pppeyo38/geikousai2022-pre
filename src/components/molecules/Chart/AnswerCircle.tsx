@@ -1,19 +1,24 @@
 import styled from '@emotion/styled'
 import { Center } from '@chakra-ui/react'
+import Image from 'next/image'
 
 type Props = {
   iconPath: string
 }
 
 export const AnswerCircle = ({ iconPath }: Props) => {
-  return <_AnswerCircle></_AnswerCircle>
+  return (
+    <_AnswerCircle>
+      <_InnerCircle>
+        <Image src={iconPath} alt="" layout="fill" />
+      </_InnerCircle>
+    </_AnswerCircle>
+  )
 }
 
 const _AnswerCircle = styled(Center)`
-  position: relative;
   width: 450px;
   height: 450px;
-  padding: 0 135px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.navy};
 
@@ -26,4 +31,10 @@ const _AnswerCircle = styled(Center)`
     border-radius: 50%;
     box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.4);
   }
+`
+
+const _InnerCircle = styled.figure`
+  position: relative;
+  width: 250px;
+  height: 250px;
 `
