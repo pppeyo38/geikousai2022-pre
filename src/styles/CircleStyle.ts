@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import { rotate, counterRotate } from '@/styles/animation/circleKeyframes'
 
 export const _DoubleCircle = css`
   position: relative;
@@ -12,6 +13,7 @@ export const _DoubleCircle = css`
     height: 250px;
     background-repeat: no-repeat;
     filter: drop-shadow(0 0 15px rgba(13, 46, 79, 0.4));
+    animation: 10s linear infinite ${rotate};
   }
 
   &:after {
@@ -23,5 +25,6 @@ export const _DoubleCircle = css`
     background-image: url('/images/department/circleGreen.svg');
     background-repeat: no-repeat;
     filter: drop-shadow(0 0 15px rgba(159, 199, 113, 0.4));
+    animation: 12s linear infinite ${counterRotate};
   }
 `

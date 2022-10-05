@@ -3,7 +3,8 @@ import { css } from '@emotion/react'
 import { use100vh } from 'react-div-100vh'
 
 import { _DoubleCircle } from '@/styles/CircleStyle'
-import { Dispatch, SetStateAction } from 'react'
+import { fadeIn, fadeOut } from '@/styles/animation/fadeKeyframes'
+import { Dispatch, SetStateAction, useState } from 'react'
 
 type Props = {
   setIsStart: Dispatch<SetStateAction<boolean>>
@@ -11,11 +12,20 @@ type Props = {
 
 export const StartDisplay = ({ setIsStart }: Props) => {
   const height = use100vh()
+  const [isFade, setIsFade] = useState(true)
+
+  const onClickStart = () => {
+    setIsFade(false)
+    setTimeout(() => {
+      setIsStart(true)
+    }, 1000)
+  }
 
   return (
     <_ContentWrap
-      onClick={() => setIsStart(true)}
+      onClick={onClickStart}
       height={height ? `${height}px` : '100vh'}
+      isFade={isFade}
     >
       <_ChartStart>
         <_RedCircle>
@@ -32,7 +42,7 @@ const _TextStyle = css`
   transform: matrix(0.99, 0, -0.12, 1, 0, 0);
 `
 
-const _ContentWrap = styled.div<{ height: string }>`
+const _ContentWrap = styled.div<{ height: string; isFade: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,6 +50,9 @@ const _ContentWrap = styled.div<{ height: string }>`
   width: 100%;
   height: ${(props) => props.height};
   gap: 120px;
+  ${(props) => props.isFade && `opacity: 0; `}
+  animation: ${(props) =>
+    props.isFade ? css`2s ${fadeIn} forwards` : css`1s ${fadeOut} forwards`};
 `
 
 const _ChartStart = styled.div`
@@ -80,5 +93,6 @@ const _StartText = styled.h2`
   font-weight: bold;
   color: ${({ theme }) => theme.colors.white};
   line-height: 48px;
+  -webkit-text-stroke: 1px #fff;
   text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
 `

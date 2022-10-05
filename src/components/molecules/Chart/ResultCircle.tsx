@@ -1,12 +1,12 @@
+import Image from 'next/image'
 import styled from '@emotion/styled'
 import { Center } from '@chakra-ui/react'
-import Image from 'next/image'
+
+import { resultType } from '@/types/chart'
+import { neonGreen } from '@/styles/animation/circleKeyframes'
 
 type Props = {
-  result: {
-    department: string
-    image: string
-  }
+  result: resultType
 }
 
 export const ResultCircle = ({ result }: Props) => {
@@ -30,11 +30,13 @@ const _AnswerCircle = styled(Center)`
   &:before {
     content: '';
     position: absolute;
+    z-index: 10;
     width: 250px;
     height: 250px;
     border: 3px solid ${({ theme }) => theme.colors.lightGreen};
     border-radius: 50%;
     box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.4);
+    animation: 1s ${neonGreen} infinite alternate;
   }
 `
 
@@ -45,6 +47,7 @@ const _Result = styled.h1`
   font-size: 35px;
   color: ${({ theme }) => theme.colors.red};
   line-height: 70px;
+  -webkit-text-stroke: 1px ${({ theme }) => theme.colors.red};
   transform: matrix(0.99, 0, -0.12, 1, 0, 0);
 `
 

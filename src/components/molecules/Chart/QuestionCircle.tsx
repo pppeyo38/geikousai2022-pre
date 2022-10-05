@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { Center } from '@chakra-ui/react'
+import { neonRed } from '@/styles/animation/circleKeyframes'
 
 type Props = {
   question: string
@@ -39,6 +40,7 @@ const _QuestionCircle = styled(Center)`
     border: 2px solid ${({ theme }) => theme.colors.red};
     border-radius: 50%;
     box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4);
+    animation: ${neonRed} 1.5s infinite alternate;
   }
 `
 
