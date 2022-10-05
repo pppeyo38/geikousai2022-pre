@@ -3,20 +3,25 @@ import { Center } from '@chakra-ui/react'
 import Image from 'next/image'
 
 type Props = {
-  iconPath: string
+  result: {
+    department: string
+    image: string
+  }
 }
 
-export const AnswerCircle = ({ iconPath }: Props) => {
+export const ResultCircle = ({ result }: Props) => {
   return (
     <_AnswerCircle>
+      <_Result>{result.department}</_Result>
       <_InnerCircle>
-        <Image src={iconPath} alt="" layout="fill" />
+        <Image src={result.image} alt={result.department} layout="fill" />
       </_InnerCircle>
     </_AnswerCircle>
   )
 }
 
 const _AnswerCircle = styled(Center)`
+  position: relative;
   width: 450px;
   height: 450px;
   border-radius: 50%;
@@ -31,6 +36,16 @@ const _AnswerCircle = styled(Center)`
     border-radius: 50%;
     box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.4);
   }
+`
+
+const _Result = styled.h1`
+  position: absolute;
+  top: 28px;
+  font-family: ${({ theme }) => theme.fonts.VDL};
+  font-size: 35px;
+  color: ${({ theme }) => theme.colors.red};
+  line-height: 70px;
+  transform: matrix(0.99, 0, -0.12, 1, 0, 0);
 `
 
 const _InnerCircle = styled.figure`

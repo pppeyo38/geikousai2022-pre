@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-import { AnswerCircle } from '@/components/molecules/Chart/AnswerCircle'
+import { ResultCircle } from '@/components/molecules/Chart/ResultCircle'
 import { CircleSkeltonBtn } from '@/components/atoms/buttons/CircleSkeltonBtn'
 
 import BackIcon from 'public/icons/chart/back.svg'
@@ -17,10 +17,10 @@ type Props = {
   chartReset: () => void
 }
 
-export const AnswerDisplay = ({ result, chartReset }: Props) => {
+export const ResultDisplay = ({ result, chartReset }: Props) => {
   return (
     <_ContentWrap>
-      <AnswerCircle iconPath={result.image} />
+      <ResultCircle result={result} />
       <_LowerBtnArea>
         <CircleSkeltonBtn onClick={chartReset}>
           <BackIcon />
@@ -43,6 +43,7 @@ export const AnswerDisplay = ({ result, chartReset }: Props) => {
 }
 
 const _ContentWrap = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

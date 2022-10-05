@@ -1,7 +1,7 @@
 import { useChartFlow } from '@/hooks/useChartFlow'
 import { StartDisplay } from '@/components/organisms/Chart/StartDisplay'
 import { QuestionDisplay } from '@/components/organisms/Chart/QuestionDisplay'
-import { AnswerDisplay } from '@/components/organisms/Chart/AnswerDisplay'
+import { ResultDisplay } from '@/components/organisms/Chart/ResultDisplay'
 
 export const ChartTestLayout = () => {
   const {
@@ -26,7 +26,7 @@ export const ChartTestLayout = () => {
               onClickAnswer={onClickAnswer}
             />
           ) : (
-            <AnswerDisplay result={result} chartReset={chartReset} />
+            <ResultDisplay result={result} chartReset={chartReset} />
           )}
         </>
       )}
