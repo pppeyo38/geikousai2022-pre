@@ -1,15 +1,21 @@
 import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 import { Center } from '@chakra-ui/react'
 import { neonRed } from '@/styles/animation/circleKeyframes'
+import {
+  slideInFromBottom,
+  slideOutToTop,
+} from '@/styles/animation/fadeKeyframes'
 
 type Props = {
+  isTextFade: boolean
   question: string
 }
 
-export const QuestionCircle = ({ question }: Props) => {
+export const QuestionCircle = ({ isTextFade, question }: Props) => {
   return (
     <_QuestionCircle>
-      <_Question>{question}</_Question>
+      <_Question isTextFade={isTextFade}>{question}</_Question>
     </_QuestionCircle>
   )
 }
@@ -44,10 +50,14 @@ const _QuestionCircle = styled(Center)`
   }
 `
 
-const _Question = styled.p`
+const _Question = styled.p<{ isTextFade: boolean }>`
   font-size: 18px;
   font-family: ${({ theme }) => theme.fonts.txtBasic};
   color: ${({ theme }) => theme.colors.white};
   line-height: 150%;
   text-align: center;
+  animation: ${(props) =>
+    props.isTextFade
+      ? css`0.5s ${slideInFromBottom} forwards`
+      : css`0.5s ${slideOutToTop} forwards`};
 `

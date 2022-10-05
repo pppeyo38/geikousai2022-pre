@@ -50,7 +50,6 @@ const _ContentWrap = styled.div<{ height: string; isFade: boolean }>`
   width: 100%;
   height: ${(props) => props.height};
   gap: 120px;
-  ${(props) => props.isFade && `opacity: 0; `}
   animation: ${(props) =>
     props.isFade ? css`2s ${fadeIn} forwards` : css`1s ${fadeOut} forwards`};
 `

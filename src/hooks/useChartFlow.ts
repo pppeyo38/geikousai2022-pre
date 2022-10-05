@@ -16,7 +16,7 @@ export const useChartFlow = () => {
     setQuestion(questionData[0])
   }
 
-  const onClickAnswer = (isAnswer: boolean) => {
+  const switchChartContent = (isAnswer: boolean) => {
     if (isAnswer) {
       switch (question.id) {
         case 0:
@@ -142,6 +142,6 @@ export const useChartFlow = () => {
     result,
     isCompleted,
     chartReset,
-    onClickAnswer,
+    switchChartContent,
   }
 }

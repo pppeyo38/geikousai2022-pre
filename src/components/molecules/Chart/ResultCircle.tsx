@@ -4,6 +4,7 @@ import { Center } from '@chakra-ui/react'
 
 import { resultType } from '@/types/chart'
 import { neonGreen } from '@/styles/animation/circleKeyframes'
+import { slideInFromBottom, fadeIn } from '@/styles/animation/fadeKeyframes'
 
 type Props = {
   result: resultType
@@ -49,10 +50,12 @@ const _Result = styled.h1`
   line-height: 70px;
   -webkit-text-stroke: 1px ${({ theme }) => theme.colors.red};
   transform: matrix(0.99, 0, -0.12, 1, 0, 0);
+  animation: 0.5s ${slideInFromBottom} forwards;
 `
 
 const _InnerCircle = styled.figure`
   position: relative;
   width: 250px;
   height: 250px;
+  animation: 2s ${fadeIn} forwards;
 `

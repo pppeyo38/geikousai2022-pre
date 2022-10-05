@@ -1,21 +1,35 @@
+import { useState } from 'react'
 import styled from '@emotion/styled'
 import { CircleSkeltonBtn } from '@/components/atoms/buttons/CircleSkeltonBtn'
 import { QuestionCircle } from '@/components/molecules/Chart/QuestionCircle'
 
 type Props = {
   questionText: string
-  onClickAnswer: (isAnswer: boolean) => void
+  switchChartContent: (isAnswer: boolean) => void
 }
 
-export const QuestionDisplay = ({ questionText, onClickAnswer }: Props) => {
+export const QuestionDisplay = ({
+  questionText,
+  switchChartContent,
+}: Props) => {
+  const [isFade, setIsFade] = useState(true)
+
+  const onClickAnswerBtn = (isAnswer: boolean) => {
+    setIsFade(false)
+    setTimeout(() => {
+      switchChartContent(isAnswer)
+      setIsFade(true)
+    }, 500)
+  }
+
   return (
     <>
-      <QuestionCircle question={questionText} />
+      <QuestionCircle question={questionText} isTextFade={isFade} />
       <_LowerBtnArea>
-        <CircleSkeltonBtn onClick={() => onClickAnswer(true)}>
+        <CircleSkeltonBtn onClick={() => onClickAnswerBtn(true)}>
           <_Span>YES</_Span>
         </CircleSkeltonBtn>
-        <CircleSkeltonBtn onClick={() => onClickAnswer(false)}>
+        <CircleSkeltonBtn onClick={() => onClickAnswerBtn(false)}>
           <_Span>NO</_Span>
         </CircleSkeltonBtn>
       </_LowerBtnArea>

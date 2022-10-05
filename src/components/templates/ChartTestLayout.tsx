@@ -13,7 +13,7 @@ export const ChartTestLayout = () => {
     result,
     isCompleted,
     chartReset,
-    onClickAnswer,
+    switchChartContent,
   } = useChartFlow()
 
   return (
@@ -25,7 +25,7 @@ export const ChartTestLayout = () => {
           {!isCompleted ? (
             <QuestionDisplay
               questionText={question.text}
-              onClickAnswer={onClickAnswer}
+              switchChartContent={switchChartContent}
             />
           ) : (
             <ResultDisplay result={result} chartReset={chartReset} />
@@ -52,6 +52,5 @@ const _ContentWrap = styled.div`
     rgb(153, 201, 85) 50%,
     rgb(48, 137, 94) 100%
   );
-  opacity: 0;
   animation: 2s ${fadeIn} forwards;
 `
