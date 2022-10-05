@@ -17,7 +17,7 @@ export const ResultDisplay = ({ result, chartReset }: Props) => {
   const router = useRouter()
 
   return (
-    <_ContentWrap>
+    <>
       <ResultCircle result={result} />
       <_LowerBtnArea>
         <CircleSkeltonBtn onClick={chartReset}>
@@ -37,27 +37,9 @@ export const ResultDisplay = ({ result, chartReset }: Props) => {
           </_Span>
         </CircleSkeltonBtn>
       </_LowerBtnArea>
-    </_ContentWrap>
+    </>
   )
 }
-
-const _ContentWrap = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  background-image: linear-gradient(
-    rgb(13, 46, 79) 0%,
-    rgb(13, 46, 79) 50%,
-    rgb(153, 201, 85) 50%,
-    rgb(48, 137, 94) 100%
-  );
-`
 
 const _LowerBtnArea = styled.div`
   display: flex;
