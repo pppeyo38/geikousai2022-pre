@@ -1,19 +1,14 @@
 import { useState } from 'react'
+import { questionType, resultType } from '@/types/chart'
 import data from '@/data/chart/chart.json'
-
-type resultType = {
-  id: number
-  department: string
-  image: string
-}
 
 export const useChartFlow = () => {
   const [isStart, setIsStart] = useState(false)
   const [isCompleted, setIsCompleted] = useState(false)
   const [question, setQuestion] = useState({ id: 0, text: '目立ちたい？' })
   const [result, setResult] = useState({} as resultType)
-  const questionData = data.questionData
-  const resultData = data.resultData
+  const questionData: questionType[] = data.questionData
+  const resultData: resultType[] = data.resultData
 
   const chartReset = () => {
     setIsStart(false)

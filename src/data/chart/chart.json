@@ -67,67 +67,54 @@
   ],
   "resultData": [
     {
-      "id": 101,
       "department": "WEB",
       "image": "/icons/department/10web.png"
     },
     {
-      "id": 102,
       "department": "MOVIE",
       "image": "/icons/department/04eizo.png"
     },
     {
-      "id": 103,
       "department": "GRAPHIC",
       "image": "/icons/department/14graphic.png"
     },
     {
-      "id": 104,
       "department": "PA",
       "image": "/icons/department/08PA.png"
     },
     {
-      "id": 105,
       "department": "WORK SHOP",
       "image": "/icons/department/16workshop.png"
     },
     {
-      "id": 106,
       "department": "INTERIOR",
       "image": "/icons/department/06interior.png"
     },
     {
-      "id": 107,
       "department": "EXTERIOR",
       "image": "/icons/department/07exterior.png"
     },
     {
-      "id": 108,
       "department": "CAFE",
       "image": "/icons/department/11cafe.png"
     },
     {
-      "id": 109,
       "department": "STAGE",
       "image": "/icons/department/15stage_hiru.png"
     },
     {
-      "id": 110,
       "department": "DIRECTION",
       "image": "/icons/department/05direction.png"
     },
     {
-      "id": 111,
       "department": "BOOTH",
       "image": "/icons/department/12booth.png"
     },
     {
-      "id": 112,
       "department": "SPORTS",
       "image": "/icons/department/09undokai.png"
     },
     {
-      "id": 113,
       "department": "BAR",
       "image": "/icons/department/13bar.png"
     }

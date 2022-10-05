@@ -1,16 +1,12 @@
+import { useRouter } from 'next/router'
 import styled from '@emotion/styled'
 
-import { ResultCircle } from '@/components/molecules/Chart/ResultCircle'
 import { CircleSkeltonBtn } from '@/components/atoms/buttons/CircleSkeltonBtn'
+import { ResultCircle } from '@/components/molecules/Chart/ResultCircle'
+import { resultType } from '@/types/chart'
 
 import BackIcon from 'public/icons/chart/back.svg'
 import TwitterIcon from 'public/icons/chart/twitter.svg'
-
-type resultType = {
-  id: number
-  department: string
-  image: string
-}
 
 type Props = {
   result: resultType
@@ -18,6 +14,8 @@ type Props = {
 }
 
 export const ResultDisplay = ({ result, chartReset }: Props) => {
+  const router = useRouter()
+
   return (
     <_ContentWrap>
       <ResultCircle result={result} />
@@ -25,12 +23,13 @@ export const ResultDisplay = ({ result, chartReset }: Props) => {
         <CircleSkeltonBtn onClick={chartReset}>
           <BackIcon />
         </CircleSkeltonBtn>
-        <_TwitterShare>
-          <CircleSkeltonBtn onClick={() => console.log('クリック')}>
-            <TwitterIcon />
-          </CircleSkeltonBtn>
+        <_TwitterShare
+          href={`http://twitter.com/share?url=https://geikousai-ncu.com/&text=私の適部署は…%0a%0a${result.department}部署！！！%0a%23芸工祭2022%20%23GOOOON`}
+          target="_blank"
+        >
+          <TwitterIcon />
         </_TwitterShare>
-        <CircleSkeltonBtn onClick={() => console.log('クリック')}>
+        <CircleSkeltonBtn onClick={() => router.push('/departments')}>
           <_Span>
             VIEW
             <br />
@@ -65,7 +64,14 @@ const _LowerBtnArea = styled.div`
   gap: 20px;
 `
 
-const _TwitterShare = styled.div`
+const _TwitterShare = styled.a`
+  display: grid;
+  place-content: center;
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  border-radius: 50%;
   transform: translateY(30px);
 `
 
