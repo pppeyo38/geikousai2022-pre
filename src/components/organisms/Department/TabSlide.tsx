@@ -1,33 +1,62 @@
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import { TabPanels, TabPanel } from '@chakra-ui/react'
 import styled from '@emotion/styled'
-import { css } from '@emotion/react'
+import { css, SerializedStyles } from '@emotion/react'
 
 import { DepaCard } from '@/components/molecules/Department/DepaCrad'
 import { department } from '@/types/department'
 import { departmentHeads } from '@/data/department/departmentHeads.json'
 import { _DoubleCircle } from '@/styles/CircleStyle'
+import { slideToLeft, slideToRight } from '@/styles/animation/fadeKeyframes'
 
 type Props = {
-  onClickPrev: () => void
-  onClickNext: () => void
+  tabIndex: number
+  prevSlide: () => void
+  nextSlide: () => void
 }
 
-export const TabSlide = ({ onClickPrev, onClickNext }: Props) => {
+export const TabSlide = ({ tabIndex, prevSlide, nextSlide }: Props) => {
   const data: department[] = departmentHeads
+  const [isNext, setIsNext] = useState(true)
+  const [slideMove, setSlideMove] = useState<SerializedStyles>()
+
+  const onClickSlide = (isNextClick: boolean) => {
+    setIsNext(isNextClick)
+    if (isNextClick) {
+      nextSlide()
+    } else {
+      prevSlide()
+    }
+  }
+
+  const getMove = (index: number) => {
+    if (index !== tabIndex) return
+    return slideMove
+  }
+
+  useEffect(() => {
+    if (isNext) {
+      setSlideMove(_slideToLeft)
+    } else {
+      setSlideMove(_slideToRight)
+    }
+  }, [tabIndex, isNext])
 
   return (
     <>
       <_TabWrap>
-        <_PrevBtn onClick={onClickPrev} />
+        <_PrevBtn onClick={() => onClickSlide(false)} />
         <_TabPanels>
           {data.map((item, index) => (
-            <TabPanel key={index}>
-              <_Image src={item.image} layout="fill" alt="" />
-            </TabPanel>
+            <_SlideWrap key={index} move={getMove(index)}>
+              <_TabPanel>
+                <_Image src={item.image} layout="fill" alt="" />
+              </_TabPanel>
+            </_SlideWrap>
           ))}
         </_TabPanels>
-        <_NextBtn onClick={onClickNext} />
+        <_NextBtn onClick={() => onClickSlide(true)} />
       </_TabWrap>
       <_CardPanels>
         {data.map((item, index) => (
@@ -55,6 +84,14 @@ const _SetTabBtn = css`
   background-repeat: repeat;
 `
 
+const _slideToLeft = css`
+  animation: 1s ${slideToLeft} cubic-bezier(0.25, 1, 0.5, 1);
+`
+
+const _slideToRight = css`
+  animation: 1s ${slideToRight} cubic-bezier(0.25, 1, 0.5, 1);
+`
+
 const _TabWrap = styled.div`
   position: relative;
   display: flex;
@@ -63,7 +100,6 @@ const _TabWrap = styled.div`
 
 const _TabPanels = styled(TabPanels)`
   ${_DoubleCircle}
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,6 +110,19 @@ const _TabPanels = styled(TabPanels)`
   &:before {
     background-image: url('/images/department/circleNavy.svg');
   }
+`
+
+const _SlideWrap = styled.div<{ move: SerializedStyles | undefined }>`
+  ${(props) => props.move}
+`
+
+const _TabPanel = styled(TabPanel)`
+  position: relative;
+  width: 310px;
+  height: 310px;
+  padding: 0;
+  outline: none;
+  outline-offset: 0;
 `
 
 const _PrevBtn = styled.button`
@@ -88,8 +137,6 @@ const _NextBtn = styled.button`
 `
 
 const _Image = styled(Image)`
-  width: 310px;
-  height: 310px;
   filter: drop-shadow(8px 0px 0px #549f5b);
 `
 

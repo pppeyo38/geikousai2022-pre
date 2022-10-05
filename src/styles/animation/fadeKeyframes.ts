@@ -43,3 +43,24 @@ export const slideOutToTop = keyframes`
     transform: translateY(-5px);
   }
 `
+export const slideToLeft = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(180px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
+
+export const slideToRight = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(-180px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`

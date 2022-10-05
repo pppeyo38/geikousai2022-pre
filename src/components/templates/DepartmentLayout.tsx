@@ -8,8 +8,7 @@ import { TabSlide } from '@/components/organisms/Department/TabSlide'
 import { TabImageList } from '@/components/organisms/Department/TabImageList'
 
 export const DepartmentLayout = () => {
-  const { tabIndex, onClickPrev, onClickNext, onClickSetPanel } =
-    usePanelSlide()
+  const { tabIndex, prevSlide, nextSlide, onClickSetPanel } = usePanelSlide()
 
   return (
     <_Section>
@@ -25,7 +24,11 @@ export const DepartmentLayout = () => {
       </_TextWrap>
       <_Tabs defaultIndex={tabIndex} index={tabIndex}>
         <_ImageTabs>
-          <TabSlide onClickPrev={onClickPrev} onClickNext={onClickNext} />
+          <TabSlide
+            tabIndex={tabIndex}
+            prevSlide={prevSlide}
+            nextSlide={nextSlide}
+          />
         </_ImageTabs>
         <TabImageList tabIndex={tabIndex} onClickSetPanel={onClickSetPanel} />
       </_Tabs>
@@ -50,6 +53,7 @@ const _Tabs = styled(Tabs)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 `
 
 const _ImageTabs = styled.div`

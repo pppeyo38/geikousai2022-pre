@@ -3,7 +3,7 @@ import { useState } from 'react'
 export const usePanelSlide = () => {
   const [tabIndex, setTabIndex] = useState(0)
 
-  const onClickPrev = () => {
+  const prevSlide = () => {
     if (tabIndex === 0) {
       setTabIndex(18)
     } else {
@@ -11,7 +11,7 @@ export const usePanelSlide = () => {
     }
   }
 
-  const onClickNext = () => {
+  const nextSlide = () => {
     if (tabIndex === 18) {
       setTabIndex(0)
     } else {
@@ -27,5 +27,5 @@ export const usePanelSlide = () => {
     })
   }
 
-  return { tabIndex, onClickPrev, onClickNext, onClickSetPanel }
+  return { tabIndex, prevSlide, nextSlide, onClickSetPanel }
 }
