@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from '@emotion/styled'
 import { useChartFlow } from '@/hooks/useChartFlow'
 import { StartDisplay } from '@/components/organisms/Chart/StartDisplay'
@@ -17,7 +18,7 @@ export const ChartTestLayout = () => {
   } = useChartFlow()
 
   return (
-    <>
+    <React.Fragment>
       {!isStart ? (
         <StartDisplay setIsStart={setIsStart} />
       ) : (
@@ -32,7 +33,7 @@ export const ChartTestLayout = () => {
           )}
         </_ContentWrap>
       )}
-    </>
+    </React.Fragment>
   )
 }
 

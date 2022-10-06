@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import styled from '@emotion/styled'
 
 type Props = {
@@ -12,15 +12,15 @@ export const PageTitle = ({ children, subTitle, isShadow, color }: Props) => {
   return (
     <_TitleWrap>
       {isShadow ? (
-        <>
+        <React.Fragment>
           <_ShadowTitle>{children}</_ShadowTitle>
           <_SubShadowTitle isDark={isShadow}>{subTitle}</_SubShadowTitle>
-        </>
+        </React.Fragment>
       ) : (
-        <>
+        <React.Fragment>
           <_Title color={color}>{children}</_Title>
           <_SubTitle color={color}>{subTitle}</_SubTitle>
-        </>
+        </React.Fragment>
       )}
     </_TitleWrap>
   )

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { ChartTemplate } from '@/components/templates/ChartTemplate'
 import { Loading } from '@/components/organisms/Chart/Loading'
@@ -16,7 +16,7 @@ const ChartPage: NextPage = () => {
   }, [])
 
   return (
-    <>
+    <React.Fragment>
       <Head>
         <title>適部署チャート｜芸工祭2022</title>
       </Head>
@@ -24,7 +24,7 @@ const ChartPage: NextPage = () => {
       <ChartTemplate>
         {isLoading ? <Loading /> : <ChartTestLayout />}
       </ChartTemplate>
-    </>
+    </React.Fragment>
   )
 }
 

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { CircleSkeltonBtn } from '@/components/atoms/buttons/CircleSkeltonBtn'
 import { QuestionCircle } from '@/components/molecules/Chart/QuestionCircle'
@@ -23,7 +23,7 @@ export const QuestionDisplay = ({
   }
 
   return (
-    <>
+    <React.Fragment>
       <QuestionCircle question={questionText} isTextFade={isFade} />
       <_LowerBtnArea>
         <CircleSkeltonBtn onClick={() => onClickAnswerBtn(true)}>
@@ -33,7 +33,7 @@ export const QuestionDisplay = ({
           <_Span>NO</_Span>
         </CircleSkeltonBtn>
       </_LowerBtnArea>
-    </>
+    </React.Fragment>
   )
 }
 

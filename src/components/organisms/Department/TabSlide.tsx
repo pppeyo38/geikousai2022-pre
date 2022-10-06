@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { TabPanels, TabPanel } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
@@ -28,7 +28,7 @@ export const TabSlide = ({ prevSlide, nextSlide }: Props) => {
   }
 
   return (
-    <>
+    <React.Fragment>
       <_TabWrap>
         <_PrevBtn onClick={() => onClickSlide(false)} />
         <_TabPanels>
@@ -55,7 +55,7 @@ export const TabSlide = ({ prevSlide, nextSlide }: Props) => {
           </_CardPanel>
         ))}
       </_CardPanels>
-    </>
+    </React.Fragment>
   )
 }
 

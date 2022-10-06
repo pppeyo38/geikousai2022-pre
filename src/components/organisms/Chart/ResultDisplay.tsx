@@ -1,3 +1,4 @@
+import React from 'react'
 import { useRouter } from 'next/router'
 import styled from '@emotion/styled'
 
@@ -17,7 +18,7 @@ export const ResultDisplay = ({ result, chartReset }: Props) => {
   const router = useRouter()
 
   return (
-    <>
+    <React.Fragment>
       <ResultCircle result={result} />
       <_LowerBtnArea>
         <CircleSkeltonBtn onClick={chartReset}>
@@ -37,7 +38,7 @@ export const ResultDisplay = ({ result, chartReset }: Props) => {
           </_Span>
         </CircleSkeltonBtn>
       </_LowerBtnArea>
-    </>
+    </React.Fragment>
   )
 }
 

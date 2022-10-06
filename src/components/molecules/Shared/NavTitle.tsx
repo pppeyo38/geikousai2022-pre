@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import styled from '@emotion/styled'
 
 type Props = {
@@ -8,10 +8,10 @@ type Props = {
 
 export const NavTitle = ({ children, subTitle }: Props) => {
   return (
-    <>
+    <React.Fragment>
       <_Title>{children}</_Title>
       <_SubTitle>{subTitle}</_SubTitle>
-    </>
+    </React.Fragment>
   )
 }
 

@@ -17,14 +17,12 @@ export const CountDown = () => {
   }
 
   return (
-    <>
-      <p>
-        芸工祭まで
-        <span style={{ margin: '12px', fontFamily: 'Pixel', fontSize: '32px' }}>
-          {howManyDays()}
-        </span>
-        日
-      </p>
-    </>
+    <p>
+      芸工祭まで
+      <span style={{ margin: '12px', fontFamily: 'Pixel', fontSize: '32px' }}>
+        {howManyDays()}
+      </span>
+      日
+    </p>
   )
 }
