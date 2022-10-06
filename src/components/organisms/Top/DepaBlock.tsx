@@ -5,6 +5,11 @@ import { Heading } from '@/components/atoms/icons/Heading'
 import { ViewMore } from '@/components/atoms/buttons/ViewMore'
 import { DepaCard } from '@/components/molecules/Department/DepaCrad'
 
+import katen from 'public/images/departmentHead/saicho.png'
+import saichoIcon from 'public/icons/department/01chief.png'
+import okutan from 'public/images/departmentHead/fuku-saicho.png'
+import hukusaichoIcon from 'public/icons/department/02chief_sub.png'
+
 export const DepaBlock = () => {
   return (
     <_Section>
@@ -14,13 +19,10 @@ export const DepaBlock = () => {
       <Grid gap="30px">
         <_ContentWrap>
           <_HeadImage>
-            <img
-              src="/images/departmentHead/saicho.png"
-              alt="芸工祭長 花天狂骨"
-            />
+            <img src={katen.src} alt="芸工祭長 花天狂骨" />
           </_HeadImage>
           <DepaCard
-            icon="/icons/department/01chief.png"
+            icon={saichoIcon.src}
             roll="芸工祭長"
             geikoName="3N 花天狂骨"
           >
@@ -29,13 +31,10 @@ export const DepaBlock = () => {
         </_ContentWrap>
         <_ContentWrap>
           <_HeadImage>
-            <img
-              src="/images/departmentHead/fuku-saicho.png"
-              alt="副芸工祭長 オクタン"
-            />
+            <img src={okutan.src} alt="副芸工祭長 オクタン" />
           </_HeadImage>
           <DepaCard
-            icon="/icons/department/02chief_sub.png"
+            icon={hukusaichoIcon.src}
             roll="副芸工祭長"
             geikoName="30 オクタン"
           >
@@ -70,7 +69,7 @@ const _ContentWrap = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 37px 0 30px;
-  background-image: url('/images/top/Bg-dot.png');
+  background-image: url('/2022/pre/images/top/Bg-dot.png');
   background-repeat: no-repeat;
   background-position-x: 25px;
 `

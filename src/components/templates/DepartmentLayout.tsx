@@ -65,7 +65,7 @@ const _Tabs = styled(Tabs)`
 const _ImageTabs = styled.div`
   width: 350px;
   padding: 38px 0 30px;
-  background-image: url('/images/top/Bg-dot.png');
+  background-image: url('/2022/pre/images/top/Bg-dot.png');
   background-repeat: repeat-y;
   background-position-x: 10px;
 `

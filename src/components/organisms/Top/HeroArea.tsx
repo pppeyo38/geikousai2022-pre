@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { keyframes } from '@emotion/react'
 import { use100vh } from 'react-div-100vh'
 import { CountDown } from '@/components/molecules/Top/CountDown'
+import hero from 'public/images/top/topVisual.png'
 
 export const HeroArea = () => {
   const height = use100vh()
@@ -10,10 +11,7 @@ export const HeroArea = () => {
     <_MainVisualArea height={height ? `${height}px` : '100vh'}>
       <_MainVisual>
         <_MainVisualWrap>
-          <img
-            src="/images/top/topVisual.png"
-            alt="名古屋市立大学芸術工学部 芸工祭"
-          />
+          <img src={hero.src} alt="名古屋市立大学芸術工学部 芸工祭" />
         </_MainVisualWrap>
         <_MainVisualCount>
           <CountDown />

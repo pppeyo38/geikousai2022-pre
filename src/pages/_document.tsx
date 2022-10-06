@@ -14,9 +14,12 @@ export default class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <meta charSet="utf-8" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/2022/pre/favicon.ico" />
           <meta property="og:title" content="芸工祭2022 告知サイト" />
-          <meta property="og:url" content="https://geikousai-ncu.com" />
+          <meta
+            property="og:url"
+            content="https://geikousai-ncu.com/2022/pre/"
+          />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
@@ -25,7 +28,7 @@ export default class MyDocument extends Document {
           <meta property="og:site_name" content="芸工祭2022 告知サイト" />
           <meta
             property="og:image"
-            content="https://geikousai-ncu.com/ogImage.png"
+            content="https://geikousai-ncu.com/2022/pre/ogImage.png"
           />
           <meta
             name="keywords"
@@ -44,7 +47,7 @@ export default class MyDocument extends Document {
           />
           <meta
             name="twitter:image"
-            content="https://geikousai-ncu.com/ogImage.png"
+            content="https://geikousai-ncu.com/2022/pre/ogImage.png"
           />
         </Head>
 

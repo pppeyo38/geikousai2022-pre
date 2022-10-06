@@ -64,7 +64,7 @@ const _SetTabBtn = css`
   height: 32px;
   position: absolute;
   z-index: 100;
-  background-image: url('/icons/button/navyCycle.svg');
+  background-image: url('/2022/pre/icons/button/navyCycle.svg');
   background-repeat: repeat;
 `
 
@@ -84,7 +84,7 @@ const _TabPanels = styled(TabPanels)`
   z-index: 30;
 
   &:before {
-    background-image: url('/images/department/circleNavy.svg');
+    background-image: url('/2022/pre/images/department/circleNavy.svg');
   }
 `
 

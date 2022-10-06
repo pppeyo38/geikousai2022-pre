@@ -3,16 +3,14 @@ import styled from '@emotion/styled'
 import { Heading } from '@/components/atoms/icons/Heading'
 import { ViewMore } from '@/components/atoms/buttons/ViewMore'
 import { Text } from '@/components/atoms/text/Text'
+import thumnail from 'public/images/top/gameThumbnail.jpg'
 
 export const GameBlock = () => {
   return (
     <_Section>
       <Heading>ミニゲーム</Heading>
       <_ThumWrap>
-        <img
-          src="/images/top/gameThumbnail.jpg"
-          alt="ミニゲーム スライム投げてみた"
-        />
+        <img src={thumnail.src} alt="ミニゲーム スライム投げてみた" />
       </_ThumWrap>
       <Text fontSize={16} color="#000">
         スライムを引っ張って遠くまで飛ばそう！
