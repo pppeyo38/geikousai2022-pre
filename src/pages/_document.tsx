@@ -1,11 +1,27 @@
 import type { DocumentContext, DocumentInitialProps } from 'next/document'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import { addPrefix } from '@/lib/add-prefix'
+import { extractCritical } from '@emotion/server'
+
 export default class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx)
-    return { ...initialProps }
+    const styles = extractCritical(initialProps.html)
+    const postCss = await addPrefix(styles.css)
+    return {
+      ...initialProps,
+      styles: (
+        <>
+          {initialProps.styles}
+          <style
+            data-emotion-css={styles.ids.join(' ')}
+            dangerouslySetInnerHTML={{ __html: postCss /* styles.css */ }}
+          ></style>
+        </>
+      ),
+    }
   }
 
   render() {
