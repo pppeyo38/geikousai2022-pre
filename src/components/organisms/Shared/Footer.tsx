@@ -3,8 +3,6 @@ import styled from '@emotion/styled'
 import { Text } from '@/components/atoms/text/Text'
 import { SnsIcons } from '@/components/molecules/Shared/SnsIcons'
 
-import GOOOONLogo from 'public/icons/header/geikosai-logo.png'
-
 export const Footer = () => {
   return (
     <_Footer>
@@ -16,7 +14,7 @@ export const Footer = () => {
       </_SnsWrap>
       <_LogoWrap>
         <img
-          src={GOOOONLogo.src}
+          src="/icons/header/geikosai-logo.png"
           width={109}
           height={98}
           alt="芸工祭2022 GOOOON"

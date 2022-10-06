@@ -1,12 +1,10 @@
 import styled from '@emotion/styled'
 
-import GOOOONLogo from 'public/icons/header/geikosai-logo.png'
-
 export const Logo = () => {
   return (
     <_LogoWrap>
       <img
-        src={GOOOONLogo.src}
+        src="/icons/header/geikosai-logo.png"
         width={47}
         height={43}
         alt="芸工祭2022 GOOOON"
