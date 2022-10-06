@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import { usePanelSlide } from '@/hooks/usePanelSlide'
 import { Text } from '@/components/atoms/text/Text'
 import { PageTitle } from '@/components/molecules/Shared/PageTitle'
+import { LinkChart } from '@/components/molecules/Department/LinkChart'
 import { TabSlide } from '@/components/organisms/Department/TabSlide'
 import { TabImageList } from '@/components/organisms/Department/TabImageList'
 
@@ -22,6 +23,9 @@ export const DepartmentLayout = () => {
           兼部署についてはインスタをチェック！
         </Text>
       </_TextWrap>
+      <_FixedBottom>
+        <LinkChart />
+      </_FixedBottom>
       <_Tabs defaultIndex={tabIndex} index={tabIndex}>
         <_ImageTabs>
           <TabSlide prevSlide={prevSlide} nextSlide={nextSlide} />
@@ -42,6 +46,12 @@ const _Section = styled.section`
 const _TextWrap = styled.div`
   margin: 22px 0;
   text-align: center;
+`
+
+const _FixedBottom = styled.div`
+  position: fixed;
+  bottom: 20px;
+  z-index: 200;
 `
 
 const _Tabs = styled(Tabs)`
