@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "/2022/pre",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
