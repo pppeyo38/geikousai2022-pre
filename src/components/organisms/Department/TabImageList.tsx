@@ -3,7 +3,6 @@ import { TabList } from '@chakra-ui/react'
 
 import { PageTitle } from '@/components/molecules/Shared/PageTitle'
 import data from '@/data/department/departmentTab.json'
-import Image from 'next/image'
 
 type Props = {
   tabIndex: number
@@ -31,7 +30,7 @@ export const TabImageList = ({ tabIndex, onClickSetPanel }: Props) => {
             isFocus={tabIndex === item.id}
             onClick={() => onClickSetPanel(item.id)}
           >
-            <Image src={item.image} alt="" width={62} height={115} />
+            <img src={item.image} width={62} height={115} />
           </_ImageRowItem>
         ))}
       </_ImageRow>
@@ -45,7 +44,7 @@ export const TabImageList = ({ tabIndex, onClickSetPanel }: Props) => {
             isFocus={tabIndex === item.id}
             onClick={() => onClickSetPanel(item.id)}
           >
-            <Image src={item.image} alt="" width={62} height={115} />
+            <img src={item.image} width={62} height={115} />
           </_ImageRowItem>
         ))}
       </_ImageRow>

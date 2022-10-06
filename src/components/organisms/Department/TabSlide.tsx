@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { useState } from 'react'
 import { TabPanels, TabPanel } from '@chakra-ui/react'
 import styled from '@emotion/styled'
@@ -36,7 +35,7 @@ export const TabSlide = ({ prevSlide, nextSlide }: Props) => {
           {data.map((item, index) => (
             <_TabPanel key={index}>
               <_SlideWrap isNext={isNext}>
-                <_Image src={item.image} layout="fill" alt={item.geikoName} />
+                <_Image src={item.image} alt={item.geikoName} />
               </_SlideWrap>
             </_TabPanel>
           ))}
@@ -116,7 +115,7 @@ const _NextBtn = styled.button`
   transform: rotate(180deg);
 `
 
-const _Image = styled(Image)`
+const _Image = styled.img`
   filter: drop-shadow(8px 0px 0px #549f5b);
 `
 

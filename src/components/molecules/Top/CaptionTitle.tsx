@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import Image from 'next/image'
 
 import Goooon from 'public/images/top/GOOOON.png'
 
@@ -7,7 +6,7 @@ export const CaptionTitle = () => {
   return (
     <_CaptionTitleWrap>
       <_GoooonWrap>
-        <Image src={Goooon.src} alt="GOOOONと前に進み続ける" layout="fill" />
+        <img src={Goooon.src} alt="GOOOONと前に進み続ける" />
       </_GoooonWrap>
       <_CaptionTitle>
         <_Margin>と</_Margin>前に進み続ける

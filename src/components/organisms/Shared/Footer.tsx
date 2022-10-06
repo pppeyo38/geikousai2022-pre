@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styled from '@emotion/styled'
 
 import { Text } from '@/components/atoms/text/Text'
@@ -16,7 +15,7 @@ export const Footer = () => {
         <SnsIcons />
       </_SnsWrap>
       <_LogoWrap>
-        <Image
+        <img
           src={GOOOONLogo.src}
           width={109}
           height={98}

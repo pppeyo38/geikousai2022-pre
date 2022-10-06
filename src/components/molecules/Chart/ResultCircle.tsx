@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styled from '@emotion/styled'
 import { Center } from '@chakra-ui/react'
 
@@ -15,7 +14,7 @@ export const ResultCircle = ({ result }: Props) => {
     <_AnswerCircle>
       <_Result>{result.department}</_Result>
       <_InnerCircle>
-        <Image src={result.image} alt={result.department} layout="fill" />
+        <img src={result.image} alt={result.department} />
       </_InnerCircle>
     </_AnswerCircle>
   )

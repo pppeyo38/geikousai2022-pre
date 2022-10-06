@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styled from '@emotion/styled'
 import { Text } from '@/components/atoms/text/Text'
 import { ReactNode } from 'react'
@@ -15,7 +14,7 @@ export const DepaCard = ({ icon, roll, geikoName, children }: CardProps) => {
     <_Card>
       <_CardHeading>
         <_IconWrap>
-          <Image src={icon} layout="fill" alt={roll} />
+          <img src={icon} alt={roll} />
         </_IconWrap>
         <_NameWrap>
           <_Roll>{roll}</_Roll>

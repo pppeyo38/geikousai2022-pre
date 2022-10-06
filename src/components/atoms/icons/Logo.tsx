@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styled from '@emotion/styled'
 
 import GOOOONLogo from 'public/icons/header/geikosai-logo.png'
@@ -6,7 +5,7 @@ import GOOOONLogo from 'public/icons/header/geikosai-logo.png'
 export const Logo = () => {
   return (
     <_LogoWrap>
-      <Image
+      <img
         src={GOOOONLogo.src}
         width={47}
         height={43}

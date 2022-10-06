@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styled from '@emotion/styled'
 
 import { Heading } from '@/components/atoms/icons/Heading'
@@ -10,10 +9,9 @@ export const GameBlock = () => {
     <_Section>
       <Heading>ミニゲーム</Heading>
       <_ThumWrap>
-        <Image
+        <img
           src="/images/top/gameThumbnail.jpg"
           alt="ミニゲーム スライム投げてみた"
-          layout="fill"
         />
       </_ThumWrap>
       <Text fontSize={16} color="#000">

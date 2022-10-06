@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/react'
 import { use100vh } from 'react-div-100vh'
@@ -13,12 +12,7 @@ export const HeroArea = () => {
     <_MainVisualArea height={height ? `${height}px` : '100vh'}>
       <_MainVisual>
         <_MainVisualWrap>
-          <Image
-            src={topVisual.src}
-            alt="芸工祭"
-            layout="fill"
-            objectFit="contain"
-          />
+          <img src={topVisual.src} alt="名古屋市立大学芸術工学部 芸工祭" />
         </_MainVisualWrap>
         <_MainVisualCount>
           <CountDown />
@@ -63,7 +57,8 @@ const _MainVisual = styled.div`
 `
 
 const _MainVisualWrap = styled.figure`
-  position: relative;
+  display: grid;
+  place-content: center;
   width: 100%;
   height: 100%;
   animation: 3s ${fuwafuwa} infinite;

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styled from '@emotion/styled'
 import { Grid } from '@chakra-ui/react'
 
@@ -15,10 +14,9 @@ export const DepaBlock = () => {
       <Grid gap="30px">
         <_ContentWrap>
           <_HeadImage>
-            <Image
+            <img
               src="/images/departmentHead/saicho.png"
-              layout="fill"
-              alt=""
+              alt="芸工祭長 花天狂骨"
             />
           </_HeadImage>
           <DepaCard
@@ -31,10 +29,9 @@ export const DepaBlock = () => {
         </_ContentWrap>
         <_ContentWrap>
           <_HeadImage>
-            <Image
+            <img
               src="/images/departmentHead/fuku-saicho.png"
-              layout="fill"
-              alt=""
+              alt="副芸工祭長 オクタン"
             />
           </_HeadImage>
           <DepaCard
