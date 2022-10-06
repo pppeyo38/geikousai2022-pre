@@ -1,25 +1,23 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { TabPanels, TabPanel } from '@chakra-ui/react'
 import styled from '@emotion/styled'
-import { css, SerializedStyles } from '@emotion/react'
+import { css } from '@emotion/react'
 
 import { DepaCard } from '@/components/molecules/Department/DepaCrad'
 import { department } from '@/types/department'
-import { departmentHeads } from '@/data/department/departmentHeads.json'
+import departmentHeadsData from '@/data/department/departmentHeads.json'
 import { _DoubleCircle } from '@/styles/CircleStyle'
 import { slideToLeft, slideToRight } from '@/styles/animation/fadeKeyframes'
 
 type Props = {
-  tabIndex: number
   prevSlide: () => void
   nextSlide: () => void
 }
 
-export const TabSlide = ({ tabIndex, prevSlide, nextSlide }: Props) => {
-  const data: department[] = departmentHeads
+export const TabSlide = ({ prevSlide, nextSlide }: Props) => {
+  const data: department[] = departmentHeadsData.departmentHeads
   const [isNext, setIsNext] = useState(true)
-  const [slideMove, setSlideMove] = useState<SerializedStyles>()
 
   const onClickSlide = (isNextClick: boolean) => {
     setIsNext(isNextClick)
@@ -30,30 +28,17 @@ export const TabSlide = ({ tabIndex, prevSlide, nextSlide }: Props) => {
     }
   }
 
-  const getMove = (index: number) => {
-    if (index !== tabIndex) return
-    return slideMove
-  }
-
-  useEffect(() => {
-    if (isNext) {
-      setSlideMove(_slideToLeft)
-    } else {
-      setSlideMove(_slideToRight)
-    }
-  }, [tabIndex, isNext])
-
   return (
     <>
       <_TabWrap>
         <_PrevBtn onClick={() => onClickSlide(false)} />
         <_TabPanels>
           {data.map((item, index) => (
-            <_SlideWrap key={index} move={getMove(index)}>
-              <_TabPanel>
-                <_Image src={item.image} layout="fill" alt="" />
-              </_TabPanel>
-            </_SlideWrap>
+            <_TabPanel key={index}>
+              <_SlideWrap isNext={isNext}>
+                <_Image src={item.image} layout="fill" alt={item.geikoName} />
+              </_SlideWrap>
+            </_TabPanel>
           ))}
         </_TabPanels>
         <_NextBtn onClick={() => onClickSlide(true)} />
@@ -84,14 +69,6 @@ const _SetTabBtn = css`
   background-repeat: repeat;
 `
 
-const _slideToLeft = css`
-  animation: 1s ${slideToLeft} cubic-bezier(0.25, 1, 0.5, 1);
-`
-
-const _slideToRight = css`
-  animation: 1s ${slideToRight} cubic-bezier(0.25, 1, 0.5, 1);
-`
-
 const _TabWrap = styled.div`
   position: relative;
   display: flex;
@@ -112,17 +89,20 @@ const _TabPanels = styled(TabPanels)`
   }
 `
 
-const _SlideWrap = styled.div<{ move: SerializedStyles | undefined }>`
-  ${(props) => props.move}
-`
-
 const _TabPanel = styled(TabPanel)`
-  position: relative;
-  width: 310px;
-  height: 310px;
   padding: 0;
   outline: none;
   outline-offset: 0;
+`
+
+const _SlideWrap = styled.figure<{ isNext: boolean }>`
+  position: relative;
+  width: 350px;
+  height: 350px;
+  animation: ${(props) =>
+    props.isNext
+      ? css` 1s ${slideToLeft} cubic-bezier(0.25, 1, 0.5, 1) `
+      : css`1s ${slideToRight} cubic-bezier(0.25, 1, 0.5, 1)`};
 `
 
 const _PrevBtn = styled.button`

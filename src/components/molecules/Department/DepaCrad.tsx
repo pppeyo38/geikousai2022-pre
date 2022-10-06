@@ -15,7 +15,7 @@ export const DepaCard = ({ icon, roll, geikoName, children }: CardProps) => {
     <_Card>
       <_CardHeading>
         <_IconWrap>
-          <Image src={icon} alt="" width={66} height={66} layout="fill" />
+          <Image src={icon} layout="fill" alt={roll} />
         </_IconWrap>
         <_NameWrap>
           <_Roll>{roll}</_Roll>

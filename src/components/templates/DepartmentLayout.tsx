@@ -24,11 +24,7 @@ export const DepartmentLayout = () => {
       </_TextWrap>
       <_Tabs defaultIndex={tabIndex} index={tabIndex}>
         <_ImageTabs>
-          <TabSlide
-            tabIndex={tabIndex}
-            prevSlide={prevSlide}
-            nextSlide={nextSlide}
-          />
+          <TabSlide prevSlide={prevSlide} nextSlide={nextSlide} />
         </_ImageTabs>
         <TabImageList tabIndex={tabIndex} onClickSetPanel={onClickSetPanel} />
       </_Tabs>

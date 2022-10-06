@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { TabList } from '@chakra-ui/react'
 
 import { PageTitle } from '@/components/molecules/Shared/PageTitle'
-import { kanbu, busyocho } from '@/data/department/departmentTab.json'
+import data from '@/data/department/departmentTab.json'
 import Image from 'next/image'
 
 type Props = {
@@ -10,7 +10,15 @@ type Props = {
   onClickSetPanel: (index: number) => void
 }
 
+type dataType = {
+  id: number
+  image: string
+}
+
 export const TabImageList = ({ tabIndex, onClickSetPanel }: Props) => {
+  const kanbu: dataType[] = data.kanbu
+  const busyocho: dataType[] = data.busyocho
+
   return (
     <_TabList>
       <PageTitle subTitle="幹部" color="#FFF">
