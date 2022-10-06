@@ -3,7 +3,7 @@ import { About } from '@/components/organisms/Top/About'
 import { Theme } from '@/components/organisms/Top/Theme'
 import { DepaBlock } from '@/components/organisms/Top/DepaBlock'
 import { MovieBlock } from '@/components/organisms/Top/MovieBlock'
-import { GameBlock } from '../organisms/Top/GameBlock'
+import { GameBlock } from '@/components/organisms/Top/GameBlock'
 
 export const TopLayout = () => {
   return (

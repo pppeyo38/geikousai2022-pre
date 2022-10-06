@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
           <meta property="og:site_name" content="芸工祭2022 告知サイト" />
           <meta
             property="og:image"
-            content="https://geikousai-ncu.com/images/geikousai-thumbnail.png"
+            content="https://geikousai-ncu.com/ogImage.png"
           />
           <meta
             name="keywords"
@@ -43,7 +43,7 @@ export default class MyDocument extends Document {
           />
           <meta
             name="twitter:image"
-            content="https://geikousai-ncu.com/images/geikousai-thumbnail.png"
+            content="https://geikousai-ncu.com/ogImage.png"
           />
         </Head>
 
