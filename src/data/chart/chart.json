@@ -68,55 +68,55 @@
   "resultData": [
     {
       "department": "WEB",
-      "image": "/icons/department/10web.png"
+      "image": "/2022/pre/icons/department/10web.png"
     },
     {
       "department": "MOVIE",
-      "image": "/icons/department/04eizo.png"
+      "image": "/2022/pre/icons/department/04eizo.png"
     },
     {
       "department": "GRAPHIC",
-      "image": "/icons/department/14graphic.png"
+      "image": "/2022/pre/icons/department/14graphic.png"
     },
     {
       "department": "PA",
-      "image": "/icons/department/08PA.png"
+      "image": "/2022/pre/icons/department/08PA.png"
     },
     {
       "department": "WORK SHOP",
-      "image": "/icons/department/16workshop.png"
+      "image": "/2022/pre/icons/department/16workshop.png"
     },
     {
       "department": "INTERIOR",
-      "image": "/icons/department/06interior.png"
+      "image": "/2022/pre/icons/department/06interior.png"
     },
     {
       "department": "EXTERIOR",
-      "image": "/icons/department/07exterior.png"
+      "image": "/2022/pre/icons/department/07exterior.png"
     },
     {
       "department": "CAFE",
-      "image": "/icons/department/11cafe.png"
+      "image": "/2022/pre/icons/department/11cafe.png"
     },
     {
       "department": "STAGE",
-      "image": "/icons/department/15stage_hiru.png"
+      "image": "/2022/pre/icons/department/15stage_hiru.png"
     },
     {
       "department": "DIRECTION",
-      "image": "/icons/department/05direction.png"
+      "image": "/2022/pre/icons/department/05direction.png"
     },
     {
       "department": "BOOTH",
-      "image": "/icons/department/12booth.png"
+      "image": "/2022/pre/icons/department/12booth.png"
     },
     {
       "department": "SPORTS",
-      "image": "/icons/department/09undokai.png"
+      "image": "/2022/pre/icons/department/09undokai.png"
     },
     {
       "department": "BAR",
-      "image": "/icons/department/13bar.png"
+      "image": "/2022/pre/icons/department/13bar.png"
     }
   ]
 }
