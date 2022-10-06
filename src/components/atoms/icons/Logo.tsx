@@ -3,12 +3,7 @@ import styled from '@emotion/styled'
 export const Logo = () => {
   return (
     <_LogoWrap>
-      <img
-        src="/icons/header/geikosai-logo.png"
-        width={47}
-        height={43}
-        alt="芸工祭2022 GOOOON"
-      />
+      <img src="/icons/header/geikosai-logo.png" alt="芸工祭2022 GOOOON" />
     </_LogoWrap>
   )
 }
