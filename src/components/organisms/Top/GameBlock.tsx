@@ -31,7 +31,5 @@ const _Section = styled.section`
 `
 
 const _ThumWrap = styled.figure`
-  position: relative;
-  width: 390px;
-  height: 338px;
+  max-width: 390px;
 `

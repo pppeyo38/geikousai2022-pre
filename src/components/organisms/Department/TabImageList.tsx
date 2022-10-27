@@ -61,6 +61,7 @@ const _TabList = styled(TabList)`
   padding-top: 30px;
   border: none;
   background-image: url(${url('/images/department/depaListBg.png')});
+  background-size: cover;
 `
 
 const _ImageRow = styled.ul`
