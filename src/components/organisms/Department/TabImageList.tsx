@@ -31,7 +31,7 @@ export const TabImageList = ({ tabIndex, onClickSetPanel }: Props) => {
             isFocus={tabIndex === item.id}
             onClick={() => onClickSetPanel(item.id)}
           >
-            <img src={item.image} width={62} height={115} />
+            <img src={url(item.image)} width={62} height={115} />
           </_ImageRowItem>
         ))}
       </_ImageRow>
@@ -45,7 +45,7 @@ export const TabImageList = ({ tabIndex, onClickSetPanel }: Props) => {
             isFocus={tabIndex === item.id}
             onClick={() => onClickSetPanel(item.id)}
           >
-            <img src={item.image} width={62} height={115} />
+            <img src={url(item.image)} width={62} height={115} />
           </_ImageRowItem>
         ))}
       </_ImageRow>

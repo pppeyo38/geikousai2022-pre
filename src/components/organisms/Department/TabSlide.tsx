@@ -36,7 +36,7 @@ export const TabSlide = ({ prevSlide, nextSlide }: Props) => {
           {data.map((item, index) => (
             <_TabPanel key={index}>
               <_SlideWrap isNext={isNext}>
-                <_Image src={item.image} alt={item.geikoName} />
+                <_Image src={url(item.image)} alt={item.geikoName} />
               </_SlideWrap>
             </_TabPanel>
           ))}

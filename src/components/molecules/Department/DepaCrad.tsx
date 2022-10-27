@@ -1,6 +1,7 @@
+import { ReactNode } from 'react'
 import styled from '@emotion/styled'
 import { Text } from '@/components/atoms/text/Text'
-import { ReactNode } from 'react'
+import { url } from '@/utils/config'
 
 type CardProps = {
   icon: string
@@ -14,7 +15,7 @@ export const DepaCard = ({ icon, roll, geikoName, children }: CardProps) => {
     <_Card>
       <_CardHeading>
         <_IconWrap>
-          <img src={icon} alt={roll} />
+          <img src={url(icon)} alt={roll} />
         </_IconWrap>
         <_NameWrap>
           <_Roll>{roll}</_Roll>

@@ -4,6 +4,7 @@ import { Center } from '@chakra-ui/react'
 import { resultType } from '@/types/chart'
 import { neonGreen } from '@/styles/animation/circleKeyframes'
 import { slideInFromBottom, fadeIn } from '@/styles/animation/fadeKeyframes'
+import { url } from '@/utils/config'
 
 type Props = {
   result: resultType
@@ -14,7 +15,7 @@ export const ResultCircle = ({ result }: Props) => {
     <_AnswerCircle>
       <_Result>{result.department}</_Result>
       <_InnerCircle>
-        <img src={result.image} alt={result.department} />
+        <img src={url(result.image)} alt={result.department} />
       </_InnerCircle>
     </_AnswerCircle>
   )

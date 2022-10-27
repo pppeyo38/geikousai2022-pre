@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/react'
 import { use100vh } from 'react-div-100vh'
-import { CountDown } from '@/components/molecules/Top/CountDown'
 import hero from 'public/images/top/topVisual.png'
 
 export const HeroArea = () => {
@@ -13,9 +12,6 @@ export const HeroArea = () => {
         <_MainVisualWrap>
           <img src={hero.src} alt="名古屋市立大学芸術工学部 芸工祭" />
         </_MainVisualWrap>
-        <_MainVisualCount>
-          <CountDown />
-        </_MainVisualCount>
       </_MainVisual>
       <_MainVisualInfo>
         <_FlowText>部署登録は6月29日(水)まで！！！！</_FlowText>
@@ -43,13 +39,14 @@ const textSlide = keyframes`
 `
 
 const _MainVisualArea = styled.section<{ height: string }>`
+  position: relative;
   width: 100vw;
   height: ${(props) => props.height};
 `
 
 const _MainVisual = styled.div`
   position: relative;
-  height: 94%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,20 +60,13 @@ const _MainVisualWrap = styled.figure`
   animation: 3s ${fuwafuwa} infinite;
 `
 
-const _MainVisualCount = styled.div`
+const _MainVisualInfo = styled.div`
   position: absolute;
   bottom: 0;
-  left: 30px;
-  margin-bottom: 15px;
-  font-family: ${({ theme }) => theme.fonts.txtBasic};
-  font-weight: ${({ theme }) => theme.fontWt.Regular};
-`
-
-const _MainVisualInfo = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 6%;
+  height: 50px;
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.red};
   overflow-x: hidden;
