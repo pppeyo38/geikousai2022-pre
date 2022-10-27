@@ -50,7 +50,9 @@ export const NavFade = ({ isOpen, onToggle }: Props) => {
           </Link>
         </_NavListItem>
         <_NavListItem onClick={onToggle}>
-          <NavTitle subTitle="ゲーム">GAME</NavTitle>
+          <a href="./game">
+            <NavTitle subTitle="ゲーム">GAME</NavTitle>
+          </a>
         </_NavListItem>
       </_NavList>
       <Center>
