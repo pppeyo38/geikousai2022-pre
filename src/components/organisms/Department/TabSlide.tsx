@@ -29,7 +29,7 @@ export const TabSlide = ({ prevSlide, nextSlide }: Props) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <_TabWrap>
         <_PrevBtn onClick={() => onClickSlide(false)} />
         <_TabPanels>
@@ -56,7 +56,7 @@ export const TabSlide = ({ prevSlide, nextSlide }: Props) => {
           </_CardPanel>
         ))}
       </_CardPanels>
-    </React.Fragment>
+    </>
   )
 }
 

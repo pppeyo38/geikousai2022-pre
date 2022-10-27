@@ -23,7 +23,7 @@ export const DepaBlock = () => {
             <img src={katen.src} alt="芸工祭長 花天狂骨" />
           </_HeadImage>
           <DepaCard
-            icon={saichoIcon.src}
+            icon="/icons/department/01chief.png"
             roll="芸工祭長"
             geikoName="3N 花天狂骨"
           >
@@ -35,7 +35,7 @@ export const DepaBlock = () => {
             <img src={okutan.src} alt="副芸工祭長 オクタン" />
           </_HeadImage>
           <DepaCard
-            icon={hukusaichoIcon.src}
+            icon="/icons/department/02chief_sub.png"
             roll="副芸工祭長"
             geikoName="30 オクタン"
           >
