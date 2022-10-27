@@ -7,9 +7,7 @@ import { ViewMore } from '@/components/atoms/buttons/ViewMore'
 import { DepaCard } from '@/components/molecules/Department/DepaCrad'
 
 import katen from 'public/images/departmentHead/saicho.png'
-import saichoIcon from 'public/icons/department/01chief.png'
 import okutan from 'public/images/departmentHead/fuku-saicho.png'
-import hukusaichoIcon from 'public/icons/department/02chief_sub.png'
 
 export const DepaBlock = () => {
   return (

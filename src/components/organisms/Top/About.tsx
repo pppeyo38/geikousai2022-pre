@@ -37,7 +37,7 @@ export const About = () => {
 }
 
 const _Section = styled.section`
-  padding: 60px 30px;
+  padding: 60px 0;
   background-image: url(${url('/images/top/aboutBg.jpg')});
   background-size: cover;
 
