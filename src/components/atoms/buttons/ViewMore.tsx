@@ -31,7 +31,7 @@ const _Button = styled.button`
     width: 20px;
     height: 20px;
     transform: translateY(-50%);
-    background-image: url('/2022/pre/icons/button/viewMore_white.svg');
+    background-image: url('/icons/button/viewMore_white.svg');
     background-repeat: no-repeat;
   }
 `

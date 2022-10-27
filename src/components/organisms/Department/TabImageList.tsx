@@ -59,7 +59,7 @@ const _TabList = styled(TabList)`
   width: 100%;
   padding-top: 30px;
   border: none;
-  background-image: url('/2022/pre/images/department/depaListBg.png');
+  background-image: url('/images/department/depaListBg.png');
 `
 
 const _ImageRow = styled.ul`

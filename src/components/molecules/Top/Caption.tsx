@@ -22,7 +22,7 @@ export const Caption = () => {
 const _CaptionArea = styled.div`
   width: 100vw;
   overflow-y: hidden;
-  background-image: url('/2022/pre/images/top/captionBg.jpg');
+  background-image: url('/images/top/captionBg.jpg');
 `
 
 const _CaptionBody = styled.div`
@@ -30,7 +30,7 @@ const _CaptionBody = styled.div`
   height: 573px;
   margin: 107px auto 80px;
   padding: 40px 30px;
-  background-image: url('/2022/pre/images/top/captionTextBack.png');
+  background-image: url('/images/top/captionTextBack.png');
 
   * + * {
     margin-top: 40px;

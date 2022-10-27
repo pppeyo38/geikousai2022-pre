@@ -37,7 +37,7 @@ export const About = () => {
 
 const _Section = styled.section`
   padding: 60px 30px;
-  background-image: url('/2022/pre/images/top/aboutBg.jpg');
+  background-image: url('/images/top/aboutBg.jpg');
   background-size: cover;
 
   * + * {
@@ -72,7 +72,7 @@ const _doubleExclamation = styled.span`
     right: -24px;
     width: 24px;
     height: 18px;
-    background-image: url('/2022/pre/icons/text/emojione_double-exclamation-mark.svg');
+    background-image: url('/icons/text/emojione_double-exclamation-mark.svg');
     background-repeat: no-repeat;
   }
 `

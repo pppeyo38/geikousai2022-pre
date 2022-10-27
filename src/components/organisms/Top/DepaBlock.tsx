@@ -69,7 +69,7 @@ const _ContentWrap = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 37px 0 30px;
-  background-image: url('/2022/pre/images/top/Bg-dot.png');
+  background-image: url('/images/top/Bg-dot.png');
   background-repeat: no-repeat;
   background-position-x: 25px;
 `

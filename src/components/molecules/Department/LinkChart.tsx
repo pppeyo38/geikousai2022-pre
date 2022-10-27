@@ -44,7 +44,7 @@ const _A = styled.a`
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-image: url('/2022/pre/icons/button/viewMore_red.svg');
+    background-image: url('/icons/button/viewMore_red.svg');
     background-repeat: no-repeat;
   }
 `

@@ -64,7 +64,7 @@ const _ChartStart = styled.div`
   ${_DoubleCircle}
 
   &:before {
-    background-image: url('/2022/pre/images/chart/circleWhite.svg');
+    background-image: url('/images/chart/circleWhite.svg');
   }
 `
 
