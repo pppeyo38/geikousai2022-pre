@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styled from '@emotion/styled'
+import { url } from '@/utils/config'
 
 export const LinkChart = () => {
   return (
@@ -44,7 +45,7 @@ const _A = styled.a`
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-image: url('/icons/button/viewMore_red.svg');
+    background-image: url(${url('/icons/button/viewMore_red.svg')});
     background-repeat: no-repeat;
   }
 `

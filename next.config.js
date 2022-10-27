@@ -1,18 +1,19 @@
 const urlPrefix = process.env.IS_DEV ? '' : '/2022/pre'
 
-module.exports = {
-  basePath: urlPrefix,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   assetPrefix: urlPrefix,
+  basePath: urlPrefix,
+  reactStrictMode: true,
+  swcMinify: true,
   publicRuntimeConfig: { urlPrefix },
-  webpack(config) {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
-      issuer: {
-        and: [/\.(js|ts)x?$/],
-      },
       use: ['@svgr/webpack'],
     })
-
     return config
   },
 }
+
+module.exports = nextConfig

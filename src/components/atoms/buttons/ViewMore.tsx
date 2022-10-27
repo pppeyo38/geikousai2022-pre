@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import styled from '@emotion/styled'
 import { useRouter } from 'next/router'
+import { url } from '@/utils/config'
 
 type Props = {
   children: ReactNode
@@ -31,7 +32,7 @@ const _Button = styled.button`
     width: 20px;
     height: 20px;
     transform: translateY(-50%);
-    background-image: url('/icons/button/viewMore_white.svg');
+    background-image: url(${url('/icons/button/viewMore_white.svg')});
     background-repeat: no-repeat;
   }
 `
