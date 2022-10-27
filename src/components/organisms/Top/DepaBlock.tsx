@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Grid } from '@chakra-ui/react'
 
+import { url } from '@/utils/config'
 import { Heading } from '@/components/atoms/icons/Heading'
 import { ViewMore } from '@/components/atoms/buttons/ViewMore'
 import { DepaCard } from '@/components/molecules/Department/DepaCrad'
@@ -69,7 +70,7 @@ const _ContentWrap = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 37px 0 30px;
-  background-image: url('/images/top/Bg-dot.png');
+  background-image: url(${url('/images/top/Bg-dot.png')});
   background-repeat: no-repeat;
   background-position-x: 25px;
 `

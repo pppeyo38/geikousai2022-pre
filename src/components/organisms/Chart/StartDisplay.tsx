@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import { use100vh } from 'react-div-100vh'
 
+import { url } from '@/utils/config'
 import { _DoubleCircle } from '@/styles/CircleStyle'
 import { fadeIn, fadeOut } from '@/styles/animation/fadeKeyframes'
 import { Dispatch, SetStateAction, useState } from 'react'
@@ -64,7 +65,7 @@ const _ChartStart = styled.div`
   ${_DoubleCircle}
 
   &:before {
-    background-image: url('/images/chart/circleWhite.svg');
+    background-image: url(${url('/images/chart/circleWhite.svg')});
   }
 `
 

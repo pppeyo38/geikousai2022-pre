@@ -1,6 +1,7 @@
 import { Text } from '@/components/atoms/text/Text'
 import { CaptionTitle } from '@/components/molecules/Top/CaptionTitle'
 import styled from '@emotion/styled'
+import { url } from '@/utils/config'
 
 export const Caption = () => {
   return (
@@ -22,7 +23,7 @@ export const Caption = () => {
 const _CaptionArea = styled.div`
   width: 100vw;
   overflow-y: hidden;
-  background-image: url('/images/top/captionBg.jpg');
+  background-image: url(${url('/images/top/captionBg.jpg')});
 `
 
 const _CaptionBody = styled.div`
@@ -30,7 +31,7 @@ const _CaptionBody = styled.div`
   height: 573px;
   margin: 107px auto 80px;
   padding: 40px 30px;
-  background-image: url('/images/top/captionTextBack.png');
+  background-image: url(${url('/images/top/captionTextBack.png')});
 
   * + * {
     margin-top: 40px;

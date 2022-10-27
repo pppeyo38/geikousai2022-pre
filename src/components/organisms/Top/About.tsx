@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { url } from '@/utils/config'
 import { AboutTxt } from '@/components/atoms/text/AboutTxt'
 import { PageTitle } from '@/components/molecules/Shared/PageTitle'
 
@@ -37,7 +38,7 @@ export const About = () => {
 
 const _Section = styled.section`
   padding: 60px 30px;
-  background-image: url('/images/top/aboutBg.jpg');
+  background-image: url(${url('/images/top/aboutBg.jpg')});
   background-size: cover;
 
   * + * {
@@ -72,7 +73,7 @@ const _doubleExclamation = styled.span`
     right: -24px;
     width: 24px;
     height: 18px;
-    background-image: url('/icons/text/emojione_double-exclamation-mark.svg');
+    background-image: url(${url('/icons/text/doubleExclamation.svg')});
     background-repeat: no-repeat;
   }
 `

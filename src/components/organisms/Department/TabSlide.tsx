@@ -3,6 +3,7 @@ import { TabPanels, TabPanel } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
+import { url } from '@/utils/config'
 import { DepaCard } from '@/components/molecules/Department/DepaCrad'
 import { department } from '@/types/department'
 import departmentHeadsData from '@/data/department/departmentHeads.json'
@@ -64,7 +65,7 @@ const _SetTabBtn = css`
   height: 32px;
   position: absolute;
   z-index: 100;
-  background-image: url('/icons/button/navyCycle.svg');
+  background-image: url(${url('/icons/button/navyCycle.svg')});
   background-repeat: repeat;
 `
 
@@ -84,7 +85,7 @@ const _TabPanels = styled(TabPanels)`
   z-index: 30;
 
   &:before {
-    background-image: url('/images/department/circleNavy.svg');
+    background-image: url(${url('/images/department/circleNavy.svg')});
   }
 `
 

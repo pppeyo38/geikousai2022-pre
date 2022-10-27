@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { TabList } from '@chakra-ui/react'
 
+import { url } from '@/utils/config'
 import { PageTitle } from '@/components/molecules/Shared/PageTitle'
 import data from '@/data/department/departmentTab.json'
 
@@ -59,7 +60,7 @@ const _TabList = styled(TabList)`
   width: 100%;
   padding-top: 30px;
   border: none;
-  background-image: url('/images/department/depaListBg.png');
+  background-image: url(${url('/images/department/depaListBg.png')});
 `
 
 const _ImageRow = styled.ul`

@@ -1,6 +1,7 @@
 import { Tabs } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
+import { url } from '@/utils/config'
 import { usePanelSlide } from '@/hooks/usePanelSlide'
 import { Text } from '@/components/atoms/text/Text'
 import { PageTitle } from '@/components/molecules/Shared/PageTitle'
@@ -65,7 +66,7 @@ const _Tabs = styled(Tabs)`
 const _ImageTabs = styled.div`
   width: 350px;
   padding: 38px 0 30px;
-  background-image: url('/images/top/Bg-dot.png');
+  background-image: url(${url('/images/top/Bg-dot.png')});
   background-repeat: repeat-y;
   background-position-x: 10px;
 `
