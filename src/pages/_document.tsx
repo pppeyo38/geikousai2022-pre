@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <meta charSet="utf-8" />
-          <link rel="icon" href="/2022/pre/favicon.ico" />
+          <link rel="icon" href="./favicon.ico" />
           <meta property="og:title" content="芸工祭2022 告知サイト" />
           <meta
             property="og:url"

@@ -1,16 +1,15 @@
 import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
+import useMedia from 'use-media'
 import { ChakraProvider } from '@chakra-ui/react'
 import { ThemeProvider, Global, css } from '@emotion/react'
 import emotionReset from 'emotion-reset'
 
 import { theme } from '@/themes/theme'
-import { Header } from '@/components/organisms/Shared/Header'
-import { Footer } from '@/components/organisms/Shared/Footer'
+import { DefaultLayout } from '@/components/templates/DefaultLayout'
+import { PCLayout } from '@/components/templates/PCLayout'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const route = useRouter()
-
+  const isMobile = useMedia('(max-width: 520px)')
   return (
     <ChakraProvider>
       <ThemeProvider theme={theme}>
@@ -42,9 +41,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           `}
         />
         <main>
-          {route.pathname !== '/chart' && <Header />}
-          <Component {...pageProps} />
-          {route.pathname !== '/chart' && <Footer />}
+          {isMobile ? (
+            <DefaultLayout>
+              <Component {...pageProps} />
+            </DefaultLayout>
+          ) : (
+            <PCLayout />
+          )}
         </main>
       </ThemeProvider>
     </ChakraProvider>
